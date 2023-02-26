@@ -6,46 +6,6 @@ output:
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "Picture/capa2.png" alt="JuveYell" width="10000px">
-</p>
-</div>
-
-
-<hr class="new1"></hr>
-<p class="ptitle"> \ </p>
-
-
-
-<div class="column-right">
-
-</br>
-
-<span style="color:darkred"> **Associate Professor** </span>
-
-Deparment of Mathematical and Computational Sciences,
-
-Yachay Tech University - <span style="color:darkred"> **UITEY** </span>
-
-</br>
-
-</br>
-
-</div>
-
-</br>
-
-</br>
-
-[<i class='fas fa-envelope' style='font-size:20px'></i>](contato.html)
-
-<p class="outset"></p>
-<div id="footer">
-<p>
-<div class="column-f1">
-<img src="imagens/logo-unicamp1.png" width="120" height="55">
-</div>
-<div class="column-f2">
-<img src="imagens/logoimecc.png" width="50" height="50">
-</div>
+<img src= "Picture/Capa_usar.png" alt="JuveYell">
 </p>
 </div>
