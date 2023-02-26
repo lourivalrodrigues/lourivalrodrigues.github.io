@@ -1,0 +1,19 @@
+name: ???Lourival Lima???
+navbar:
+  title:
+  type: inverse
+  left:
+    - text: Home
+      icon: fa-home
+      href: index.html
+  right:
+    - text: Teaching
+      icon: fa-graduation-cap
+      href: Teaching.html
+
+output_dir: "."
+output:
+  html_document:
+    theme: bootstrap  # lumen cosmo
+    highlight: textmate
+    css: styles.css
