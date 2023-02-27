@@ -31,21 +31,21 @@ I graduated in mathematics from Universidade Federal do Pará (Brazil), and I re
 **Education**
 <hr class="new1"></hr>
   <ul>
-    <li> 2020 - 2020: **Research Visit, Imperial College London** \
-        Work project: An averaging principle in Lie groups \
-        Supervisor: Xue-Mei Li. </li> \
     <li> 2018 - 2022: **Ph.D. Mathematics, State University of Campinas (UNICAMP)** \
         Thesis title: Decomposition of flows of diffeomorphisms: analytical and geometrical aspects\
         Supervisor: Paulo Ruffino </li> \
+    <li> 2020 - 2020: **Research Visit, Imperial College London** \
+        Work project: An averaging principle in Lie groups \
+        Supervisor: Xue-Mei Li. </li> \
     <li> 2016 - 2018: **M.Sc. Mathematics, State University of Campinas (UNICAMP)**\
         Thesis title: An averaging principle for diffusion in foliated spaces \
         Supervisor: Paulo Ruffino </li> \
-    <li> 2013 - 2014: **Internship in Applied Mathematics, University of Evansville (UE)** \
-        Work project: Trends of weight during the college years \
-        Supervisor: Kate Hogan </li> \
     <li> 2011 - 2016: **Undergraduate in Mathematics, Universidade Federal do Pará (UFPA)** \
         Work project: As cônicas como no princípio: estudo das seções do cone e implementação computacional \
-        Supervisor: Marcos Diniz </li>
+        Supervisor: Marcos Diniz </li> \
+            <li> 2013 - 2014: **Internship in Applied Mathematics, University of Evansville (UE)** \
+        Work project: Trends of weight during the college years \
+        Supervisor: Kate Hogan </li>
   </ul>
 
 </h5>
