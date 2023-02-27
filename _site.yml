@@ -7,9 +7,16 @@ navbar:
       icon: fa-home
       href: index.html
   right:
+    - text: Research & Publications
+      href: Research.html
     - text: Teaching
-      icon: fa-graduation-cap
       href: Teaching.html
+    - text: CV
+      href: CV.html
+    - text: Blog
+      href: Blog.html
+    - text: Contact
+      href: Contact.html
 
 output_dir: "."
 output:
