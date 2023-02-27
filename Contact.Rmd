@@ -3,7 +3,6 @@ title: "Contact" #espaço:\_\_\_\_\_
 output: 
   html_document:
     fig_width: 1
-    css: styleEN.css
 ---
 
 <hr class="new"></hr>
@@ -25,7 +24,8 @@ output:
   <hr class="new1"></hr>
 
   **E-mail** <i class="fas fa-at" style='font-size:16px'></i>  
-  lrodrigues@yachaytech.edu.ec  
+  lrodrigues@yachaytech.edu.ec  \
+  lourivallima15@gmail.com
   
   <hr class="new1"></hr>
   </div>
@@ -38,7 +38,8 @@ output:
 
 \
 
-### **Gallery **
+<h3> **Gallery ** </h3>
+<hr class="new1"></hr>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -149,7 +150,7 @@ clear: both;
 }
 </style>
 
-----
+
 
 <div class="row">
 

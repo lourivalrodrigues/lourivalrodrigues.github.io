@@ -1,29 +1,11 @@
 ---
-title: "Lourival Lima" #espaço:\_\_\_\_\_ 
+title: "Teaching" #espaço:\_\_\_\_\_ 
 output: 
   html_document
 ---
 
-<hr class="new1"></hr>
+<hr class="new"></hr>
 <p class="ptitle"> \ </p>
 
 
-<div class="column-right">
 
-</br>
-
-<span style="color:darkred"> **Associate Professor** </span>
-
-Deparment of Mathematical and Computational Sciences,
-
-Yachay Tech University - <span style="color:darkred"> **UITEY** </span>
-
-</br>
-
-</br>
-
-</div>
-
-</br>
-
-</br>

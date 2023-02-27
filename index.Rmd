@@ -9,3 +9,44 @@ output:
 <img src= "Picture/Capa_usar.png" alt="JuveYell">
 </p>
 </div>
+
+\
+
+
+<h5>
+**About me**
+<hr class="new1"></hr>
+
+<p> I am an Associate Professor in the Department of Mathematical and Computational Sciences at [Yachay Tech University](https://www.yachaytech.edu.ec/). 
+
+I graduated in mathematics from Universidade Federal do Pará (Brazil), and I received my Master's and Ph.D. degrees in pure mathematics at the State University of Campinas (Brazil) in the field of Stochastic Dynamical Systems. I have been in internships and scientific visits at the University of Evansville and Imperial College London, where he created a strong network with world-renowned scientists. </p>
+
+<p> My research interests are stochastic analysis and probability, stochastic optimal control, Lévy processes, decomposition of flows, rough paths, and stochastic dynamics in Lie groups, among others. </p>
+</h5>
+
+\
+
+
+<h5>
+**Education**
+<hr class="new1"></hr>
+  <ul>
+    <li> 2020 - 2020: **Research Visit, Imperial College London** \
+        Work project: An averaging principle in Lie groups \
+        Supervisor: Xue-Mei Li. </li> \
+    <li> 2018 - 2022: **Ph.D. Mathematics, State University of Campinas (UNICAMP)** \
+        Thesis title: Decomposition of flows of diffeomorphisms: analytical and geometrical aspects\
+        Supervisor: Paulo Ruffino </li> \
+    <li> 2016 - 2018: **M.Sc. Mathematics, State University of Campinas (UNICAMP)**\
+        Thesis title: An averaging principle for diffusion in foliated spaces \
+        Supervisor: Paulo Ruffino </li> \
+    <li> 2013 - 2014: **Internship in Applied Mathematics, University of Evansville (UE)** \
+        Work project: Trends of weight during the college years \
+        Supervisor: Kate Hogan </li> \
+    <li> 2011 - 2016: **Undergraduate in Mathematics, Universidade Federal do Pará (UFPA)** \
+        Work project: As cônicas como no princípio: estudo das seções do cone e implementação computacional \
+        Supervisor: Marcos Diniz </li>
+  </ul>
+
+</h5>
+

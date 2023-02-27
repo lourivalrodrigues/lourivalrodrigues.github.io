@@ -1,5 +1,5 @@
 .navbar {
-  background-color:maroon; 
+  background-color:black; 
   border-color:black;
 }
 
@@ -14,12 +14,12 @@ h1.title {
 
 h2 { /* Header 2 */
     font-size: 24px;
-    color: DarkRed;
+    color: black;
 }
 
 h3 { /* Header 3*/
     font-size: 20px;
-    color: DarkRed;
+    color: black;
 }
 
 h4 { /* Header 4*/
@@ -27,10 +27,10 @@ h4 { /* Header 4*/
 }
 
 a:link {
-    color: darkred;
+    color: black;
   }
 a:visited {
-  color: darkred;
+  color: #Darkblue;
 }
 a:hover {
   color: blue;
@@ -74,12 +74,11 @@ p.bor {
 }
 
 hr{
-  border: 0.5px solid DarkRed;
+  border: 0.5px solid black;
 }
 
 hr.new{
-  border: 10px solid DarkRed;
-  border-radius: 5px;
+  border: 0.6px solid black;
 }
 
 hr.new1{
@@ -96,45 +95,3 @@ hr.new1{
 }
 
 .ptitle{line-height: 0.5em;}
-
-
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-height: 100%;
-margin: 0;
-font-family: Open Sans;
-}
-
-/* Style tab links */
-.tablink {
-background-color: #999999;
-color: white;
-float: left;
-border: none;
-outline: none;
-cursor: pointer;
-padding: 8px 8px;
-font-size: 15px;
-width: 20%;
-}
-
-.tablink:hover {
-background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-color: #737373;
-display: none;
-padding: 40px 20px;
-height: 100%;
-font-size: 13px;
-font-family: 'Open Sans';
-font-style: normal;
-}
-
-p.big {
-  line-height: 1.3;
-}
