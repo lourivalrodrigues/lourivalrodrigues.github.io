@@ -58,7 +58,7 @@ h3a { /* Header 3*/
 }
 </style>
 
-----
+<hr class="new"></hr>
 
 ### Undergraduate Education
 <p class="ptitle"> \ </p>

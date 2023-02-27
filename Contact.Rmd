@@ -1,5 +1,5 @@
 ---
-title: "Contact" #espaço:\_\_\_\_\_ 
+title: "<i class='fas fa-envelope' style='font-size:20px'></i> Contact" #espaço:\_\_\_\_\_ 
 output: 
   html_document:
     fig_width: 1
