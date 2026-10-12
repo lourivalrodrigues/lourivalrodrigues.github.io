@@ -1,9 +1,8 @@
-/* Preserve the approved lecture photo and its full framing. */
-.hero-with-portrait { display:grid; grid-template-columns:minmax(0,1fr) 280px; align-items:center; gap:2rem; }
-.hero-with-portrait h1 { font-size:clamp(2.6rem,4.5vw,3.6rem); }
-.hero-with-portrait .lead { font-size:1.15rem; }
+/* Approved photo: full frame, aligned with the academic introduction. */
+.hero-with-portrait { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,340px); align-items:start; gap:3rem; }
 .hero-copy { min-width:0; }
-.hero-photo p { margin:0; }
+.hero-photo { padding-top:3.7rem; }
 .hero-photo img { display:block; width:100%; max-width:100%; height:auto; position:static; border-radius:6px; border:1px solid #739986; box-shadow:0 12px 30px rgba(0,0,0,.15); }
-@media(max-width:760px) { .hero-with-portrait { grid-template-columns:1fr; gap:1.5rem; } .hero-photo { grid-row:1; width:min(100%,280px); justify-self:center; } }
+@media(max-width:1000px) { .hero-with-portrait { grid-template-columns:minmax(0,1fr) 290px; gap:2rem; } }
+@media(max-width:760px) { .hero-with-portrait { grid-template-columns:1fr; gap:1.5rem; } .hero-photo { grid-row:1; width:min(100%,320px); justify-self:center; padding-top:0; } }
 @media print { .hero-with-portrait { display:block; } .hero-photo { display:none; } }
