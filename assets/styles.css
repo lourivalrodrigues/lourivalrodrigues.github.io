@@ -92,3 +92,33 @@ main { padding-top:2.2rem; }
  .math-wall .equation:nth-child(7) { left:3%; bottom:6%; font-size:12px; }
  .math-wall .equation:nth-child(11) { left:57%; bottom:14%; font-size:12px; }
 }
+
+/* Full-screen deep green surface. */
+:root { --paper:#102b29; --ink:#edf5ef; --muted:#c1d6cc; --accent:#b4d5c0; --line:#31514a; }
+html { background:#102b29; }
+body { min-height:100vh; isolation:isolate; background:radial-gradient(ellipse at 85% 15%,#24483e 0,#18382f 45%,#102b29 100%); background-attachment:fixed; color:var(--ink); }
+#quarto-content,.page-columns,main.content { background:transparent; }
+a:hover { color:#e0f0e6; }
+a:focus-visible,button:focus-visible { outline-color:#b4d5c0; }
+.hero.hero-dark { background:transparent; isolation:auto; margin:0 0 2rem; padding:4rem 0 4.5rem; }
+.hero.hero-dark h1 { font-size:clamp(2.4rem,4vw,3.5rem); }
+.hero-dark .hero-copy { background:radial-gradient(ellipse,rgba(16,43,41,.98) 40%,rgba(16,43,41,.88) 72%,rgba(16,43,41,0) 100%); }
+.math-wall { position:fixed; inset:0; z-index:-1; }
+.hero-photo figcaption,.hero-photo .figure-caption { color:#c1d6cc; font-size:.9rem; }
+.nav-footer,.nav-footer a,#quarto-margin-sidebar,.sidebar nav[role="doc-toc"] { color:#c1d6cc; background:transparent; }
+.sidebar nav[role="doc-toc"] ul>li>a.active { color:#b4d5c0!important; border-left-color:#b4d5c0; }
+.navbar #quarto-search,.navbar #quarto-search svg { color:#edf5ef!important; }
+.publication h3,.publication h4 { color:#edf5ef; }
+.table { color:#edf5ef; --bs-table-color:#edf5ef; --bs-table-bg:transparent; --bs-table-border-color:#31514a; }
+pre,div.sourceCode { background:#17382f; color:#edf5ef; }
+code:not(pre code) { color:#cde5d5; background:#17382f; }
+.btn-academic.primary { background:#b4d5c0; color:#17372d; }
+.btn-academic.primary:hover { background:#d1e5d7; color:#102b29; }
+@media(max-width:760px) { .hero.hero-dark { margin:0 0 2rem; padding:2.5rem 0 4rem; } }
+@media print {
+ :root { --paper:white; --ink:#182a37; --muted:#596770; --accent:#166b70; --line:#dce2df; }
+ html,body { background:white!important; color:#182a37; }
+ .math-wall { display:none; }
+ .hero.hero-dark,.hero-dark .hero-copy { background:transparent!important; padding:0; }
+ .publication h3,.publication h4,.table { color:#182a37; }
+}
