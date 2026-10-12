@@ -19,14 +19,25 @@ Mi área principal de investigación comprende sistemas dinámicos estocásticos
 - **Procesos de Lévy y control estocástico:** dinámica con saltos y problemas de optimización.
 - **Topología y relaciones:** construcciones topológicas inducidas por acciones de grupos y relaciones binarias.
 
-## Proyectos en desarrollo
-Estos temas corresponden a trabajos en preparación. Sus manuscritos se incorporarán cuando estén listos para difusión pública.
+## Proyectos actuales
 
 ### Rough paths y Navier–Stokes
-Estudio de ecuaciones de fluidos bajo perturbaciones irregulares, con énfasis en el transporte proyectado y la estructura analítica de las ecuaciones.
+Estudio de las ecuaciones de Navier–Stokes con perturbaciones de transporte irregulares. El proyecto se centra en el transporte proyectado y en las propiedades analíticas y geométricas de la dinámica resultante. El manuscrito se encuentra en preparación.
 
-### Topología de Markov
-Trabajo sobre estructuras topológicas asociadas a relaciones y construcciones de tipo Markov.
+### Goldbach and Alexandroff Spaces Shake Hands
+Estudio de una topología relacional de Alexandroff sobre los enteros pares, construida a partir de representaciones de Goldbach. El objetivo es formular y estudiar caracterizaciones topológicas de la conjetura fuerte de Goldbach mediante accesibilidad, clausuras y propiedades de conexión y compacidad. El trabajo se encuentra en preparación.
 
-### Goldbach y espacios de Alexandroff
-Investigación de construcciones relacionales y espacios de Alexandroff asociados a representaciones de Goldbach.
+### Inferencia espacial mediante SPDE
+**Likelihood-based inference for spatial data with censored and missing responses via SPDE approach**
+
+Desarrollo de una metodología de máxima verosimilitud para regresión espacial con respuestas censuradas y faltantes. El enfoque utiliza una representación SPDE del campo gaussiano latente y una aproximación mediante un campo aleatorio de Markov gaussiano. La estimación combina un algoritmo EM de aproximación estocástica con operaciones de matrices dispersas. El proyecto incluye estudios de simulación y una aplicación a datos de carbono orgánico del suelo.
+
+### Topología de accesibilidad de Markov
+**The Markov Accessibility Topology and its Probabilistic Structure**, con Jorge Vielma.
+
+Estudio de una topología de Alexandroff asociada al operador de transición de una cadena de Markov en tiempo discreto. El trabajo relaciona accesibilidad probabilística, conjuntos absorbentes, irreducibilidad y el cociente de comunicación.
+
+El preprint ya está disponible: [arXiv:2610.10591](https://arxiv.org/abs/2610.10591).
+
+## Artículos y preprints
+Consulta la lista de [publicaciones](publications.qmd).

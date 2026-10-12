@@ -19,14 +19,25 @@ My main research area is stochastic dynamical systems, stochastic flows, and the
 - **Lévy processes and stochastic control:** dynamics with jumps and optimization problems.
 - **Topology and relations:** topological constructions induced by group actions and binary relations.
 
-## Work in progress
-These topics concern work in preparation. Manuscripts will be added when they are ready for public circulation.
+## Current projects
 
 ### Rough paths and Navier–Stokes
-Fluid equations under irregular perturbations, with an emphasis on projected transport and the analytical structure of the equations.
+Navier–Stokes equations under irregular transport perturbations. The project focuses on projected transport and the analytical and geometric properties of the resulting dynamics. A manuscript is in preparation.
 
-### Markov topology
-Work on topological structures associated with relations and Markov-type constructions.
+### Goldbach and Alexandroff Spaces Shake Hands
+A relational Alexandroff topology on the even integers, constructed from Goldbach representations. The aim is to formulate and investigate topological characterizations of the strong Goldbach conjecture through accessibility, closures, connectedness, and compactness. This work is in preparation.
 
-### Goldbach and Alexandroff spaces
-Relational constructions and Alexandroff spaces associated with Goldbach representations.
+### Spatial inference through SPDEs
+**Likelihood-based inference for spatial data with censored and missing responses via SPDE approach**
+
+A likelihood-based methodology for spatial regression with censored and missing responses. The approach uses an SPDE representation of the latent Gaussian field and an approximation by a Gaussian Markov random field. Estimation combines a stochastic approximation EM-type algorithm with sparse matrix computations. The project includes simulation studies and an application to soil organic carbon data.
+
+### Markov accessibility topology
+**The Markov Accessibility Topology and its Probabilistic Structure**, with Jorge Vielma.
+
+An Alexandroff topology associated with the transition operator of a discrete-time Markov chain. The work connects probabilistic accessibility with absorbing sets, irreducibility, and the communication quotient.
+
+The preprint is publicly available: [arXiv:2610.10591](https://arxiv.org/abs/2610.10591).
+
+## Articles and preprints
+See the [publications list](publications.qmd).
