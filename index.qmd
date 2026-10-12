@@ -1,0 +1,40 @@
+---
+title: ""
+pagetitle: Lourival Rodrigues de Lima
+toc: false
+title-block-banner: false
+format:
+  html:
+    title-block-style: none
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](es/index.html)
+:::
+
+
+::: {.hero}
+::: {.eyebrow}
+Mathematics · ESPOL · Ecuador
+:::
+# Lourival Rodrigues de Lima {.unnumbered}
+::: {.lead}
+I am a mathematician and professor at Escuela Superior Politécnica del Litoral (ESPOL). My research focuses on stochastic analysis and stochastic dynamical systems, with interests in rough paths, stochastic flows, and stochastic partial differential equations.
+:::
+<div class="hero-actions"><a class="btn-academic primary" href="research.html">Explore research</a><a class="btn-academic" href="publications.html">Publications</a><a class="btn-academic" href="cv.html">Academic CV</a></div>
+:::
+
+## About me
+I teach mathematics at ESPOL's Faculty of Natural Sciences and Mathematics. I obtained my master's degree and doctorate in Mathematics at Universidade Estadual de Campinas (UNICAMP), following undergraduate studies at Universidade Federal do Pará.
+
+::: {.section-grid}
+::: {}
+### Research
+Random processes, dynamics, and geometric structures. [Explore my research interests](research.qmd).
+:::
+::: {}
+### Teaching and notes
+Mathematics and statistics courses, with a growing space for lecture notes and course materials. [Explore teaching](teaching.qmd).
+:::
+:::

@@ -1,0 +1,51 @@
+---
+title: Publicaciones
+toc: true
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../publications.html)
+:::
+
+
+Selección de publicaciones, con enlaces a las versiones de las revistas y a manuscritos públicos.
+
+## 2025
+
+::: {.publication}
+### The Property ($E_A$) and Local Spectral Theory
+Elvis Aponte, Lourival Lima, José Sanabria.  
+*International Journal of Mathematics and Mathematical Sciences*, 2025, article 3294145.
+
+[DOI](https://doi.org/10.1155/ijmm/3294145)
+:::
+
+::: {.publication}
+### Continuous functions on primal topological spaces induced by group actions
+Luis Fernando Mejías, Jorge Vielma, Elvis Aponte, Lourival Rodrigues de Lima.  
+*AIMS Mathematics*, 10(1), 793–808, 2025.
+
+[DOI](https://doi.org/10.3934/math.2025037) · [PDF](https://www.aimspress.com/aimspress-data/math/2025/1/PDF/math-10-01-037.pdf)
+:::
+
+## 2023
+
+::: {.publication}
+### Geometric Aspects of Young Integral: Decomposition of Flows
+Pedro Catuogno, Lourival Lima, Paulo Ruffino.  
+*Mediterranean Journal of Mathematics*, 20, article 335, 2023.
+
+[DOI](https://doi.org/10.1007/s00009-023-02539-3) · [arXiv](https://arxiv.org/abs/2204.03527)
+:::
+
+## Manuscritos públicos
+
+::: {.publication}
+### Decomposition of discontinuous flows of diffeomorphisms: jumpings, geometrical and topological aspects
+Lourival Lima, Paulo Ruffino. arXiv:2501.01750, 2025.
+
+[arXiv](https://arxiv.org/abs/2501.01750) · [PDF](https://arxiv.org/pdf/2501.01750)
+:::
+
+Los trabajos en preparación se describen en la página de [investigación](research.qmd).

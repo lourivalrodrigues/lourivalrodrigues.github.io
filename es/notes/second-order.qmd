@@ -1,0 +1,32 @@
+---
+title: De segundo orden a un sistema de primer orden
+toc: true
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../../notes/second-order.html)
+:::
+
+
+## La idea
+Consideremos una ecuación de segundo orden
+
+$$\ddot{x}(t)=f(t,x(t),\dot{x}(t)).$$
+
+Definimos $v(t)=\dot{x}(t)$. La ecuación se escribe como
+
+$$\begin{cases}\dot{x}(t)=v(t),\\\dot{v}(t)=f(t,x(t),v(t)).\end{cases}$$
+
+La posición y la velocidad forman el **estado** del sistema. Los datos iniciales son $x(0)=x_0$ y $v(0)=v_0$.
+
+## Ejemplo: el péndulo ideal
+Para un péndulo sin fricción ni fuerza externa, de longitud $\ell>0$, bajo aceleración gravitacional constante $g>0$,
+
+$$\ddot{\theta}+\frac{g}{\ell}\sin\theta=0.$$
+
+Con $\omega=\dot{\theta}$ obtenemos
+
+$$\dot{\theta}=\omega,\qquad \dot{\omega}=-\frac{g}{\ell}\sin\theta.$$
+
+Aquí $\theta$ es el ángulo respecto de la vertical descendente y $\omega$ es la velocidad angular. El plano $(\theta,\omega)$ permite estudiar las trayectorias del sistema.

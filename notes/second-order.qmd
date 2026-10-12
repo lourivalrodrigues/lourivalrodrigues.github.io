@@ -1,0 +1,32 @@
+---
+title: From second order to a first-order system
+toc: true
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](../es/notes/second-order.html)
+:::
+
+
+## The idea
+Consider a second-order differential equation
+
+$$\ddot{x}(t)=f(t,x(t),\dot{x}(t)).$$
+
+Set $v(t)=\dot{x}(t)$. The equation becomes
+
+$$\begin{cases}\dot{x}(t)=v(t),\\\dot{v}(t)=f(t,x(t),v(t)).\end{cases}$$
+
+Position and velocity together form the **state** of the system. The initial data are $x(0)=x_0$ and $v(0)=v_0$.
+
+## Example: the ideal pendulum
+For a pendulum with no friction or external forcing, length $\ell>0$, and constant gravitational acceleration $g>0$,
+
+$$\ddot{\theta}+\frac{g}{\ell}\sin\theta=0.$$
+
+With $\omega=\dot{\theta}$, we obtain
+
+$$\dot{\theta}=\omega,\qquad \dot{\omega}=-\frac{g}{\ell}\sin\theta.$$
+
+Here $\theta$ is the angle measured from the downward vertical and $\omega$ is the angular velocity. The $(\theta,\omega)$ plane lets us study the system's trajectories.

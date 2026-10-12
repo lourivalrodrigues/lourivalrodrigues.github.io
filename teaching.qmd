@@ -1,0 +1,29 @@
+---
+title: Teaching
+toc: true
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](es/teaching.html)
+:::
+
+This page collects courses and areas from my teaching activity. Dates, assessment policies, and materials will be added for each course offering.
+
+## Axiomatic Geometry
+Axioms, proofs, and the foundations of geometry.
+
+## Mathematical Methods for the Sciences
+Modeling, differential equations, and dynamical systems.
+
+## Stochastic Processes
+Probabilistic models of systems evolving in time.
+
+## Statistics
+Probability, inference, and data analysis.
+
+## Computational Statistics
+Computational methods for statistical problems.
+
+## Materials
+Public notes are collected in the [notes section](notes.qmd). Official course communications and submissions are managed through ESPOL's virtual learning environment.

@@ -1,0 +1,29 @@
+---
+title: Docencia
+toc: true
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../teaching.html)
+:::
+
+Esta página reúne áreas y cursos de mi actividad docente. Las fechas, políticas de evaluación y materiales se incorporarán por edición del curso.
+
+## Geometría Axiomática
+Axiomas, demostración y fundamentos de la geometría.
+
+## Métodos Matemáticos para las Ciencias
+Modelación, ecuaciones diferenciales y sistemas dinámicos.
+
+## Procesos Estocásticos
+Modelos probabilísticos para sistemas que evolucionan en el tiempo.
+
+## Estadística
+Probabilidad, inferencia y análisis de datos.
+
+## Estadística Computacional
+Métodos computacionales para problemas estadísticos.
+
+## Materiales
+Las notas públicas se encuentran en la sección de [notas](notes.qmd). Las entregas y comunicaciones oficiales de cada curso se realizan a través del Aula Virtual de ESPOL.

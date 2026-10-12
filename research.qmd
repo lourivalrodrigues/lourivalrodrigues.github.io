@@ -1,0 +1,32 @@
+---
+title: Research
+toc: true
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](es/research.html)
+:::
+
+
+## Stochastic analysis and dynamics
+My main research area is stochastic dynamical systems, stochastic flows, and their interaction with geometric structures. I am interested in differential equations driven by irregular signals and rough path methods.
+
+## Research interests
+- **Rough paths and flows:** Young integration, irregular dynamics, and decompositions of flows.
+- **Stochastic dynamics on Lie groups:** the interaction between geometry and stochastic processes.
+- **Stochastic PDEs:** analytical questions for systems subject to random perturbations.
+- **Lévy processes and stochastic control:** dynamics with jumps and optimization problems.
+- **Topology and relations:** topological constructions induced by group actions and binary relations.
+
+## Work in progress
+These topics concern work in preparation. Manuscripts will be added when they are ready for public circulation.
+
+### Rough paths and Navier–Stokes
+Fluid equations under irregular perturbations, with an emphasis on projected transport and the analytical structure of the equations.
+
+### Markov topology
+Work on topological structures associated with relations and Markov-type constructions.
+
+### Goldbach and Alexandroff spaces
+Relational constructions and Alexandroff spaces associated with Goldbach representations.

@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - '*.qmd'
+    - 'notes/*.qmd'
+    - 'es/*.qmd'
+    - 'es/notes/*.qmd'
+  resources:
+    - assets/
+    - files/
+website:
+  title: Lourival Lima
+  description: Academic website of Lourival Rodrigues de Lima, mathematician at ESPOL.
+  favicon: assets/favicon.svg
+  search: true
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+      - href: notes.qmd
+        text: Notes
+    right:
+      - href: es/index.qmd
+        text: Español
+        id: language-toggle
+  page-footer:
+    left: 'Lourival Rodrigues de Lima · ESPOL'
+    right: 'Mathematics · Matemáticas'
+format:
+  html:
+    theme: cosmo
+    css: assets/styles.css
+    toc: true
+    toc-title: On this page
+    html-math-method: mathjax
+    smooth-scroll: true
+    link-external-newwindow: true
+    include-after-body: assets/navigation.html
+lang: en
+execute:
+  enabled: false

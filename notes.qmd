@@ -1,0 +1,17 @@
+---
+title: Notes
+toc: true
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](es/notes.html)
+:::
+
+
+A space for mathematical notes, explanations, and teaching materials.
+
+## First note
+[From a second-order differential equation to a first-order system](notes/second-order.qmd)
+
+A short introduction using the pendulum as an example. Future notes can combine prose, LaTeX mathematics, and downloadable files.

@@ -1,0 +1,32 @@
+---
+title: Investigación
+toc: true
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../research.html)
+:::
+
+
+## Análisis estocástico y dinámica
+Mi área principal de investigación comprende sistemas dinámicos estocásticos, flujos y su relación con estructuras geométricas. Me interesan las ecuaciones diferenciales impulsadas por señales irregulares y los enfoques basados en rough paths.
+
+## Líneas de interés
+- **Rough paths y flujos:** integración de Young, dinámica irregular y descomposición de flujos.
+- **Dinámica estocástica en grupos de Lie:** interacción entre geometría y procesos estocásticos.
+- **EDP estocásticas:** preguntas analíticas sobre sistemas con perturbaciones aleatorias.
+- **Procesos de Lévy y control estocástico:** dinámica con saltos y problemas de optimización.
+- **Topología y relaciones:** construcciones topológicas inducidas por acciones de grupos y relaciones binarias.
+
+## Proyectos en desarrollo
+Estos temas corresponden a trabajos en preparación. Sus manuscritos se incorporarán cuando estén listos para difusión pública.
+
+### Rough paths y Navier–Stokes
+Estudio de ecuaciones de fluidos bajo perturbaciones irregulares, con énfasis en el transporte proyectado y la estructura analítica de las ecuaciones.
+
+### Topología de Markov
+Trabajo sobre estructuras topológicas asociadas a relaciones y construcciones de tipo Markov.
+
+### Goldbach y espacios de Alexandroff
+Investigación de construcciones relacionales y espacios de Alexandroff asociados a representaciones de Goldbach.

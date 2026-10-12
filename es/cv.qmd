@@ -1,0 +1,31 @@
+---
+title: Currículum académico
+toc: true
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../cv.html)
+:::
+
+
+## Cargo actual
+**Profesor Titular, categoría Auxiliar 1**  
+Facultad de Ciencias Naturales y Matemáticas, ESPOL, Ecuador.  
+En ESPOL desde mayo de 2023.
+
+## Formación
+- **Doctorado en Matemática**, UNICAMP, Brasil. Defensa: 10 de agosto de 2022. Área de investigación: sistemas dinámicos estocásticos.
+- **Maestría en Matemática**, UNICAMP, Brasil.
+- **Grado en Matemática**, Universidade Federal do Pará, Brasil.
+
+## Experiencia académica
+- Docencia previa en Yachay Tech, Ecuador.
+- Período de intercambio académico en la University of Evansville, Estados Unidos.
+- Estancia de investigación en Imperial College London, Reino Unido.
+
+## Investigación y docencia
+Consulta las páginas de [investigación](research.qmd), [publicaciones](publications.qmd) y [docencia](teaching.qmd).
+
+## Versión para descargar
+Puedes guardar esta página como PDF con la opción **Imprimir → Guardar como PDF** del navegador. El currículum completo se incorporará más adelante.

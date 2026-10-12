@@ -1,0 +1,31 @@
+---
+title: Academic CV
+toc: true
+description: Academic website of Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[Español](es/cv.html)
+:::
+
+
+## Current appointment
+**Profesor Titular, categoría Auxiliar 1**  
+Faculty of Natural Sciences and Mathematics, ESPOL, Ecuador.  
+At ESPOL since May 2023.
+
+## Education
+- **Doctorate in Mathematics**, UNICAMP, Brazil. Defense: 10 August 2022. Research area: stochastic dynamical systems.
+- **Master's degree in Mathematics**, UNICAMP, Brazil.
+- **Undergraduate degree in Mathematics**, Universidade Federal do Pará, Brazil.
+
+## Academic experience
+- Previous teaching appointment at Yachay Tech, Ecuador.
+- Academic exchange at the University of Evansville, United States.
+- Research stay at Imperial College London, United Kingdom.
+
+## Research and teaching
+See [research](research.qmd), [publications](publications.qmd), and [teaching](teaching.qmd).
+
+## Downloadable version
+Save this page as a PDF using your browser's **Print → Save as PDF** option. A full academic CV will be added later.

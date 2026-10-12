@@ -1,0 +1,40 @@
+---
+title: ""
+pagetitle: Lourival Rodrigues de Lima
+toc: false
+title-block-banner: false
+format:
+  html:
+    title-block-style: none
+description: Sitio académico de Lourival Rodrigues de Lima.
+---
+
+::: {.language-link}
+[English](../index.html)
+:::
+
+
+::: {.hero}
+::: {.eyebrow}
+Matemáticas · ESPOL · Ecuador
+:::
+# Lourival Rodrigues de Lima {.unnumbered}
+::: {.lead}
+Soy matemático y profesor en la Escuela Superior Politécnica del Litoral (ESPOL). Mi investigación se centra en el análisis estocástico y los sistemas dinámicos estocásticos, con interés en rough paths, flujos estocásticos y ecuaciones en derivadas parciales estocásticas.
+:::
+<div class="hero-actions"><a class="btn-academic primary" href="research.html">Investigación</a><a class="btn-academic" href="publications.html">Publicaciones</a><a class="btn-academic" href="cv.html">Currículum</a></div>
+:::
+
+## Acerca de mí
+Soy profesor de Matemáticas en la Facultad de Ciencias Naturales y Matemáticas de ESPOL. Obtuve mi maestría y doctorado en Matemática en la Universidade Estadual de Campinas (UNICAMP), después de cursar mis estudios de grado en la Universidade Federal do Pará.
+
+::: {.section-grid}
+::: {}
+### Investigación
+Procesos aleatorios, dinámica y estructuras geométricas. [Conoce mis líneas de investigación](research.qmd).
+:::
+::: {}
+### Docencia y notas
+Cursos de matemáticas y estadística, con espacio para notas de clase y materiales. [Explora la docencia](teaching.qmd).
+:::
+:::
