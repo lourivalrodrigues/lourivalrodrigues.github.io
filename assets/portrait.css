@@ -1,0 +1,11 @@
+/* Academic profile portrait; additional styles only for the homepage. */
+.hero-with-portrait { display:grid; grid-template-columns:minmax(0,1fr) 250px; align-items:start; gap:2rem; max-width:1100px; }
+.hero-with-portrait h1 { font-size:clamp(2.6rem,4.5vw,3.6rem); }
+.hero-with-portrait .lead { font-size:1.15rem; }
+.hero-copy { min-width:0; }
+.hero-photo { padding-top:.4rem; }
+/* Display a crop of the untouched source photograph: x=1000..1440, y=560..1110. */
+.hero-photo p { margin:0; position:relative; aspect-ratio:4 / 5; overflow:hidden; border-radius:10px; border:1px solid var(--line); box-shadow:0 12px 30px rgba(24,42,55,.08); }
+.hero-photo img { display:block; position:absolute; width:327.27273%; max-width:none; height:auto; left:-227.27273%; top:-101.81818%; }
+@media(max-width:760px) { .hero-with-portrait { grid-template-columns:1fr; gap:1.5rem; } .hero-photo { grid-row:1; width:210px; justify-self:center; } }
+@media print { .hero-with-portrait { display:block; } .hero-photo { display:none; } }
