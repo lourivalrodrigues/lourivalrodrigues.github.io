@@ -16,7 +16,34 @@ description: Sitio académico de Lourival Rodrigues de Lima.
 
 <link rel="stylesheet" href="../assets/portrait.css">
 
-::: {.hero .hero-with-portrait}
+::: {.hero .hero-with-portrait .hero-dark}
+<div class="math-wall" aria-hidden="true">
+ <span class="equation">dX<sub>t</sub> = b(X<sub>t</sub>) dt + σ(X<sub>t</sub>) dW<sub>t</sub></span>
+ <span class="equation">φ<sub>t</sub> = ξ<sub>t</sub> ∘ ψ<sub>t</sub></span>
+ <span class="equation">e<sup>iπ</sup> + 1 = 0</span>
+ <span class="equation">∇ · u = 0</span>
+ <span class="equation">[X,Y] = XY − YX</span>
+ <span class="equation">∫<sub>0</sub><sup>t</sup> f(s) dX<sub>s</sub></span>
+ <span class="equation">∂<sub>t</sub>u + (u · ∇)u = νΔu − ∇p</span>
+ <span class="equation">𝔼[X | ℱ<sub>t</sub>]</span>
+ <span class="equation">dY<sub>t</sub> = V(Y<sub>t</sub>) d𝐙<sub>t</sub></span>
+ <span class="equation">a² + b² = c²</span>
+ <span class="equation">P<sup>n+m</sup> = P<sup>n</sup>P<sup>m</sup></span>
+ <span class="equation">⟨x,y⟩ = ∑<sub>i</sub> x<sub>i</sub>y<sub>i</sub></span>
+ <span class="equation">lim<sub>n→∞</sub> (1 + 1/n)<sup>n</sup> = e</span>
+ <span class="equation">∫<sub>ℝ</sub> e<sup>−x²</sup> dx = √π</span>
+ <span class="equation">d² = 0</span>
+ <span class="equation">∂<sub>t</sub>v = Δv</span>
+ <span class="equation">det(AB) = det(A) det(B)</span>
+ <span class="equation">F̂(ξ) = ∫<sub>ℝ</sub> F(x)e<sup>−2πixξ</sup> dx</span>
+ <span class="equation">dω + ω ∧ ω = Ω</span>
+ <span class="equation">∑<sub>n=1</sub><sup>∞</sup> 1/n² = π²/6</span>
+ <span class="equation">𝔓(A ∩ B) = 𝔓(A | B)𝔓(B)</span>
+ <span class="equation">∇ × ∇f = 0</span>
+ <span class="equation">‖x + y‖ ≤ ‖x‖ + ‖y‖</span>
+ <span class="equation">(α ∧ β) = (−1)<sup>pq</sup>(β ∧ α)</span>
+</div>
+
 ::: {.hero-copy}
 ::: {.eyebrow}
 Matemáticas · ESPOL · Ecuador
@@ -29,7 +56,7 @@ Soy matemático y profesor en la Escuela Superior Politécnica del Litoral (ESPO
 :::
 
 ::: {.hero-photo}
-![Lourival Rodrigues de Lima](../assets/lourival-original.jpg){width=280 height=350 loading="eager"}
+![Lourival Rodrigues de Lima durante una presentación](../assets/lourival-lecture.png){width=1406 height=1292 loading="eager"}
 :::
 :::
 
