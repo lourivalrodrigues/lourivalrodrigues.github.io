@@ -1,0 +1,26 @@
+---
+title: "Modelación de transformaciones químicas"
+lang: es
+toc: true
+toc-depth: 2
+description: "Modelación de transformaciones químicas — MATG1075, Lourival Rodrigues de Lima."
+format:
+  html:
+    toc-title: Contenido
+crossref:
+  eq-prefix: ecuación
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+
+::: {.language-link}
+[Sitio en español](../es/notes/chemical-modeling.html)
+:::
+
+Complete lecture notes for Mathematical Methods for the Sciences (MATG1075). The note text is in Spanish.
+
+<div class="note-actions"><a class="btn-academic primary" href="../files/notes/chemical-modeling.pdf" download>Download PDF · 6 pages</a><a class="note-back" href="../notes.html">← All notes</a></div>
+
+**Docente:** Lourival Rodrigues de Lima. **Base:** Witelski y Bowen (2015), sección 1.2, pp. 5–8.
+
+{{< include ../_content/notes/chemical-modeling.qmd >}}

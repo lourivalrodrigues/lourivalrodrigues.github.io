@@ -1,17 +1,48 @@
 ---
 title: Notas
 toc: true
-description: Sitio académico de Lourival Rodrigues de Lima.
+description: Notas de clase y materiales de matemáticas de Lourival Rodrigues de Lima.
 ---
 
 ::: {.language-link}
 [English](../notes.html)
 :::
 
+<link rel="stylesheet" href="../assets/notes.css">
 
-Un espacio para notas matemáticas, explicaciones y materiales de clase.
+Notas de clase con definiciones, demostraciones y ejemplos resueltos. Puedes leerlas directamente aquí o descargar su versión en PDF.
 
-## Primera nota
+## Métodos Matemáticos para las Ciencias
+
+**MATG1075 · ESPOL**  
+Materiales en español, basados en Witelski y Bowen (2015).
+
+::: {.notes-catalog-item}
+### Modelación de transformaciones químicas
+
+Ley de acción de masas, relaciones de conservación, reacciones reversibles y consecutivas, soluciones explícitas y ejercicios.
+
+::: {.meta}
+6 páginas · Sección 1.2 del libro base
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/chemical-modeling.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/chemical-modeling.pdf" download>Descargar PDF</a></div>
+:::
+
+::: {.notes-catalog-item}
+### Plano de fase y nuevas direcciones en modelación matemática
+
+Sistemas bidimensionales, linealización, estabilidad, péndulo, nulclinas y extensiones a modelos con memoria, tiempo discreto y aleatoriedad.
+
+::: {.meta}
+19 páginas · Secciones 1.5–1.7 del libro base
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/phase-plane.pdf" download>Descargar PDF</a></div>
+:::
+
+## Nota complementaria
+
 [De una ecuación diferencial de segundo orden a un sistema de primer orden](notes/second-order.qmd)
 
-Una breve introducción con el ejemplo del péndulo. Las futuras notas podrán combinar texto, fórmulas en LaTeX y archivos descargables.
+Una explicación breve con el ejemplo del péndulo.

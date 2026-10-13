@@ -1,0 +1,1053 @@
+**Propósito.** Estas notas acompañan la actividad de clase compartida. Cada estudiante debe poder definir los conceptos, justificar los resultados utilizados, desarrollar los cálculos y continuar una explicación iniciada por un compañero.
+
+**Alcance.** Se sigue la secuencia del libro: sistemas bidimensionales, linealización, clasificación de equilibrios, péndulo, nulclinas y nuevas familias de modelos. El ejercicio 1.7 sirve como aplicación integradora. Las demostraciones elementales y los ejemplos complementarios se incluyen para explicar las hipótesis y los límites del análisis. No se emplean métodos numéricos.
+
+**Resultados de aprendizaje**
+
+1.  Relacionar un campo vectorial con las trayectorias y su orientación temporal.
+
+2.  Calcular equilibrios, Jacobianos, autovalores y autovectores; interpretar la estabilidad local.
+
+3.  Distinguir lo que demuestra la linealización de lo que requiere información no lineal.
+
+4.  Construir argumentos cualitativos mediante nulclinas y cantidades conservadas.
+
+5.  Reconocer cuándo un modelo necesita más variables, memoria, tiempo discreto, aleatoriedad o estructura poblacional.
+
+**Secuencia sugerida.** Cinco bloques de 90 minutos: (1) sistemas y linealización; (2) clasificación y límites; (3) péndulo; (4) nulclinas y ejercicio integrador; (5) extensiones y exposición compartida. Ajustar el tiempo según los conocimientos previos de álgebra lineal y EDOs.
+
+**Nota sobre las fuentes.** Los modelos del péndulo, de nulclinas y del ejercicio integrador corresponden a (1.39), (1.40) y el ejercicio 1.7 del libro. Las demostraciones ampliadas, los contraejemplos y las formulaciones ilustrativas de la sección 1.6 son desarrollos didácticos complementarios; no se presentan como transcripciones del texto.
+
+**Convenciones.** $x'=dx/dt$, $y'=dy/dt$, $\mathbf z=(x,y)^{\mathsf T}$. El símbolo $H$ representa una *función de energía*; su valor constante a lo largo de una solución se denota por $E$. Así se distingue la función de la constante fijada por los datos iniciales.
+
+## Sistemas autónomos y campo vectorial
+
+::: definicion
+**Definición 1.1** (Sistema autónomo bidimensional). Un sistema de la forma 
+
+$$
+x'=f(x,y),\qquad y'=g(x,y),\qquad (x(0),y(0))=(x_0,y_0)
+$$ {#eq-sistema}
+
+ es autónomo porque su campo $\mathbf F(x,y)=(f(x,y),g(x,y))^{\mathsf T}$ no depende explícitamente del tiempo. El conjunto de estados $(x,y)$ es el *plano de fase*.
+:::
+
+Las variables de estado no necesitan ser posiciones espaciales: pueden representar concentración y temperatura, dos poblaciones, o posición y velocidad. Si sus unidades difieren, los ejes también tienen unidades diferentes; la dirección dibujada depende de la escala gráfica.
+
+::: definicion
+**Definición 1.2** (Trayectoria y órbita). Una trayectoria es una solución parametrizada $t\mapsto\mathbf z(t)$ de @eq-sistema. Su órbita es el conjunto de puntos que recorre. El campo vectorial indica la velocidad instantánea: $\mathbf z'(t)=\mathbf F(\mathbf z(t))$.
+:::
+
+Una órbita sin flechas no especifica el sentido temporal. En estas notas, una *curva integral del campo de pendientes* describe localmente la misma forma geométrica, pero no la rapidez con la que se recorre.
+
+::: ejemplo
+**Ejemplo 1.3** (Oscilación lineal). Considérese $x'=y$, $y'=-x$. La solución con $(x_0,y_0)=(1,0)$ es 
+
+$$
+x(t)=\cos t,\qquad y(t)=-\sin t.
+$$
+
+ En efecto, $x'=-\sin t=y$ y $y'=-\cos t=-x$. Su órbita satisface $x^2+y^2=1$ y se recorre en sentido horario: en $(1,0)$, el campo es $(0,-1)$. La rapidez es $\sqrt{x'^2+y'^2}=1$ en esta órbita.
+:::
+
+::: proposicion
+**Proposición 1.4** (Las órbitas distintas no se cruzan). Si $\mathbf F$ es localmente Lipschitz en un abierto, dos órbitas de soluciones no pueden intersectarse allí y después separarse. Una solución no constante no alcanza un equilibrio en un tiempo finito de su intervalo de existencia.
+:::
+
+::: proof
+ Si $\mathbf z_1(t_1)=\mathbf z_2(t_2)=\mathbf p$, las funciones trasladadas $\mathbf z_1(t_1+s)$ y $\mathbf z_2(t_2+s)$ satisfacen el mismo problema inicial en $s=0$. La unicidad implica que coinciden donde ambas existen. Si $\mathbf p$ es un equilibrio, la solución constante $\mathbf z(s)=\mathbf p$ ya resuelve ese problema; una solución no constante no puede compartir ese estado en un tiempo finito. ◻
+:::
+
+La hipótesis se cumple si $\mathbf F$ es $C^1$. Es posible acercarse a un equilibrio *asintóticamente*, sin alcanzarlo en tiempo finito. Por ejemplo, $x(t)=x_0e^{-t}$ converge a cero.
+
+**Existencia local y global.** La regularidad garantiza existencia y unicidad *locales*, no que toda solución exista para todo $t$. En $x'=x^2$, $x(0)=1$, se obtiene $x(t)=1/(1-t)$, que diverge cuando $t\to1^-$. Para conclusiones de largo plazo debe comprobarse la existencia futura de la solución.
+
+**Para explicar en la pizarra.** ¿Qué información aporta el campo en un punto? ¿Por qué una curva que se acerca a un equilibrio no contradice la unicidad?
+
+## Curvas integrales y ecuaciones de segundo orden
+
+### Eliminar el tiempo: una operación local
+
+Si $x'(t)=f(x(t),y(t))\ne0$, el teorema de la función inversa permite usar $x$ como variable local. La regla de la cadena da 
+
+$$
+\frac{dy}{dx}=\frac{dy/dt}{dx/dt}
+ =\boxed{\frac{g(x,y)}{f(x,y)}}.
+$$
+
+ Esta ecuación no se utiliza donde $f=0$. Si $f=0$ y $g\ne0$, la trayectoria tiene tangente vertical; se puede usar $dx/dy=f/g$ localmente. En un equilibrio, ambos componentes son cero y ninguna de estas divisiones determina una dirección.
+
+::: ejemplo
+**Ejemplo 2.1** (Curvas de una silla). Para $x'=x$, $y'=-2y$, cuando $x\ne0$, 
+
+$$
+\frac{dy}{dx}=-\frac{2y}{x}.
+$$
+
+ Si también $y\ne0$, separar variables produce 
+
+$$
+\int\frac{dy}{y}=-2\int\frac{dx}{x}
+ \quad\Longrightarrow\quad \log|y|=-2\log|x|+C,
+$$
+
+ por tanto $yx^2=K$. Las soluciones temporales son 
+
+$$
+x(t)=x_0e^t,\qquad y(t)=y_0e^{-2t},
+$$
+
+ y verifican $y(t)x(t)^2=y_0x_0^2$. El eje $x=0$ debe estudiarse aparte: allí $y(t)=y_0e^{-2t}$ se acerca al origen. El eje $y=0$ también es una órbita invariante; salvo el origen, se aleja de él.
+:::
+
+Dividir por una variable puede excluir soluciones. Al obtener curvas integrales, revisar siempre las regiones donde se realizó la división y las soluciones omitidas.
+
+### De una EDO de segundo orden a dos de primer orden
+
+Si 
+
+$$
+x''=G(x,x'),
+$$
+
+ definimos $y=x'$. Entonces el sistema equivalente es 
+
+$$
+\boxed{x'=y,\qquad y'=G(x,y).}
+$$
+
+ Los datos $x(0)=x_0$, $x'(0)=v_0$ se convierten en $(x(0),y(0))=(x_0,v_0)$. Recíprocamente, una solución del sistema tiene $x''=y'=G(x,x')$.
+
+**Interpretación.** Si $x$ es posición, $y$ es velocidad. En el semiplano $y>0$, $x$ aumenta; en $y<0$, $x$ disminuye. Sobre $y=0$, el cuerpo está instantáneamente en reposo, pero puede tener aceleración no nula. Por ello, reposo instantáneo no equivale a equilibrio.
+
+::: ejemplo
+**Ejemplo 2.2** (Movimiento con amortiguamiento). De $x''+2\gamma x'+\omega^2x=0$, con $\gamma,\omega>0$, se obtiene 
+
+$$
+x'=y,\qquad y'=-\omega^2x-2\gamma y.
+$$
+
+ El único equilibrio es $(0,0)$. La misma curva geométrica de un modelo sin amortiguamiento no describe necesariamente este sistema: el término $-2\gamma y$ cambia la evolución y la energía.
+:::
+
+**Para explicar en la pizarra.** ¿Qué soluciones se pierden al dividir por $x$ en el ejemplo de la silla? ¿Es todo punto de $y=0$ un equilibrio de una ecuación de segundo orden?
+
+## Equilibrios y linealización
+
+::: definicion
+**Definición 3.1** (Equilibrio). Un estado $\mathbf z_*=(x_*,y_*)$ es un equilibrio cuando 
+
+$$
+f(x_*,y_*)=0,\qquad g(x_*,y_*)=0.
+$$
+
+ La solución que empieza allí permanece allí: $\mathbf z(t)=\mathbf z_*$.
+:::
+
+Para hallar equilibrios hay que resolver *simultáneamente* las dos ecuaciones. Anular una sola tasa no basta.
+
+::: definicion
+**Definición 3.2** (Jacobiano). Para $\mathbf F=(f,g)^{\mathsf T}$ de clase $C^1$, su Jacobiano es 
+
+$$
+J(x,y)=D\mathbf F(x,y)=
+ \begin{pmatrix} f_x&f_y\\g_x&g_y\end{pmatrix}.
+$$
+
+ Sus entradas miden la respuesta de cada tasa a pequeñas variaciones de cada variable de estado.
+:::
+
+### Deducción por Taylor
+
+Escribimos $\mathbf z=\mathbf z_*+\mathbf u$. Como $\mathbf F(\mathbf z_*)=0$, 
+
+$$
+\mathbf u'=\mathbf F(\mathbf z_*+\mathbf u)
+ =A\mathbf u+\mathbf R(\mathbf u),\qquad A=J(\mathbf z_*),
+$$
+
+ con 
+
+$$
+\lim_{\|\mathbf u\|\to0}\frac{\|\mathbf R(\mathbf u)\|}{\|\mathbf u\|}=0.
+$$
+
+ El sistema *linealizado* es $\mathbf u'=A\mathbf u$. El resto es pequeño respecto de la perturbación. Si además $\mathbf F$ es $C^2$, localmente se puede escribir $\mathbf R(\mathbf u)=O(\|\mathbf u\|^2)$.
+
+La linealización aproxima el campo cerca del equilibrio. No convierte automáticamente una solución del modelo no lineal en una fórmula exacta, ni asegura que la aproximación siga siendo válida al alejarse del equilibrio.
+
+### Autovalores y modos
+
+Buscando $\mathbf u(t)=\mathbf v e^{\lambda t}$ con $\mathbf v\ne0$, 
+
+$$
+\lambda\mathbf v e^{\lambda t}=A\mathbf v e^{\lambda t}
+ \quad\Longrightarrow\quad A\mathbf v=\lambda\mathbf v.
+$$
+
+ Los autovalores satisfacen $\det(A-\lambda I)=0$. Si hay dos autovectores linealmente independientes, 
+
+$$
+\boxed{\mathbf u(t)=c_1\mathbf v_1e^{\lambda_1t}
+ +c_2\mathbf v_2e^{\lambda_2t}.}
+$$
+
+ Para autovalores complejos, se toman combinaciones reales de los modos conjugados. Si el autovalor es repetido y solo hay un autovector independiente, se requieren modos con factores polinomiales en $t$; veremos un ejemplo.
+
+**Precisión sobre sistemas lineales.** Para $\mathbf z'=A\mathbf z+\mathbf b$, hay un único equilibrio si $A$ es invertible. Si $A$ es singular, puede haber ninguno o infinitos. Por ejemplo, $x'=-x$, $y'=0$ tiene todos los puntos $(0,y)$ como equilibrios.
+
+**Para explicar en la pizarra.** Obtenga el sistema linealizado mostrando el término que se omite. ¿Por qué no es suficiente encontrar solo un autovalor?
+
+## Estabilidad y clasificación en el plano
+
+::: definicion
+**Definición 4.1** (Estabilidad de Lyapunov). Un equilibrio $\mathbf z_*$ es estable si para cada $\varepsilon>0$ existe $\delta>0$ tal que $\|\mathbf z(0)-\mathbf z_*\|<\delta$ implica existencia para todo $t\ge0$ y $\|\mathbf z(t)-\mathbf z_*\|<\varepsilon$ para todo $t\ge0$. Es asintóticamente estable si, además, todas las soluciones suficientemente cercanas convergen a él. Es inestable si no es estable.
+:::
+
+Estable significa permanecer cerca; asintóticamente estable significa también aproximarse al equilibrio. Una silla es inestable aunque algunas de sus soluciones sí se acerquen al equilibrio.
+
+### Traza, determinante y discriminante
+
+Si $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$, entonces 
+
+$$
+\det(A-\lambda I)=(a-\lambda)(d-\lambda)-bc
+ =\lambda^2-\tau\lambda+\Delta,
+$$
+
+ con $\tau=a+d=\operatorname{tr}A$ y $\Delta=ad-bc=\det A$. Por ello, 
+
+$$
+D=\tau^2-4\Delta,\qquad
+ \lambda_{1,2}=\frac{\tau\pm\sqrt D}{2}.
+$$
+
+ La suma de autovalores es $\tau$ y su producto es $\Delta$.
+
+::: center
+  **Condición**                 **Geometría lineal**                           **Estabilidad lineal**
+  ----------------------------- ---------------------------------------------- -----------------------------
+  $\Delta<0$                    Silla: autovalores reales de signos opuestos   Inestable
+  $\Delta>0$, $D>0$, $\tau<0$   Nodo atractor                                  Asintóticamente estable
+  $\Delta>0$, $D>0$, $\tau>0$   Nodo repulsor                                  Inestable
+  $\Delta>0$, $D<0$, $\tau<0$   Espiral atractora                              Asintóticamente estable
+  $\Delta>0$, $D<0$, $\tau>0$   Espiral repulsora                              Inestable
+  $\Delta>0$, $\tau=0$          Centro: autovalores $\pm i\sqrt\Delta$         Estable; no asintótico
+  $\Delta>0$, $D=0$             Nodo con autovalor repetido                    Depende del signo de $\tau$
+  $\Delta=0$                    Al menos un autovalor cero                     Examinar el caso concreto
+:::
+
+La tabla clasifica el *sistema lineal*. En coordenadas generales, las órbitas de un centro lineal son elipses; no necesariamente círculos. En un nodo, las órbitas tampoco tienen que ser rectas: solo las direcciones propias generan modos rectilíneos.
+
+::: definicion
+**Definición 4.2** (Equilibrio hiperbólico). Un equilibrio es hiperbólico si ningún autovalor de su Jacobiano tiene parte real cero.
+:::
+
+::: teorema
+**Teorema 4.3** (Criterio de linealización, enunciado). Para un campo $C^1$, si todos los autovalores del Jacobiano tienen parte real negativa, el equilibrio no lineal es localmente asintóticamente estable. Si alguno tiene parte real positiva, es inestable. En el caso hiperbólico, la linealización describe el tipo cualitativo local de las órbitas. Si aparecen partes reales cero y ninguna positiva, este criterio no decide la estabilidad.
+:::
+
+El criterio no lineal es un resultado general que aquí se utiliza sin demostrar. Las siguientes páginas justifican la clasificación lineal y muestran por qué la advertencia sobre los casos no hiperbólicos es necesaria.
+
+## Ejemplos resueltos de clasificación lineal
+
+### Nodo atractor: curvas y estabilidad
+
+Para $x'=-x$, $y'=-2y$, el Jacobiano es $A=\operatorname{diag}(-1,-2)$. Los autovectores son $(1,0)$ y $(0,1)$, y 
+
+$$
+x(t)=x_0e^{-t},\qquad y(t)=y_0e^{-2t}.
+$$
+
+ Con la norma euclidiana, 
+
+$$
+\|\mathbf z(t)\|^2=x_0^2e^{-2t}+y_0^2e^{-4t}
+ \le e^{-2t}\|\mathbf z(0)\|^2.
+$$
+
+ Así, $\|\mathbf z(t)\|\le e^{-t}\|\mathbf z(0)\|$. Elegir $\delta=\varepsilon$ prueba estabilidad; tomar $t\to\infty$ prueba atracción. Si $x_0\ne0$, las órbitas satisfacen $y=(y_0/x_0^2)x^2$: son parábolas, además de las órbitas sobre los ejes.
+
+### Silla: una dirección estable no elimina la inestabilidad
+
+Para $x'=x$, $y'=-2y$, los autovalores son $1$ y $-2$. El eje $y$ es la dirección estable y el eje $x$ la inestable. Para demostrar inestabilidad, fije $\varepsilon=1$. Para cualquier $\delta>0$, tome $(x_0,0)$ con $0<x_0<\min(\delta,1)$. Como $x(t)=x_0e^t$, existe un tiempo en el que $x(t)>1$. Ninguna vecindad inicial garantiza permanecer dentro del radio elegido.
+
+**Conclusión.** No todas las soluciones se alejan: las que empiezan en $x=0$ convergen al origen. La inestabilidad afirma que existen perturbaciones arbitrariamente pequeñas que abandonan una vecindad fija.
+
+### Espiral atractora: contracción y giro
+
+Para 
+
+$$
+x'=-x-2y,\qquad y'=2x-y,
+ \qquad A=\begin{pmatrix}-1&-2\\2&-1\end{pmatrix},
+$$
+
+ $\tau=-2$, $\Delta=5$ y $D=-16$. Los autovalores son $-1\pm2i$. La solución es 
+
+$$
+\begin{pmatrix}x(t)\\y(t)\end{pmatrix}
+ =e^{-t}\begin{pmatrix}\cos2t&-\sin2t\\\sin2t&\cos2t\end{pmatrix}
+ \begin{pmatrix}x_0\\y_0\end{pmatrix}.
+$$
+
+ La matriz de rotación conserva la norma, por lo que $r(t)=r_0e^{-t}$. El giro es antihorario, como confirma el campo en $(1,0)$: $(-1,2)$. La parte real determina la contracción; el signo del giro debe comprobarse en el campo.
+
+### Autovalor repetido y bloque de Jordan
+
+En $x'=-x+y$, $y'=-y$, el único autovalor es $-1$ y el espacio propio es $\operatorname{span}\{(1,0)\}$. Primero $y=c_2e^{-t}$; luego 
+
+$$
+x'+x=c_2e^{-t}
+ \quad\Longrightarrow\quad (e^tx)'=c_2
+ \quad\Longrightarrow\quad x=e^{-t}(c_1+c_2t).
+$$
+
+ Aunque aparezca $t$, se tiene $te^{-t}\to0$. El equilibrio es asintóticamente estable. La matriz exponencial $e^{-t}\begin{pmatrix}1&t\\0&1\end{pmatrix}$ también es acotada para $t\ge0$, lo que garantiza estabilidad. No es correcto exigir dos autovectores para todo sistema lineal.
+
+## Límites de la linealización: un contraejemplo calculable
+
+Considérese la familia de tres sistemas 
+
+$$
+x'=-y+\sigma x(x^2+y^2),\qquad
+ y'=x+\sigma y(x^2+y^2),\qquad \sigma\in\{-1,0,1\}.
+$$ {#eq-radial}
+
+ En todos ellos, el Jacobiano en el origen es 
+
+$$
+J(0,0)=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad \lambda=\pm i.
+$$
+
+ Sin embargo, su estabilidad no lineal es diferente.
+
+### Deducción en coordenadas polares
+
+Para $r=\sqrt{x^2+y^2}>0$, 
+
+$$
+rr'=xx'+yy'
+ =x(-y+\sigma xr^2)+y(x+\sigma yr^2)=\sigma r^4,
+$$
+
+ y por tanto $r'=\sigma r^3$. La velocidad angular satisface 
+
+$$
+\theta'=\frac{xy'-yx'}{r^2}
+ =\frac{x(x+\sigma yr^2)-y(-y+\sigma xr^2)}{r^2}=1.
+$$
+
+ El ángulo aumenta igual en los tres modelos; el radio decide su comportamiento.
+
+1.  **$\sigma=0$: centro.** $r(t)=r_0$. Toda órbita no trivial es un círculo y el origen es estable, pero no asintóticamente estable.
+
+2.  **$\sigma=-1$: atracción.** Separando variables, 
+
+$$
+\int_{r_0}^{r(t)}s^{-3}\,\mathrm ds=-t
+     \quad\Longrightarrow\quad
+     \frac1{r(t)^2}=\frac1{r_0^2}+2t,
+$$
+
+ por tanto 
+
+$$
+r(t)=\frac{r_0}{\sqrt{1+2r_0^2t}}.
+$$
+
+ El radio decrece, nunca supera $r_0$ y converge a cero. El origen es asintóticamente estable; la aproximación ocurre con giro, pero no con decaimiento exponencial.
+
+3.  **$\sigma=1$: repulsión.** El mismo cálculo produce 
+
+$$
+r(t)=\frac{r_0}{\sqrt{1-2r_0^2t}},\qquad
+     0\le t<\frac1{2r_0^2}.
+$$
+
+ Todo radio inicial positivo crece y sale de cualquier vecindad fija antes de su tiempo de divergencia. El origen es inestable.
+
+**Qué demuestra el ejemplo.** El mismo Jacobiano, con autovalores puramente imaginarios, es compatible con un centro, un equilibrio atractivo o uno repulsivo. Los términos cúbicos que desaparecen al linealizar son precisamente los que deciden la evolución radial.
+
+**Regla de trabajo.** Ante un equilibrio no hiperbólico, buscar información adicional: una cantidad conservada, una función de Lyapunov, signos exactos o una reducción apropiada. No concluir "centro no lineal" solo a partir de $\lambda=\pm i\beta$.
+
+**Para explicar en la pizarra.** ¿Por qué un término de orden cúbico puede decidir la estabilidad si es pequeño cerca del origen? Explique usando $r'=\sigma r^3$.
+
+## El péndulo: modelo, equilibrios y energía
+
+### Origen del modelo y cambio de variables
+
+Para un péndulo ideal de longitud $\ell$, sin rozamiento, el balance de momentos da 
+
+$$
+m\ell^2\frac{d^2\theta}{dt_{\rm fis}^2}=-mg\ell\sin\theta.
+$$
+
+ Con el tiempo adimensional $t=\sqrt{g/\ell}\,t_{\rm fis}$, resulta 
+
+$$
+\theta''+\sin\theta=0.
+$$
+
+ El modelo supone longitud fija, masa puntual y ausencia de resistencia. Definiendo $x=\theta$, $y=\theta'$, se obtiene el sistema del libro: 
+
+$$
+\boxed{x'=y,\qquad y'=-\sin x.}
+$$ {#eq-pendulo}
+
+ Aquí $y$ es velocidad angular respecto del tiempo adimensional.
+
+### Equilibrios y Jacobiano
+
+Las ecuaciones $y=0$ y $\sin x=0$ dan $(x_*,y_*)=(n\pi,0)$, $n\in\mathbb Z$. Además, 
+
+$$
+J(x,y)=\begin{pmatrix}0&1\\-\cos x&0\end{pmatrix}.
+$$
+
+
+
+-   En $(2k\pi,0)$, $A=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$ y $\lambda=\pm i$. La linealización es un centro, pero todavía debemos justificar el centro del modelo no lineal.
+
+-   En $((2k+1)\pi,0)$, $A=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ y $\lambda=\pm1$. Son sillas hiperbólicas. Para $\lambda=-1$, un autovector es $(1,-1)$; para $\lambda=1$, es $(1,1)$.
+
+Los estados pares corresponden al péndulo colgando hacia abajo; los impares, al péndulo vertical hacia arriba.
+
+::: definicion
+**Definición 7.1** (Integral primera). Una función $H(x,y)$ es una integral primera si permanece constante a lo largo de cada solución: $dH(x(t),y(t))/dt=0$.
+:::
+
+::: proposicion
+**Proposición 7.2** (Energía del péndulo). La función 
+
+$$
+\boxed{H(x,y)=\frac{y^2}{2}+1-\cos x}
+$$
+
+ es una integral primera de @eq-pendulo.
+:::
+
+::: proof
+ Por la regla de la cadena, 
+
+$$
+\frac{dH}{dt}=H_xx'+H_yy'
+ =\sin x\,y+y(-\sin x)=0.
+$$
+
+ En consecuencia, $H(x(t),y(t))=E=H(x_0,y_0)$. ◻
+:::
+
+La energía da una relación *exacta* entre $x$ y $y$: $y^2=2(E-1+\cos x)$. A diferencia de la linealización, permite estudiar regiones completas del plano.
+
+## Retrato de fase exacto del péndulo
+
+### Oscilaciones, separatrices y rotaciones
+
+Como $H\ge0$, distinguimos cuatro casos:
+
+1.  **$E=0$:** únicamente los equilibrios $(2k\pi,0)$.
+
+2.  **$0<E<2$:** las componentes del nivel $H=E$ rodean un equilibrio inferior y son curvas cerradas. En la celda centrada en cero, los extremos angulares son $x=\pm a$, donde $\cos a=1-E$ y $0<a<\pi$. Son oscilaciones periódicas.
+
+3.  **$E=2$:** además de las sillas, aparecen las separatrices. Para $-\pi\le x\le\pi$, 
+
+$$
+y=\pm\sqrt{2(1+\cos x)}=\pm2\cos(x/2).
+$$
+
+ La rama superior se recorre hacia la derecha, pues $x'=y>0$; la inferior, hacia la izquierda. Las sillas se alcanzan solo asintóticamente. Estas órbitas separan oscilaciones de rotaciones.
+
+4.  **$E>2$:** $y^2\ge2(E-2)>0$. El signo de $y$ permanece fijo y el ángulo aumenta o disminuye continuamente. Son rotaciones; en el plano con $x\in\mathbb R$, el ángulo no queda acotado.
+
+::: center
+![Retrato de fase del péndulo: oscilaciones, separatrices y rotaciones](/assets/notes/pendulum-phase.png){.note-diagram}
+
+Niveles de energía: oscilaciones (azul), separatrices (rojo), rotaciones (gris).
+:::
+
+**Plano y cilindro.** En el plano, las separatrices conectan sillas vecinas: son órbitas *heteroclínicas*. Si identificamos $x$ con $x+2\pi$, el estado angular vive en un cilindro; las sillas vecinas representan el mismo estado y esas conexiones se interpretan como *homoclínicas*.
+
+**Direcciones propias frente a separatrices.** Cerca de $(\pi,0)$, las rectas $y=\pm(x-\pi)$ son las tangentes de las ramas estable e inestable. Las separatrices del sistema no lineal son curvas, no esas rectas completas.
+
+## Estabilidad y período del péndulo: demostraciones
+
+::: proposicion
+**Proposición 9.1** (El equilibrio inferior es un centro estable). Cada equilibrio $(2k\pi,0)$ del péndulo es estable y no es asintóticamente estable. Las órbitas suficientemente cercanas y no constantes son periódicas.
+:::
+
+::: proof
+ Basta trabajar cerca de $(0,0)$. Allí $H(0,0)=0$ y $H(x,y)>0$ para $(x,y)\ne(0,0)$ en una vecindad que no contiene otros mínimos. Fije un radio pequeño $\varepsilon<\pi$. La circunferencia $x^2+y^2=\varepsilon^2$ es compacta y no contiene ceros de $H$; por ello, 
+
+$$
+m_\varepsilon=\min_{x^2+y^2=\varepsilon^2}H(x,y)>0.
+$$
+
+ Por continuidad, existe $\delta<\varepsilon$ tal que $\|(x_0,y_0)\|<\delta$ implica $H(x_0,y_0)<m_\varepsilon$. La conservación impide que esa solución cruce la circunferencia. Permanece en una región compacta donde el campo es suave, por lo que continúa para todo tiempo futuro. Esto demuestra estabilidad.
+
+Si $H(x_0,y_0)=E>0$, la solución no puede converger al origen: por continuidad, esa convergencia implicaría $H\to0$, contradiciendo $H=E$. Para $0<E<2$, cada componente de $H=E$ es una curva cerrada regular sin equilibrios. El campo es tangente y no nulo; recorre la curva en un tiempo finito y vuelve al punto inicial. Así se obtiene una familia de órbitas periódicas y un centro no lineal. ◻
+:::
+
+### Deducción del período
+
+Si la amplitud angular es $a\in(0,\pi)$, en el extremo $y=0$ y $E=1-\cos a$. La conservación da 
+
+$$
+|x'|=|y|=\sqrt{2(\cos x-\cos a)}.
+$$
+
+ Por simetría, un cuarto del período corresponde al recorrido de $0$ a $a$: 
+
+$$
+\boxed{T(a)=4\int_0^a\frac{dx}{\sqrt{2(\cos x-\cos a)}}.}
+$$
+
+ No es necesario resolver explícitamente $x(t)$ para deducir esta fórmula. Con $k=\sin(a/2)$ y $\sin(x/2)=k\sin\phi$, 
+
+$$
+\cos x-\cos a=2k^2\cos^2\phi,\qquad
+ dx=\frac{2k\cos\phi}{\sqrt{1-k^2\sin^2\phi}}\,\mathrm d\phi,
+$$
+
+ por lo que 
+
+$$
+T(a)=4\int_0^{\pi/2}\frac{d\phi}{\sqrt{1-k^2\sin^2\phi}}.
+$$
+
+ Cuando $a\to0$, $k\to0$ y $T\to2\pi$, el período del modelo lineal $x''+x=0$. Cuando $a\to\pi$, $k\to1$ y la integral diverge: el integrando límite es $1/\cos\phi$. La separatriz no es una oscilación periódica de período finito. En unidades físicas, $T_{\rm fis}=\sqrt{\ell/g}\,T$.
+
+**Para explicar en la pizarra.** ¿Qué parte del argumento demuestra estabilidad y qué parte excluye la estabilidad asintótica? ¿Por qué el período aumenta cerca de la separatriz?
+
+## Nulclinas y análisis de signos
+
+::: definicion
+**Definición 10.1** (Nulclinas). En $x'=f(x,y)$, $y'=g(x,y)$, la nulclina de $x$ es el conjunto $N_x=\{f=0\}$ y la nulclina de $y$ es $N_y=\{g=0\}$. Sus intersecciones son exactamente los equilibrios.
+:::
+
+La palabra "curva" es útil en ejemplos regulares, pero una nulclina puede tener varias ramas o ser un conjunto más complicado. Si $\nabla f\ne0$, el teorema de la función implícita permite describir $f=0$ localmente como una curva regular.
+
+::: proposicion
+**Proposición 10.2** (Dirección sobre las nulclinas). En $N_x$ fuera de los equilibrios, el campo es vertical. En $N_y$ fuera de los equilibrios, es horizontal.
+:::
+
+::: proof
+ En $N_x$, $\mathbf F=(0,g)$ y $g\ne0$, de modo que la velocidad tiene solo componente vertical. En $N_y$, $\mathbf F=(f,0)$ y $f\ne0$, de modo que tiene solo componente horizontal. En una intersección, $\mathbf F=0$ y no hay un vector tangente no nulo determinado por el campo. ◻
+:::
+
+::: center
+    **Signos**      **Variación de estados**       **Dirección**
+  -------------- ------------------------------ --------------------
+   $f>0$, $g>0$     $x$ aumenta, $y$ aumenta      derecha y arriba
+   $f>0$, $g<0$    $x$ aumenta, $y$ disminuye     derecha y abajo
+   $f<0$, $g>0$    $x$ disminuye, $y$ aumenta    izquierda y arriba
+   $f<0$, $g<0$   $x$ disminuye, $y$ disminuye   izquierda y abajo
+:::
+
+Estos signos describen el movimiento mientras la trayectoria permanece en la región indicada; al cruzar una nulclina puede cambiar una componente de la dirección. No toda nulclina necesariamente separa signos: en $x'=x^2$, la tasa es positiva a ambos lados de $x=0$.
+
+### Una nulclina no es necesariamente una órbita
+
+En $x'=y$, $y'=-x$, las nulclinas son $y=0$ y $x=0$. Las órbitas no triviales son círculos y cruzan ambos ejes. En $(1,0)$, por ejemplo, el campo $(0,-1)$ atraviesa la nulclina $y=0$; no permanece en ella.
+
+**Criterio de invariancia.** Si una curva regular se escribe $q(x,y)=0$, para que una trayectoria permanezca sobre ella es necesario que el campo sea tangente: 
+
+$$
+\frac{d}{dt}q(x(t),y(t))=\nabla q\cdot\mathbf F=0
+ \quad\text{sobre la curva}.
+$$
+
+ Una nulclina $f=0$ no cumple automáticamente $\nabla f\cdot\mathbf F=0$. Bajo las hipótesis regulares y de unicidad apropiadas, la tangencia a lo largo de toda la curva permite probar su invariancia.
+
+**Para explicar en la pizarra.** Explique la diferencia entre "$x'=0$ en este instante" y "$x(t)$ permanece constante". Dé un punto concreto del oscilador donde se distingan.
+
+## Ejemplo del libro: parábola y circunferencia
+
+Estudiemos el sistema (1.40) de Witelski y Bowen: 
+
+$$
+\boxed{x'=y-\frac{x^2}{\sqrt2},\qquad y'=x^2+y^2-4.}
+$$ {#eq-libro}
+
+
+
+### Nulclinas y equilibrios: cálculo exacto
+
+Las nulclinas son 
+
+$$
+N_x:\ y=\frac{x^2}{\sqrt2},\qquad
+ N_y:\ x^2+y^2=4.
+$$
+
+ Para intersectarlas, sea $s=x^2\ge0$. Sustituyendo $y=s/\sqrt2$, 
+
+$$
+s+\frac{s^2}{2}=4
+ \quad\Longleftrightarrow\quad s^2+2s-8=(s+4)(s-2)=0.
+$$
+
+ Solo $s=2$ es admisible. Así, los equilibrios son 
+
+$$
+P_+=(\sqrt2,\sqrt2),\qquad P_-=(-\sqrt2,\sqrt2).
+$$
+
+
+
+### Signos en las regiones
+
+Por encima de la parábola, $f>0$; por debajo, $f<0$. Dentro de la circunferencia, $g<0$; fuera, $g>0$. Se combinan ambos criterios:
+
+::: center
+  **Respecto de la parábola**   **Respecto del círculo**   **Movimiento**
+  ----------------------------- -------------------------- --------------------
+  Encima                        Dentro                     derecha y abajo
+  Encima                        Fuera                      derecha y arriba
+  Debajo                        Dentro                     izquierda y abajo
+  Debajo                        Fuera                      izquierda y arriba
+:::
+
+Sobre la parábola el campo es vertical, excepto en $P_\pm$. Sobre el círculo es horizontal, excepto en esos mismos equilibrios.
+
+::: center
+![Nulclinas y direcciones del campo vectorial](/assets/notes/nullclines.png){.note-diagram}
+
+Nulclinas exactas y direcciones representativas; no son trayectorias calculadas.
+:::
+
+### Clasificación de los dos equilibrios
+
+El Jacobiano del sistema es 
+
+$$
+J(x,y)=\begin{pmatrix}-\sqrt2x&1\\2x&2y\end{pmatrix}.
+$$
+
+ **En $P_+=(\sqrt2,\sqrt2)$.** 
+
+$$
+A_+=\begin{pmatrix}-2&1\\2\sqrt2&2\sqrt2\end{pmatrix},\qquad
+ \tau_+=2\sqrt2-2,\qquad \Delta_+=-6\sqrt2<0.
+$$
+
+ El determinante negativo demuestra que es una silla. Para hallar los autovalores, 
+
+$$
+D_+=(2\sqrt2-2)^2+24\sqrt2=12+16\sqrt2,
+$$
+
+ 
+
+$$
+\boxed{\lambda_{\pm}=\sqrt2-1\pm\sqrt{3+4\sqrt2}.}
+$$
+
+ Uno es positivo y el otro negativo. De la primera fila de $(A_+-\lambda I)\mathbf v=0$ se obtiene 
+
+$$
+(-2-\lambda)v_x+v_y=0
+ \quad\Longrightarrow\quad
+ \mathbf v_\lambda=\begin{pmatrix}1\\2+\lambda\end{pmatrix}.
+$$
+
+ Las tangentes estable e inestable en $P_+$ son 
+
+$$
+y-\sqrt2=(2+\lambda_-)(x-\sqrt2),\qquad
+ y-\sqrt2=(2+\lambda_+)(x-\sqrt2),
+$$
+
+ respectivamente. Estas son direcciones *locales*; no afirmamos que sean órbitas rectas del modelo no lineal.
+
+**En $P_-=(-\sqrt2,\sqrt2)$.** 
+
+$$
+A_-=\begin{pmatrix}2&1\\-2\sqrt2&2\sqrt2\end{pmatrix},\qquad
+ \tau_-=2+2\sqrt2,\qquad \Delta_-=6\sqrt2>0.
+$$
+
+ El discriminante es 
+
+$$
+D_-=(2+2\sqrt2)^2-24\sqrt2=12-16\sqrt2<0.
+$$
+
+ Así, 
+
+$$
+\boxed{\lambda_{1,2}=1+\sqrt2\pm i\sqrt{4\sqrt2-3}.}
+$$
+
+ Su parte real es positiva: $P_-$ es una espiral repulsora. Para comprobar el sentido de giro, tome una perturbación $(u,v)=(h,0)$, $h>0$, respecto de $P_-$. La componente vertical lineal es $v'=-2\sqrt2h<0$; en el extremo derecho de una órbita local se mueve hacia abajo. El giro local es horario.
+
+**Síntesis del razonamiento.** Las nulclinas localizan los equilibrios y orientan el movimiento por regiones; el Jacobiano clasifica localmente la silla y la espiral. Esta información no constituye, por sí sola, una demostración de todo el retrato global ni de existencia para todo tiempo.
+
+**Para explicar en la pizarra.** Repita los determinantes sin usar aproximaciones decimales. ¿Cómo identifica la dirección estable de la silla y el sentido del giro de la espiral?
+
+## Ejercicio integrador 1.7: energía y órbitas periódicas
+
+El libro propone estudiar 
+
+$$
+x''=x-\frac{x^2}{2}.
+$$
+
+ Presentamos su análisis y, en la página siguiente, la comparación con el modelo lineal por tramos.
+
+### Sistema, equilibrios y estabilidad
+
+Con $y=x'$, 
+
+$$
+x'=y,\qquad y'=x-\frac{x^2}{2}.
+$$
+
+ Los equilibrios cumplen $y=0$ y $x(1-x/2)=0$, por tanto son $(0,0)$ y $(2,0)$. El Jacobiano es 
+
+$$
+J(x,y)=\begin{pmatrix}0&1\\1-x&0\end{pmatrix}.
+$$
+
+ En $(0,0)$, $\lambda=\pm1$: es una silla. En $(2,0)$, $\lambda=\pm i$: la linealización es un centro y hace falta un argumento adicional.
+
+### Integral primera y centro no lineal
+
+Defina 
+
+$$
+V(x)=-\frac{x^2}{2}+\frac{x^3}{6},\qquad
+ H(x,y)=\frac{y^2}{2}+V(x).
+$$
+
+ Entonces 
+
+$$
+H'=yy'+V'(x)x'
+ =y\left(x-\frac{x^2}{2}\right)
+ +\left(-x+\frac{x^2}{2}\right)y=0.
+$$
+
+ Como $V'(2)=0$ y $V''(2)=1>0$, $H$ tiene un mínimo estricto en $(2,0)$, con $H(2,0)=-2/3$. El mismo argumento de conservación usado para el péndulo prueba estabilidad y, mediante las curvas cerradas cercanas, un centro no lineal. No es asintóticamente estable.
+
+### Extremos, amplitud y rango de energía
+
+En un extremo de $x(t)$, $y=x'=0$. Por ello, 
+
+$$
+V(x)=E\quad\Longleftrightarrow\quad \boxed{x^3-3x^2-6E=0.}
+$$
+
+ Para $-2/3<E<0$, existen dos raíces positivas: $x_{\min}\in(0,2)$ y $x_{\max}\in(2,3)$. La componente cerrada del nivel de energía que rodea $(2,0)$ produce oscilaciones entre esos extremos. Existe otra rama del mismo nivel en $x<0$; no debe confundirse con la componente periódica.
+
+La amplitud del ejercicio es $A=x_{\max}-x_{\min}$, distinta de la amplitud angular unilateral del péndulo. Cuando $E\downarrow-2/3$, ambos extremos tienden a $2$ y $A\to0$. Cuando $E\uparrow0$, $x_{\min}\to0$, $x_{\max}\to3$ y $A\to3$.
+
+**Cuidado con el caso límite.** Para $E=0$, la curva que llega a $x=3$ es una órbita homoclínica de la silla $(0,0)$: se aproxima a ella cuando $t\to\pm\infty$. No es una oscilación de período finito. El valor $3$ es el supremo de las amplitudes periódicas, no una amplitud periódica alcanzada.
+
+### Período por cuadratura
+
+De $y^2=2E+x^2-x^3/3$ y $dt=dx/y$ se deduce 
+
+$$
+\boxed{P(E)=2\int_{x_{\min}}^{x_{\max}}
+ \frac{dx}{\sqrt{2E+x^2-x^3/3}},\qquad -\frac23<E<0.}
+$$
+
+ El factor $2$ reúne el recorrido de ida y vuelta. Cuando $E\uparrow0$, el integrando cerca de $x=0$ se comporta como $1/x$ y el período diverge.
+
+### Modelo lineal por tramos: solución exacta
+
+El apartado final del ejercicio propone 
+
+$$
+x''=f(x),\qquad f(x)=
+ \begin{cases}x,&x<1,\\2-x,&x\ge1.\end{cases}
+$$
+
+ La función $f$ es continua y Lipschitz, aunque su derivada cambia en $x=1$. Los equilibrios siguen siendo $x=0$ y $x=2$: cerca de ellos, $f'(0)=1$ y $f'(2)=-1$, así que se conservan la silla y el centro.
+
+**Primer tramo.** Comience en $x(0)=m$, $x'(0)=0$, con $0<m<1$. Mientras $x<1$, 
+
+$$
+x_A''=x_A\quad\Longrightarrow\quad
+ x_A(t)=m\cosh t,\qquad x_A'(t)=m\sinh t.
+$$
+
+ El instante de cruce $t_c$ satisface $m\cosh t_c=1$, es decir, 
+
+$$
+t_c=\operatorname{arcosh}(1/m),\qquad
+ v_c=m\sinh t_c=\sqrt{1-m^2}.
+$$
+
+
+
+**Segundo tramo.** Sea $t_m=P/2$ el instante del máximo $M>2$. La solución que satisface $x_B(t_m)=M$, $x_B'(t_m)=0$ es 
+
+$$
+x_B(t)=2+(M-2)\cos(t-t_m),\qquad
+ x_B'(t)=-(M-2)\sin(t-t_m).
+$$
+
+ Con $\alpha=t_m-t_c\in(\pi/2,\pi)$, las condiciones de continuidad de posición y velocidad en el cruce son 
+
+$$
+1=2+(M-2)\cos\alpha,\qquad
+ v_c=(M-2)\sin\alpha.
+$$
+
+ Elevar al cuadrado y sumar da 
+
+$$
+(M-2)^2=1+v_c^2=2-m^2,
+ \qquad\boxed{M=2+\sqrt{2-m^2}}.
+$$
+
+ Además, $\cos\alpha=-1/\sqrt{2-m^2}$ y 
+
+$$
+\boxed{P=2\left[\operatorname{arcosh}(1/m)
+ +\arccos\left(-\frac1{\sqrt{2-m^2}}\right)\right].}
+$$
+
+ En $[0,t_c]$ se utiliza $x_A$; en $[t_c,P/2]$, $x_B$. La segunda mitad se obtiene por reflexión $x(t)=x(P-t)$, y luego se extiende periódicamente. Los valores de $x$, $x'$ coinciden en los cruces; también coincide $x''$, pues ambos lados dan $f(1)=1$.
+
+**Órbitas que no cruzan $x=1$.** Si la amplitud respecto de $x=2$ es $B\in(0,1]$, basta $x(t)=2+B\cos(t-t_0)$ y $P=2\pi$. Cuando $m\to1^-$, la fórmula anterior también da $P\to2\pi$; cuando $m\to0^+$, $P\to\infty$.
+
+**Comparación de modelos.** Tener los mismos equilibrios y la misma clasificación local no significa tener iguales amplitudes o períodos globales. Aquí el máximo límite es $2+\sqrt2$; en el modelo polinómico era $3$. La aproximación por tramos permite soluciones exactas, pero cambia las propiedades cuantitativas globales.
+
+**Para explicar en la pizarra.** ¿Por qué hay que igualar tanto posición como velocidad? ¿Qué información se preserva al reemplazar la fuerza por una función lineal por tramos?
+
+## Nuevas direcciones I: dimensión y memoria
+
+La sección 1.6 del libro presenta extensiones de las ecuaciones de tasas. Las siguientes formulaciones son ejemplos pedagógicos complementarios: introducen la estructura de cada familia sin desarrollar su teoría avanzada.
+
+### Sistemas de dimensión mayor
+
+Un modelo con $n$ variables tiene la forma 
+
+$$
+\mathbf z'=\mathbf F(\mathbf z),\qquad \mathbf z\in\mathbb R^n.
+$$
+
+ Los equilibrios satisfacen $\mathbf F(\mathbf z_*)=0$ y el Jacobiano es una matriz $n\times n$. El criterio de estabilidad mediante las partes reales de sus autovalores se extiende a esta dimensión.
+
+::: ejemplo
+**Ejemplo 13.1** (Tres variables). En $x'=-x$, $y'=-2y$, $z'=z$, la solución es 
+
+$$
+(x,y,z)=(x_0e^{-t},y_0e^{-2t},z_0e^t).
+$$
+
+ El origen es inestable por el autovalor positivo. Sin embargo, toda solución con $z_0=0$ converge al origen. El subespacio estable tiene dimensión $2$ y el inestable, dimensión $1$.
+:::
+
+La unicidad sigue impidiendo cruces de órbitas distintas en el espacio de estados. Pero las *proyecciones* sobre un plano pueden cruzarse: dos estados con las mismas coordenadas $(x,y)$ y diferentes valores de $z$ no son el mismo estado. Además, en dimensión tres una curva no actúa en general como barrera que separe regiones, como puede hacerlo una curva cerrada en el plano.
+
+### Ecuaciones con retardo
+
+::: definicion
+**Definición 13.2** (Modelo con retardo). Una ecuación con retardo contiene valores anteriores del estado, por ejemplo 
+
+$$
+x'(t)=-a\,x(t-\tau),\qquad a>0,\quad\tau>0.
+$$
+
+ Aquí $\tau$ es un tiempo de memoria; para iniciar el modelo se prescribe una función historia $x(t)=\varphi(t)$ en $[-\tau,0]$, no solo un número $x(0)$.
+:::
+
+Puede representar una respuesta reguladora que actúa después de un tiempo de procesamiento. Su tasa actual depende de lo ocurrido antes y no únicamente del estado actual.
+
+::: ejemplo
+**Ejemplo 13.3** (Primer intervalo por integración exacta). Si $\varphi(t)=x_0$ en $[-\tau,0]$, para $0\le t\le\tau$ tenemos $x(t-\tau)=x_0$, así que 
+
+$$
+x'=-ax_0\quad\Longrightarrow\quad x(t)=x_0(1-at).
+$$
+
+ Para $\tau\le t\le2\tau$, usamos esa expresión anterior: 
+
+$$
+x'=-ax_0\bigl[1-a(t-\tau)\bigr],
+$$
+
+ 
+
+$$
+x(t)=x_0(1-a\tau)-ax_0(t-\tau)
+ +\frac{a^2x_0}{2}(t-\tau)^2.
+$$
+
+ La integración por intervalos es analítica. Estas fórmulas no bastan para concluir estabilidad de largo plazo. Si $x$ representa una cantidad no negativa, se debe comprobar que la ley con retardo respeta esa restricción; este ejemplo lineal no garantiza positividad para toda historia.
+:::
+
+**Para explicar en la pizarra.** Explique por qué dos historias con el mismo $x(0)$ pueden producir tasas iniciales diferentes.
+
+## Nuevas direcciones II: tiempo discreto y aleatoriedad
+
+### Mapas en tiempo discreto
+
+::: definicion
+**Definición 14.1** (Ecuación en diferencias). Un modelo $x_{n+1}=F(x_n)$ actualiza el estado en instantes separados. Un punto fijo satisface $F(x_*)=x_*$.
+:::
+
+Para una perturbación $u_n=x_n-x_*$, Taylor da 
+
+$$
+u_{n+1}=F'(x_*)u_n+o(|u_n|).
+$$
+
+ El modelo lineal tiene $u_n=q^nu_0$, con $q=F'(x_*)$. Por eso, $|q|<1$ indica atracción y $|q|>1$ indica inestabilidad. Si $|q|=1$, este criterio no decide.
+
+::: proposicion
+**Proposición 14.2** (Atracción local de un punto fijo). Si $F$ es $C^1$ y $|F'(x_*)|<1$, el punto fijo es localmente asintóticamente estable.
+:::
+
+::: proof
+ Por continuidad, existe una vecindad donde $|F'|\le q<1$. El teorema del valor medio implica $|F(x)-F(x_*)|\le q|x-x_*|$. Para datos suficientemente cercanos, cada iteración permanece en esa vecindad y $|x_n-x_*|\le q^n|x_0-x_*|\to0$. ◻
+:::
+
+::: ejemplo
+**Ejemplo 14.3** (Mapa logístico). En $x_{n+1}=r x_n(1-x_n)$, $r>0$, los puntos fijos son $0$ y, si $r\ne0$, $1-1/r$. El segundo es positivo para $r>1$. Como $F'(x)=r(1-2x)$, 
+
+$$
+F'(0)=r,\qquad F'(1-1/r)=2-r.
+$$
+
+ El origen es atractivo para $0<r<1$. El punto fijo positivo es atractivo cuando $|2-r|<1$, es decir, $1<r<3$. En $r=1,3$ se necesita otro análisis. Si $0<r\le4$, $F$ lleva $[0,1]$ a $[0,1]$, pues su máximo allí es $r/4$. Una recurrencia no se clasifica con el signo de $F'$: se usa su *módulo*.
+:::
+
+### Modelos estocásticos: introducción conceptual
+
+En un modelo determinista, un estado inicial y las ecuaciones fijan una solución. Si existen fluctuaciones relevantes no descritas por las variables, puede incorporarse una contribución aleatoria. Una forma ilustrativa es 
+
+$$
+dX_t=-aX_t\,dt+\sigma\,dW_t,\qquad a>0,\quad\sigma\ge0,
+$$
+
+ donde $W_t$ es un movimiento browniano: sus incrementos sobre intervalos disjuntos son independientes, tienen media cero y varianza igual a la longitud del intervalo. El término $-aX_t$ representa retorno hacia cero y $\sigma$ controla la intensidad de la fluctuación.
+
+La notación $dW_t$ requiere cálculo estocástico: no representa la derivada de una función ordinaria suave. Para intervalos cortos, la contribución aleatoria tiene escala $\sigma\sqrt{\Delta t}$, frente a la escala $\Delta t$ de la contribución determinista. Si $\sigma=0$, recuperamos $X'=-aX$; si $\sigma>0$, se estudian distribuciones y trayectorias aleatorias, no una sola curva determinista. Un modelo para poblaciones o concentraciones debe además respetar su dominio físico.
+
+**Para explicar en la pizarra.** ¿Por qué $F'(x_*)=-2$ no da un punto fijo estable? ¿Qué significa conocer una distribución de estados en vez de un estado futuro único?
+
+## Nuevas direcciones III: poblaciones estructuradas
+
+::: definicion
+**Definición 15.1** (Densidad poblacional por edad). Sea $n(a,t)$ una densidad respecto de la edad $a\ge0$. La cantidad de individuos con edades entre $a_1$ y $a_2$ es $\int_{a_1}^{a_2}n(a,t)\,\mathrm da$, y la población total es $N(t)=\int_0^\infty n(a,t)\,\mathrm da$.
+:::
+
+Una sola variable $N(t)$ puede ser insuficiente: dos poblaciones con el mismo total pueden tener proporciones muy distintas de individuos jóvenes y adultos, y por tanto distintas tasas de nacimiento.
+
+### Balance y ecuación de transporte
+
+Si la edad avanza a razón de una unidad por unidad de tiempo y $\mu(a)$ es la mortalidad por individuo, un modelo es 
+
+$$
+\boxed{\frac{\partial n}{\partial t}+\frac{\partial n}{\partial a}
+ =-\mu(a)n(a,t).}
+$$
+
+ El término $\partial_an$ describe el transporte hacia edades mayores. La entrada en edad cero se modela mediante 
+
+$$
+\boxed{n(0,t)=\int_0^\infty b(a)n(a,t)\,\mathrm da,}
+$$
+
+ donde $b(a)$ es una tasa de nacimiento efectiva. Además, se prescribe la distribución inicial $n(a,0)=n_0(a)$.
+
+**Deducción local.** A lo largo de una cohorte que envejece, $a(t)=a_0+t$ y 
+
+$$
+\frac{d}{dt}n(a_0+t,t)=\partial_t n+\partial_a n
+ =-\mu(a_0+t)n.
+$$
+
+ Separar variables da, para las cohortes procedentes de la distribución inicial, 
+
+$$
+\boxed{n(a,t)=n_0(a-t)
+ \exp\left[-\int_{a-t}^{a}\mu(s)\,\mathrm ds\right],\qquad a\ge t.}
+$$
+
+ Para $a<t$, el valor depende de los nacimientos en $t-a$ y de la supervivencia posterior. Así, la estructura necesita una condición inicial y una condición de entrada.
+
+::: proposicion
+**Proposición 15.2** (Balance de la población total). Si las integrales convergen, se puede derivar bajo el signo integral y $n(a,t)\to0$ cuando $a\to\infty$, entonces 
+
+$$
+N'(t)=\int_0^\infty [b(a)-\mu(a)]n(a,t)\,\mathrm da.
+$$
+
+
+:::
+
+::: proof
+ Integrando la ecuación de transporte, 
+
+$$
+N'=-\int_0^\infty\partial_a n\,\mathrm da
+ -\int_0^\infty\mu(a)n\,\mathrm da
+ =n(0,t)-\int_0^\infty\mu(a)n\,\mathrm da.
+$$
+
+ Sustituir la condición de nacimientos proporciona el resultado. ◻
+:::
+
+Si $b(a)=b_0$ y $\mu(a)=\mu_0$ son constantes, $N'=(b_0-\mu_0)N$. Cuando las tasas dependen de la edad, generalmente no se obtiene una ecuación cerrada para $N$ sin información adicional sobre $n$.
+
+**Para explicar en la pizarra.** ¿En qué paso del balance aparece la condición de nacimiento? ¿Por qué conocer únicamente $N(t)$ no suele determinar $N'(t)$?
+
+## Guía para la exposición y comprobación del aprendizaje
+
+### Procedimiento para estudiar un sistema plano
+
+1.  Definir las variables, las unidades, el dominio y los supuestos del modelo.
+
+2.  Escribir las ecuaciones y buscar simultáneamente los equilibrios.
+
+3.  Calcular el Jacobiano y evaluarlo en cada equilibrio.
+
+4.  Obtener traza, determinante, autovalores y, cuando proceda, autovectores.
+
+5.  Clasificar el sistema lineal y verificar si el criterio permite una conclusión no lineal.
+
+6.  Hallar nulclinas y signos; distinguir tangentes locales de curvas invariantes.
+
+7.  Buscar integrales primeras o argumentos adicionales antes de afirmar un comportamiento global.
+
+8.  Interpretar cada resultado en el contexto y revisar los casos excluidos por divisiones o hipótesis.
+
+### Preguntas de cierre con respuestas orientadoras
+
+1.  **Un Jacobiano tiene traza $-3$ y determinante $2$. ¿Qué resulta?**\
+    $D=9-8=1$ y $\lambda=(-3\pm1)/2=-1,-2$: nodo atractor. Para un campo $C^1$, el equilibrio no lineal es localmente asintóticamente estable.
+
+2.  **¿Determinante negativo permite una espiral?**\
+    No. El producto de autovalores es negativo, por lo que son reales con signos opuestos: silla. Además, $D=\tau^2-4\Delta>0$.
+
+3.  **¿$\lambda=\pm3i$ demuestra un centro no lineal?**\
+    No. Demuestra un centro del sistema lineal. El modelo original requiere otro argumento; la familia @eq-radial muestra las alternativas.
+
+4.  **En el péndulo, $(0,1)$ está en una nulclina. ¿Es equilibrio?**\
+    Pertenece a $N_y$ porque $-\sin0=0$, pero $x'=1$. El campo es $(1,0)$: tangente horizontal y movimiento hacia la derecha.
+
+5.  **Para @eq-libro, ¿qué dirección tiene el campo en $(0,1)$?**\
+    $f=1$, $g=-3$: hacia la derecha y abajo. Está encima de la parábola y dentro del círculo.
+
+6.  **¿Por qué la silla del péndulo no puede alcanzarse desde otro estado en tiempo finito?**\
+    La unicidad haría coincidir la solución con la constante del equilibrio. La órbita separatriz se aproxima asintóticamente.
+
+7.  **¿Qué dato adicional exige un modelo con retardo?**\
+    Una función historia sobre el intervalo de memoria. Un número inicial no determina todos los valores que aparecen en la tasa.
+
+8.  **¿Qué distingue los criterios continuo y discreto?**\
+    En tiempo continuo se examinan las partes reales de los autovalores; en un mapa escalar, el módulo de la derivada en el punto fijo. Corresponden a $e^{\lambda t}$ y $q^n$, respectivamente.
+
+### Cómo continuar la explicación de otro estudiante
+
+Al asumir el turno, identifique el modelo, el objetivo del cálculo y el último paso justificado. Declare las hipótesis antes de usar un resultado; si detecta un error, corríjalo y continúe desde la expresión correcta. Una buena exposición conecta cada cálculo con lo que permite concluir.
+
+## Referencias
+
+Witelski, T. y Bowen, M. (2015). *Methods of Mathematical Modelling: Continuous Systems and Differential Equations*. Springer International Publishing. Capítulo 1: sección 1.5, pp. 12--18; sección 1.6, pp. 18--19; sección 1.7, pp. 19--21 (ejercicio 1.7, pp. 20--21). [doi:10.1007/978-3-319-23042-9](https://doi.org/10.1007/978-3-319-23042-9).

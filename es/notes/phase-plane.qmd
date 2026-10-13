@@ -1,0 +1,26 @@
+---
+title: "Plano de fase y nuevas direcciones en modelación matemática"
+lang: es
+toc: true
+toc-depth: 2
+description: "Plano de fase y nuevas direcciones en modelación matemática — MATG1075, Lourival Rodrigues de Lima."
+format:
+  html:
+    toc-title: Contenido
+crossref:
+  eq-prefix: ecuación
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+
+::: {.language-link}
+[English site](../../notes/phase-plane.html)
+:::
+
+Notas completas del curso Métodos Matemáticos para las Ciencias (MATG1075), en español.
+
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/phase-plane.pdf" download>Descargar PDF · 19 páginas</a><a class="note-back" href="../notes.html">← Todas las notas</a></div>
+
+**Docente:** Lourival Rodrigues de Lima. **Base:** Witelski y Bowen (2015), capítulo 1, secciones 1.5–1.7, pp. 12–21.
+
+{{< include ../../_content/notes/phase-plane.qmd >}}

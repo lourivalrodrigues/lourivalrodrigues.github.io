@@ -1,0 +1,14 @@
+.note-actions { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin:1.2rem 0; }
+.note-back { font-size:.95rem; }
+.notes-catalog-item { padding:1.2rem 0 1.5rem; border-bottom:1px solid var(--line); }
+.notes-catalog-item h3 { margin:.2rem 0 .7rem; }
+.definicion,.proposicion,.teorema,.ejemplo { padding:.8rem 1rem; margin:1.2rem 0; border-left:3px solid #739986; background:rgba(23,56,47,.7); border-radius:0 5px 5px 0; }
+.proof { padding:.2rem 0 .2rem 1rem; border-left:1px solid var(--line); margin:1rem 0; }
+.center { text-align:center; }
+.note-diagram { max-width:100%; height:auto; background:white; padding:.5rem; border-radius:4px; box-sizing:border-box; }
+.quarto-figure img.note-diagram { margin:1rem auto; }
+mjx-container[display="true"] { max-width:100%; overflow-x:auto; overflow-y:hidden; padding:.4rem 0; }
+main table { max-width:100%; font-size:.9rem; }
+main .center:has(table) { max-width:100%; overflow-x:auto; text-align:left; }
+@media(max-width:600px) { .definicion,.proposicion,.teorema,.ejemplo { padding:.65rem .75rem; } }
+@media print { .note-actions { display:none; } .definicion,.proposicion,.teorema,.ejemplo { background:#f4f7f5; border-left-color:#285e48; } }

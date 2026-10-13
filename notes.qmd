@@ -1,17 +1,48 @@
 ---
 title: Notes
 toc: true
-description: Academic website of Lourival Rodrigues de Lima.
+description: Mathematics lecture notes and teaching materials by Lourival Rodrigues de Lima.
 ---
 
 ::: {.language-link}
 [Español](es/notes.html)
 :::
 
+<link rel="stylesheet" href="assets/notes.css">
 
-A space for mathematical notes, explanations, and teaching materials.
+Lecture notes with definitions, proofs, and worked examples. Read the full notes online or download their PDF versions.
 
-## First note
+## Métodos Matemáticos para las Ciencias
+
+**MATG1075 · ESPOL**  
+Materials in Spanish, based on Witelski and Bowen (2015).
+
+::: {.notes-catalog-item}
+### Modeling chemical transformations
+
+Mass action, conservation laws, reversible and consecutive reactions, explicit solutions, and exercises.
+
+::: {.meta}
+6 pages · Section 1.2 of the course textbook
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/chemical-modeling.html">Read online</a><a class="btn-academic" href="files/notes/chemical-modeling.pdf" download>Download PDF</a></div>
+:::
+
+::: {.notes-catalog-item}
+### Phase plane and new directions in mathematical modeling
+
+Planar systems, linearization, stability, the pendulum, nullclines, and extensions involving memory, discrete time, and randomness.
+
+::: {.meta}
+19 pages · Sections 1.5–1.7 of the course textbook
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Read online</a><a class="btn-academic" href="files/notes/phase-plane.pdf" download>Download PDF</a></div>
+:::
+
+## Supplementary note
+
 [From a second-order differential equation to a first-order system](notes/second-order.qmd)
 
-A short introduction using the pendulum as an example. Future notes can combine prose, LaTeX mathematics, and downloadable files.
+A brief explanation using the pendulum as an example.
