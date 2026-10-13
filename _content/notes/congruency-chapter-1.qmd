@@ -1,0 +1,585 @@
+## 1.1 Introducción
+
+Estas notas siguen exclusivamente el capítulo 1, **Congruency**, de Leonard, Lewis, Liu y Tokarsky, *Classical Geometry: Euclidean, Transformational, Inversive, and Projective* (2014), pp. 3–40. Conservan sus ocho secciones, la numeración de resultados, los ejercicios intercalados y los quince problemas finales. La redacción y los dibujos son nuevos. Las aclaraciones de hipótesis corrigen ambigüedades sin introducir temas de otros capítulos.
+
+### Conocimientos presupuestos
+
+Trabajamos en el plano euclidiano. Un **triángulo** tiene tres vértices distintos y no colineales; sus lados son los segmentos que los unen. Se presupone el conocimiento de la suma de sus ángulos, que también se justificará en 1.3.1, y del teorema de Pitágoras: si los catetos miden $a,b$ y la hipotenusa mide $c$, entonces
+
+$$c^2=a^2+b^2.$$
+
+Un **paralelogramo** es un cuadrilátero simple con sus dos pares de lados opuestos paralelos. Si $b$ es una base y $h$ la altura perpendicular correspondiente, sus áreas son
+
+$$\operatorname{Área}(\text{paralelogramo})=bh,\qquad \operatorname{Área}(\text{triángulo})=\frac{bh}{2}.$$
+
+La altura no es, en general, la longitud de un lado oblicuo.
+
+<figure class="geometry-figure" id="geometry-fig-1">
+<div class="geometry-static"><img src="/assets/geometry-ch1/prerequisites.svg" alt="Conocimientos previos: ángulos de un triángulo, Pitágoras y áreas con altura perpendicular." loading="lazy"></div>
+<figcaption><strong>Figura 1.</strong> Conocimientos previos: ángulos de un triángulo, Pitágoras y áreas con altura perpendicular.</figcaption>
+</figure>
+
+**Axioma de las paralelas, o de Playfair.** Por un punto $P$ exterior a una recta $l$ pasa exactamente una recta paralela a $l$. Al permitir que una recta sea paralela a sí misma, si $P\in l$ la única de estas rectas es $l$.
+
+La formulación euclidiana equivalente dice que, si una transversal corta dos rectas y los ángulos interiores situados de un mismo lado suman menos de $180^\circ$, esas rectas se encuentran de ese lado. Este postulado caracteriza el marco euclidiano utilizado aquí.
+
+### Notación y terminología
+
+Los puntos se designan por letras mayúsculas; las rectas y semirrectas, por minúsculas cuando resulte conveniente. Para $A\ne B$:
+
+- $\overleftrightarrow{AB}$ es la recta que pasa por ambos puntos.
+- $\overline{AB}$ es el segmento con extremos $A,B$; $AB$ denota su longitud.
+- $\overrightarrow{AB}$ es la semirrecta con origen $A$ que pasa por $B$.
+- $\angle BAC$ es el ángulo entre las semirrectas $\overrightarrow{AB}$ y $\overrightarrow{AC}$; su vértice es la letra central.
+- $\triangle ABC$ es el triángulo de vértices $A,B,C$.
+- $C(O,r)$ es la circunferencia de centro $O$ y radio $r>0$.
+
+Una **circunferencia** es su borde; el **disco** incluye los puntos interiores. Esta distinción importa al hablar de puntos dentro o fuera de una circunferencia.
+
+Salvo indicación expresa, $\angle BAC$ denota el ángulo no reflejo, cuya medida está entre $0^\circ$ y $180^\circ$. El ángulo reflejo complementario alrededor del vértice mide $360^\circ-\angle BAC$. Los ángulos no tienen orientación ni medida negativa en estas notas. Usaremos el mismo símbolo para un ángulo y su medida cuando no produzca confusión.
+
+En un cuadrilátero $ABCD$ el orden fija los lados $AB,BC,CD,DA$. Cambiarlo puede cambiar la figura: $ABDC$ conecta otros segmentos. Consideramos cuatro vértices distintos, sin lados de longitud cero ni tres vértices consecutivos colineales.
+
+Un cuadrilátero es **simple** si sus lados no se cruzan, salvo en extremos consecutivos; es **convexo** si todos sus ángulos interiores son menores que $180^\circ$; es **cóncavo** si es simple y uno de ellos es reflejo. Un cuadrilátero **no simple** tiene lados que se cruzan. Todo convexo es simple, pero no todo simple es convexo. Para figuras cruzadas, cuando se mencionen los ángulos en sus vértices se tomarán los cuatro ángulos menores entre lados consecutivos.
+
+<figure class="geometry-figure" id="geometry-fig-2">
+<div class="geometry-static"><img src="/assets/geometry-ch1/quadrilaterals.svg" alt="El orden de los vértices y la clasificación: convexo, simple cóncavo y cruzado." loading="lazy"></div>
+<figcaption><strong>Figura 2.</strong> El orden de los vértices y la clasificación: convexo, simple cóncavo y cruzado.</figcaption>
+</figure>
+
+## 1.2 Figuras congruentes
+
+Dos figuras son **congruentes** cuando tienen la misma forma y tamaño. Se escribe $\cong$. En particular: dos segmentos lo son si tienen igual longitud; dos ángulos, si tienen igual medida; y $C(P,r)\cong C(Q,s)$ si y solo si $r=s$. Todas las rectas son congruentes entre sí, y lo mismo ocurre con las semirrectas.
+
+Para triángulos, el orden expresa la correspondencia:
+
+$$\triangle ABC\cong\triangle DEF\quad\Longleftrightarrow\quad
+\begin{cases}
+AB=DE,\ BC=EF,\ AC=DF,\\
+\angle A=\angle D,\ \angle B=\angle E,\ \angle C=\angle F.
+\end{cases}$$
+
+Así, la correspondencia es $A\leftrightarrow D$, $B\leftrightarrow E$, $C\leftrightarrow F$. Escribir $\triangle ABC\cong\triangle EFD$ afirma otra correspondencia.
+
+**Teorema 1.2.1. Ángulos opuestos por el vértice.** Al cortarse dos rectas, los ángulos opuestos son iguales.
+
+*Demostración.* Si $\alpha$ y $\beta$ son opuestos y $\gamma$ es adyacente a ambos, entonces $\alpha+\gamma=180^\circ=\beta+\gamma$. Restando $\gamma$, obtenemos $\alpha=\beta$.
+
+### Criterios básicos de congruencia
+
+**Axioma 1.2.2. LAL (SAS).** Dos triángulos son congruentes si coinciden dos lados correspondientes y el ángulo **comprendido entre ellos**.
+
+**Teorema 1.2.3. LLL (SSS).** Son congruentes si coinciden sus tres lados correspondientes.
+
+**Teorema 1.2.4. ALA (ASA).** Son congruentes si coinciden dos ángulos correspondientes y el lado **comprendido entre ellos**.
+
+Como en el libro, LAL se adopta como axioma y LLL y ALA se utilizan sin desarrollar sus demostraciones. Cada criterio permite concluir la igualdad de todas las partes correspondientes; no hace falta comprobar las seis por separado.
+
+**Axioma 1.2.5. Desigualdad triangular.** Para un triángulo no degenerado,
+
+$$AB+BC>AC,\qquad AB+AC>BC,\qquad AC+BC>AB.$$
+
+Por eso tres longitudes positivas no siempre forman un triángulo: $3,1,1$ no cumplen la desigualdad. Dados dos lados positivos y un ángulo comprendido estrictamente entre $0^\circ$ y $180^\circ$, sí se obtiene uno no degenerado.
+
+<figure class="geometry-figure" id="geometry-fig-3" data-geometry="congruence" data-title="Correspondencias, ángulos opuestos por el vértice y los datos LAL, LLL y ALA.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/congruence.svg" alt="Correspondencias, ángulos opuestos por el vértice y los datos LAL, LLL y ALA." loading="lazy"></div>
+<figcaption><strong>Figura 3.</strong> Correspondencias, ángulos opuestos por el vértice y los datos LAL, LLL y ALA.</figcaption>
+</figure>
+
+**Teorema 1.2.6. Triángulo isósceles.** Si $AB=AC$, entonces $\angle ABC=\angle ACB$.
+
+*Demostración.* Comparamos el mismo triángulo con el orden invertido: $\triangle ABC$ y $\triangle ACB$. Se tiene $AB=AC$, el ángulo en $A$ es común y $AC=AB$. Por LAL son congruentes; los ángulos correspondientes en $B$ y $C$ son iguales.
+
+**Teorema 1.2.7. Recíproco.** Si $\angle ABC=\angle ACB$, entonces $AB=AC$.
+
+*Demostración.* En $\triangle ABC$ y $\triangle ACB$ coinciden los ángulos de la base y el lado comprendido $BC=CB$. Por ALA, $AB=AC$.
+
+### Una afirmación y su recíproco
+
+El recíproco de «si $P$, entonces $Q$» es «si $Q$, entonces $P$». La verdad de uno no garantiza la del otro. Un cuadrado tiene cuatro ángulos rectos; el recíproco es falso, pues un rectángulo con lados desiguales también los tiene.
+
+**Ejercicio 1.2.8.** Escriba el recíproco y determine su validez en cada caso:
+
+1. En $\triangle ABC$, si $\angle ABC=90^\circ$, entonces $AB^2+BC^2=AC^2$.
+2. Si $ABCD$ es un paralelogramo, entonces $AB=CD$ y $AD=BC$.
+3. Si $ABCD$ es convexo, entonces es un rectángulo.
+4. Si las diagonales de $ABCD$ tienen longitudes distintas, entonces no es un rectángulo.
+
+**Teorema 1.2.9. Desigualdad ángulo-lado.** Si $\angle ABC>\angle ACB$, entonces $AC>AB$.
+
+*Demostración.* Dentro del ángulo en $B$, trazamos la semirrecta que forma con $BC$ un ángulo igual a $\angle ACB$. Corta $AC$ en un punto interior $D$. En $\triangle BDC$, los ángulos en $B$ y $C$ son iguales; por 1.2.7, $BD=DC$. Aplicando la desigualdad triangular a $\triangle ABD$,
+
+$$AB<AD+DB=AD+DC=AC.$$
+
+**Teorema 1.2.10. Recíproco de la desigualdad ángulo-lado.** Si $AC>AB$, entonces $\angle ABC>\angle ACB$.
+
+*Demostración.* Si los ángulos fueran iguales, 1.2.7 daría $AC=AB$. Si el ángulo en $B$ fuera menor, 1.2.9 daría $AC<AB$. Ambas posibilidades contradicen la hipótesis; queda la desigualdad indicada.
+
+<figure class="geometry-figure" id="geometry-fig-4" data-geometry="isosceles" data-title="Triángulo isósceles y construcción auxiliar para comparar ángulos y lados.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/isosceles.svg" alt="Triángulo isósceles y construcción auxiliar para comparar ángulos y lados." loading="lazy"></div>
+<figcaption><strong>Figura 4.</strong> Triángulo isósceles y construcción auxiliar para comparar ángulos y lados.</figcaption>
+</figure>
+
+En un triángulo, a ángulos iguales se oponen lados iguales, y al ángulo mayor se opone el lado mayor.
+
+## 1.3 Rectas paralelas
+
+Adoptamos la convención del libro: dos rectas son **paralelas**, $l\parallel m$, si son coincidentes o si no se intersectan. Dos rectas distintas no paralelas se cortan en exactamente un punto.
+
+Una **transversal** corta dos rectas distintas en puntos distintos. Los **ángulos correspondientes** ocupan la misma posición relativa en las dos intersecciones. Los **alternos internos** están entre las rectas y en lados opuestos de la transversal; los **alternos externos**, fuera de las rectas y en lados opuestos. Los **interiores del mismo lado** están entre las rectas y en el mismo lado de la transversal; el libro los llama *adjacent angles*. No deben confundirse con dos ángulos adyacentes en un único vértice.
+
+**Teorema 1.3.1. Criterios de paralelismo.** Basta cualquiera de estas condiciones para que las dos rectas sean paralelas:
+
+1. Los interiores del mismo lado suman $180^\circ$.
+2. Los alternos internos son iguales.
+3. Los alternos externos son iguales.
+4. Los correspondientes son iguales.
+
+**Teorema 1.3.2. Ángulos entre paralelas.** Si las dos rectas son paralelas, se cumplen las cuatro condiciones.
+
+Como el libro, usamos estos resultados sin demostrarlos. El segundo requiere el postulado de las paralelas. Debe evitarse una justificación circular: no se puede demostrar un resultado mediante otro cuya única demostración depende del primero.
+
+<figure class="geometry-figure" id="geometry-fig-5" data-geometry="parallel" data-title="Transversal de dos paralelas: correspondientes, alternos e interiores del mismo lado.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/parallel.svg" alt="Transversal de dos paralelas: correspondientes, alternos e interiores del mismo lado." loading="lazy"></div>
+<figcaption><strong>Figura 5.</strong> Transversal de dos paralelas: correspondientes, alternos e interiores del mismo lado.</figcaption>
+</figure>
+
+### 1.3.1 Ángulos de un triángulo
+
+**Teorema 1.3.3.** Los ángulos interiores de un triángulo suman $180^\circ$.
+
+*Demostración.* Por $A$ trazamos la paralela a $BC$. Los ángulos que forma con $AB$ y $AC$ son iguales, respectivamente, a los ángulos en $B$ y $C$, por alternos internos. Junto con el ángulo en $A$ forman un ángulo llano. Por tanto,
+
+$$\angle A+\angle B+\angle C=180^\circ.$$
+
+Un **ángulo exterior** se forma entre un lado y la prolongación de un lado adyacente. Si prolongamos $BC$ más allá de $C$ hasta $X$, es $\angle ACX$.
+
+**Teorema 1.3.4. Ángulo exterior.** Un ángulo exterior es la suma de los dos interiores no adyacentes:
+
+$$\angle ACX=\angle A+\angle B.$$
+
+*Demostración.* Tanto $\angle ACX+\angle ACB$ como $\angle A+\angle B+\angle ACB$ suman $180^\circ$. Restando el ángulo en $C$, resulta la fórmula.
+
+**Corolario 1.3.5. Desigualdad del ángulo exterior.** El ángulo exterior es mayor que cada uno de los interiores no adyacentes, porque ambos son positivos.
+
+La demostración anterior usa el postulado de las paralelas a través de 1.3.3. El libro señala que la desigualdad exterior admite otra demostración sin ese postulado, pero no la desarrolla.
+
+<figure class="geometry-figure" id="geometry-fig-6" data-geometry="triangle-angles" data-title="Paralela por un vértice y ángulo exterior: la igualdad se conserva al variar el triángulo.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/triangle-angles.svg" alt="Paralela por un vértice y ángulo exterior: la igualdad se conserva al variar el triángulo." loading="lazy"></div>
+<figcaption><strong>Figura 6.</strong> Paralela por un vértice y ángulo exterior: la igualdad se conserva al variar el triángulo.</figcaption>
+</figure>
+
+### 1.3.2 Teorema de Tales
+
+Una **cuerda** une dos puntos de una circunferencia. Un **ángulo inscrito** tiene su vértice en ella y sus lados pasan por otros dos puntos de ella. El **arco interceptado** es el arco entre esos dos puntos que no contiene el vértice del ángulo. Su medida angular es la del ángulo central correspondiente: puede ser menor o mayor que $180^\circ$.
+
+**Teorema 1.3.6. Tales, en la terminología del libro.** La medida de un ángulo inscrito es la mitad de la medida de su arco interceptado:
+
+$$\angle BAC=\tfrac12\,m(\widehat{BC}_{\text{sin }A}).$$
+
+Aquí «Tales» se refiere al teorema del ángulo inscrito, y no al teorema de proporcionalidad entre segmentos. Si el arco es mayor, debe usarse su medida mayor; sustituirla por el ángulo central menor sería incorrecto.
+
+*Demostración.* Si un lado del ángulo inscrito es un diámetro $AD$, el triángulo $AOB$ es isósceles. El ángulo exterior en $O$ cumple $\angle BOD=2\angle BAD$; así queda probado este caso. Para un ángulo general $BAC$, trazamos el diámetro desde $A$. Si queda dentro del ángulo, sumamos los dos casos anteriores; si queda fuera, los restamos. Cuando el arco interceptado es mayor, tomamos la medida central correspondiente a ese arco. Se obtiene la misma igualdad en las tres configuraciones dibujadas en el libro: centro interior al ángulo, exterior y situado sobre uno de sus lados.
+
+**Corolario 1.3.7.** En una misma circunferencia:
+
+1. Los ángulos inscritos que interceptan el mismo arco tienen igual medida.
+2. También la tienen si interceptan arcos de igual medida.
+3. El ángulo que intercepta una semicircunferencia es recto.
+
+<figure class="geometry-figure" id="geometry-fig-7" data-geometry="thales" data-title="Ángulo inscrito y arco interceptado; el control permite explorar las tres configuraciones y el arco mayor.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/thales.svg" alt="Ángulo inscrito y arco interceptado; el control permite explorar las tres configuraciones y el arco mayor." loading="lazy"></div>
+<figcaption><strong>Figura 7.</strong> Ángulo inscrito y arco interceptado; el control permite explorar las tres configuraciones y el arco mayor.</figcaption>
+</figure>
+
+**Teorema 1.3.8. Recíproco y comparación.** Sean $P\ne Q$, un semiplano abierto $H$ determinado por $\overleftrightarrow{PQ}$, y $0^\circ<\beta<180^\circ$. El conjunto de puntos $X\in H$ tales que $\angle PXQ=\beta$ es un arco de una circunferencia que pasa por $P,Q$, excluyendo sus extremos. Los puntos de $H$ interiores al disco forman un ángulo mayor que $\beta$; los exteriores, uno menor.
+
+*Demostración.* Tomamos un punto $S\in H$ que forme el ángulo $\beta$ y la circunferencia que pasa por $P,Q,S$. Todos los puntos de su arco en $H$ interceptan el mismo arco opuesto, así que forman $\beta$. Para un punto interior $Y$, la semirrecta desde $P$ pasando por $Y$ corta ese arco en $X$, con $Y$ entre $P$ y $X$. El ángulo $PYQ$ es exterior de $\triangle YXQ$, por lo que es mayor que $\angle PXQ=\beta$. Para un punto exterior $Z$, el corte $X$ queda entre $P$ y $Z$, y $\angle PXQ$ es exterior de $\triangle XZQ$, de modo que $\beta>\angle PZQ$. Esto prueba también que no hay otros puntos con ángulo $\beta$.
+
+<figure class="geometry-figure" id="geometry-fig-8" data-geometry="circle-locus" data-title="Arco de ángulo constante y comparación para puntos interiores y exteriores en un mismo semiplano.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/circle-locus.svg" alt="Arco de ángulo constante y comparación para puntos interiores y exteriores en un mismo semiplano." loading="lazy"></div>
+<figcaption><strong>Figura 8.</strong> Arco de ángulo constante y comparación para puntos interiores y exteriores en un mismo semiplano.</figcaption>
+</figure>
+
+**Ejercicio 1.3.9.** Calcule $\theta$ en la figura. $O$ es el centro, $T,L,R,U$ pertenecen a la circunferencia y $L,O,U$ son colineales; se dan $\angle TLO=30^\circ$ y $\angle OTR=40^\circ$. Determine $\theta=\angle UOR$.
+
+<figure class="geometry-figure" id="geometry-fig-9">
+<div class="geometry-static"><img src="/assets/geometry-ch1/exercise-139.svg" alt="Datos del ejercicio 1.3.9, con los puntos y el centro identificados." loading="lazy"></div>
+<figcaption><strong>Figura 9.</strong> Datos del ejercicio 1.3.9, con los puntos y el centro identificados.</figcaption>
+</figure>
+
+### 1.3.3 Cuadriláteros
+
+**Teorema 1.3.10.** Los ángulos interiores de un cuadrilátero simple suman $360^\circ$.
+
+*Demostración.* Una diagonal interior lo divide en dos triángulos. Al sumar sus ángulos se recuperan los cuatro interiores del cuadrilátero, incluyendo el reflejo si es cóncavo. La suma es $180^\circ+180^\circ=360^\circ$.
+
+En un cuadrilátero cruzado no se aplica esta suma: con la convención de los cuatro ángulos menores entre lados consecutivos, su suma es menor que $360^\circ$.
+
+Un cuadrilátero es **cíclico** si sus cuatro vértices están en una circunferencia, llamada su **circunferencia circunscrita**. Un cuadrilátero simple no degenerado que sea cíclico es necesariamente convexo.
+
+**Teorema 1.3.11.** En un cuadrilátero simple cíclico:
+
+1. Los ángulos opuestos son suplementarios, es decir, suman $180^\circ$.
+2. Un ángulo exterior es igual al interior opuesto.
+
+*Demostración.* Los ángulos opuestos interceptan arcos cuya suma es la circunferencia completa. Por Tales, su suma es $360^\circ/2=180^\circ$. El exterior es el suplemento de su interior adyacente, y por eso coincide con el opuesto.
+
+**Teorema 1.3.12. Recíproco.** Si en un cuadrilátero simple los ángulos opuestos suman $180^\circ$, es cíclico.
+
+*Demostración.* Ningún ángulo puede ser reflejo, pues su opuesto es positivo: el cuadrilátero es convexo. Trazamos la circunferencia de $\triangle ABC$. En el semiplano de $D$ respecto de $AC$, su arco forma con $A,C$ el ángulo $180^\circ-\angle ABC$. La hipótesis da exactamente esa medida para $\angle ADC$. Por 1.3.8, $D$ pertenece al arco.
+
+**Ejemplo 1.3.13. Cuadriláteros cíclicos cruzados.** En la configuración cruzada $ABCD$, los cuatro vértices son concíclicos si y solo si sus ángulos opuestos menores son iguales: $\angle A=\angle C$ y $\angle B=\angle D$.
+
+*Justificación.* Si son concíclicos, los ángulos opuestos interceptan la misma cuerda desde el mismo lado y son iguales por Tales. Recíprocamente, $B,D$ quedan del mismo lado de la diagonal $AC$ en la configuración cruzada. La igualdad $\angle ABC=\angle ADC$ y 1.3.8 sitúan $D$ en la circunferencia de $ABC$. Se supone una figura cruzada no degenerada; no se usan ángulos reflejos para este enunciado.
+
+<figure class="geometry-figure" id="geometry-fig-10" data-geometry="cyclic" data-title="Un cuadrilátero cíclico simple tiene ángulos opuestos suplementarios; el cruzado tiene ángulos opuestos menores iguales.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/cyclic.svg" alt="Un cuadrilátero cíclico simple tiene ángulos opuestos suplementarios; el cruzado tiene ángulos opuestos menores iguales." loading="lazy"></div>
+<figcaption><strong>Figura 10.</strong> Un cuadrilátero cíclico simple tiene ángulos opuestos suplementarios; el cruzado tiene ángulos opuestos menores iguales.</figcaption>
+</figure>
+
+**Ejercicio 1.3.14. Circunferencia inscrita.** Para un cuadrilátero **convexo**, pruebe que existe una circunferencia interior tangente a sus cuatro segmentos laterales si y solo si
+
+$$AB+CD=AD+BC.$$
+
+La convexidad y la tangencia a los segmentos, no solamente a sus rectas prolongadas, son parte de la formulación precisa usada en estas notas.
+
+<figure class="geometry-figure" id="geometry-fig-11">
+<div class="geometry-static"><img src="/assets/geometry-ch1/tangential.svg" alt="Cuadrilátero convexo circunscrito a una circunferencia y pares de segmentos tangentes iguales." loading="lazy"></div>
+<figcaption><strong>Figura 11.</strong> Cuadrilátero convexo circunscrito a una circunferencia y pares de segmentos tangentes iguales.</figcaption>
+</figure>
+
+**Ejemplo 1.3.15. Teorema de Simson.** Sean $A,B,C$ tres puntos distintos de una circunferencia y $P$ otro punto de ella. Los pies de las perpendiculares desde $P$ a las **rectas** $AB,BC,CA$ son colineales. La recta obtenida es la **recta de Simson** de $P$. Los pies pueden quedar en prolongaciones de los lados.
+
+*Demostración para la configuración ilustrada.* Sean $F,D,E$ los pies sobre $AB,BC,CA$, respectivamente. Los cuadriláteros $PEAF$ y $PECD$ son cíclicos, pues los ángulos en los pies son rectos. Por Tales y la colinealidad de los pies con sus rectas laterales,
+
+$$\angle PEF=\angle PAF=\angle PAB
+=\angle PCB=\angle PCD=\angle PED.$$
+
+En esta configuración $EF$ y $ED$ quedan del mismo lado de $EP$, por lo que las dos semirrectas coinciden. Así $D,E,F$ son colineales. Al cambiar la posición de $P$, alguna de estas igualdades se convierte en una relación de ángulos suplementarios: entonces $EF$ y $ED$ son semirrectas opuestas, con la misma conclusión. La aplicación de Tales siempre se hace con el arco correcto. Si un pie coincide con otro, la colinealidad se interpreta usando los pies distintos; no se define un ángulo con un lado de longitud cero.
+
+<figure class="geometry-figure" id="geometry-fig-12" data-geometry="simson" data-title="Los tres pies de perpendicular permanecen alineados cuando P recorre la circunferencia.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/simson.svg" alt="Los tres pies de perpendicular permanecen alineados cuando P recorre la circunferencia." loading="lazy"></div>
+<figcaption><strong>Figura 12.</strong> Los tres pies de perpendicular permanecen alineados cuando P recorre la circunferencia.</figcaption>
+</figure>
+
+## 1.4 Más sobre congruencia
+
+**Teorema 1.4.1. AAL (SAA).** Dos triángulos son congruentes si coinciden dos ángulos correspondientes y un lado correspondiente, aunque ese lado no esté comprendido entre los ángulos dados.
+
+*Demostración.* La suma de ángulos permite recuperar el tercer ángulo. Con él y uno de los dados se aplica ALA al lado conocido.
+
+### El caso ambiguo LLA
+
+Dos lados y un ángulo no comprendido entre ellos, LLA (SSA), no bastan en general. Dados un ángulo en $B$, el lado $AB=c$ y el lado opuesto $AC=b$, la semirrecta $BC$ puede cortar la circunferencia $C(A,b)$ en dos puntos distintos: aparecen dos triángulos con los mismos datos.
+
+<figure class="geometry-figure" id="geometry-fig-13" data-geometry="ssa" data-title="Dos intersecciones de una semirrecta y una circunferencia pueden producir triángulos no congruentes con datos LLA.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/ssa.svg" alt="Dos intersecciones de una semirrecta y una circunferencia pueden producir triángulos no congruentes con datos LLA." loading="lazy"></div>
+<figcaption><strong>Figura 13.</strong> Dos intersecciones de una semirrecta y una circunferencia pueden producir triángulos no congruentes con datos LLA.</figcaption>
+</figure>
+
+**Teorema 1.4.2. LLA con condición adicional.** LLA sí garantiza congruencia cuando el lado opuesto al ángulo dado es mayor o igual que el otro lado conocido.
+
+*Demostración.* Supongamos $AB=DE$, $AC=DF$, $\angle ABC=\angle DEF$ y $AC\ge AB$. Si $BC\ne EF$, intercambiamos los nombres de los triángulos para que $BC<EF$. Tomamos $H$ interior a $EF$ con $EH=BC$. Por **LAL**, $\triangle ABC\cong\triangle DEH$, así que $DH=AC=DF$. En el triángulo isósceles $DHF$,
+
+$$\angle DHF=\angle DFH=\angle DFE.$$
+
+Como $DF\ge DE$, la comparación ángulo-lado en $DEF$ da $\angle DEF\ge\angle DFE$. Pero $\angle DHF$ es exterior de $DEH$, así que es estrictamente mayor que $\angle DEH=\angle DEF$. Obtenemos simultáneamente $\angle DHF=\angle DFE\le\angle DEF<\angle DHF$, una contradicción. Luego $BC=EF$, y por LLL los triángulos son congruentes.
+
+**Aclaración de lectura:** en la prueba impresa se menciona SSS al comparar $ABC$ y $DEH$; los datos disponibles corresponden a SAS, es decir, LAL.
+
+**Corolario 1.4.3. Hipotenusa-cateto (HSR).** Dos triángulos rectángulos son congruentes si coinciden sus hipotenusas y un cateto correspondiente. La hipotenusa es el lado opuesto al ángulo recto y es el mayor; se aplica 1.4.2.
+
+### Contraejemplos y contradicción
+
+En «si $P$, entonces $Q$», $P$ es la **hipótesis** y $Q$ la **conclusión**. Un **contraejemplo** satisface $P$ y no satisface $Q$. Basta uno para refutar una afirmación universal. Por ejemplo, un rectángulo de lados $2$ y $1$ refuta que todo rectángulo tenga dos lados consecutivos iguales.
+
+En una **demostración por contradicción** suponemos que la hipótesis es verdadera y la conclusión falsa. Si deducimos una contradicción con un hecho establecido, rechazamos esa suposición y concluimos la afirmación. Esto no consiste en suponer falsa la hipótesis.
+
+**Ejercicio 1.4.4.** Dibuje contraejemplos para:
+
+1. Si un triángulo tiene un ángulo de $60^\circ$, entonces es isósceles.
+2. Si $AB=AC$ y $P,Q$ trisecan $BC$ en el orden $B,P,Q,C$, entonces las semirrectas $AP,AQ$ trisecan $\angle BAC$.
+3. Si $AB=CD$ y $\angle BAD=\angle ADC=90^\circ$, entonces $ABCD$ es un rectángulo.
+
+## 1.5 Perpendiculares y bisectrices
+
+Dos rectas son **perpendiculares**, $l\perp m$, si se cortan formando ángulos rectos. El **punto medio** $M$ de $AB$ cumple $M\in\overline{AB}$ y $AM=MB$. La **mediatriz** es la recta perpendicular a $AB$ por $M$.
+
+**Teorema 1.5.1. Caracterización de la mediatriz.** Para $A\ne B$, un punto $P$ pertenece a la mediatriz si y solo si $PA=PB$.
+
+*Demostración.* Si $P=M$, la afirmación es inmediata. Para otro punto de la mediatriz, $\triangle PMA\cong\triangle PMB$ por LAL: comparten $PM$, tienen $MA=MB$ y ángulos rectos en $M$. Luego $PA=PB$. Recíprocamente, si $PA=PB$ y $P\ne M$, no puede estar en la recta $AB$, porque su único punto equidistante de $A,B$ es $M$. Los dos triángulos no degenerados $PMA,PMB$ son congruentes por LLL. Sus ángulos adyacentes en $M$ son iguales y suman $180^\circ$, así que ambos son rectos.
+
+<figure class="geometry-figure" id="geometry-fig-14" data-geometry="mediatrix" data-title="La mediatriz es exactamente el lugar de puntos equidistantes de A y B.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/mediatrix.svg" alt="La mediatriz es exactamente el lugar de puntos equidistantes de A y B." loading="lazy"></div>
+<figcaption><strong>Figura 14.</strong> La mediatriz es exactamente el lugar de puntos equidistantes de A y B.</figcaption>
+</figure>
+
+**Ejercicio 1.5.2.** Si $P$ está del mismo lado de la mediatriz que $B$, pruebe que $PB<PA$.
+
+**Ejercicio 1.5.3.** Pruebe, sin usar Pitágoras, que la hipotenusa es el mayor lado de un triángulo rectángulo.
+
+**Ejercicio 1.5.4.** Si $Q$ es el pie de la perpendicular desde $P\notin l$ a $l$, pruebe que $Q$ es el punto de $l$ más próximo a $P$.
+
+**Ejercicio 1.5.5.** Pruebe que por $P\notin l$ pasa a lo sumo una recta perpendicular a $l$.
+
+Para $0^\circ<\angle ABC<180^\circ$, su **bisectriz interior** es la semirrecta de origen $B$, interior al ángulo, que lo divide en dos ángulos iguales. El vértice pertenece a la semirrecta, aunque no es un punto interior al ángulo.
+
+La **distancia de un punto a una recta**, $d(P,l)$, es la longitud de su perpendicular: $d(P,l)=PQ$, donde $Q$ es el pie. Si $P\in l$, la distancia es cero.
+
+**Teorema 1.5.6. Caracterización de la bisectriz.** Los puntos **interiores** de un ángulo no reflejo que equidistan de las dos rectas que contienen sus lados son exactamente los puntos de su bisectriz distintos del vértice.
+
+*Demostración.* Sea $P$ en la bisectriz y sean $Q,R$ los pies en las dos rectas laterales. En los triángulos rectángulos $PBQ,PBR$, la hipotenusa es común y los ángulos en $B$ son iguales; AAL da congruencia y $PQ=PR$. Recíprocamente, si $PQ=PR$, hipotenusa-cateto da congruencia. Esto significa que la recta $BP$ forma ángulos agudos iguales con las dos rectas laterales. Como $P$ está dentro del ángulo, corresponde a la bisectriz interior y no a la exterior. Si un pie coincide con $B$, la igualdad obligaría a ambos pies a coincidir con $B$, lo cual exigiría lados colineales; queda excluido por $0^\circ<\angle ABC<180^\circ$.
+
+Para un ángulo obtuso, un pie desde un punto interior puede caer en la prolongación de un lado. Por eso la distancia en este resultado se define a las **rectas** laterales. Al quitar la condición de estar dentro del ángulo, aparecen también las bisectrices de los ángulos exteriores.
+
+<figure class="geometry-figure" id="geometry-fig-15" data-geometry="bisector" data-title="Puntos en la bisectriz y sus distancias perpendiculares a las rectas laterales.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/bisector.svg" alt="Puntos en la bisectriz y sus distancias perpendiculares a las rectas laterales." loading="lazy"></div>
+<figcaption><strong>Figura 15.</strong> Puntos en la bisectriz y sus distancias perpendiculares a las rectas laterales.</figcaption>
+</figure>
+
+### Desigualdades empleadas en demostraciones
+
+El capítulo utiliza la desigualdad triangular, la del ángulo exterior, la ángulo-lado y la siguiente.
+
+**Teorema 1.5.7. Desigualdad de la bisagra (*Open Jaw Inequality*).** Si $AB=DE$ y $BC=EF$, entonces
+
+$$\angle ABC<\angle DEF\quad\Longleftrightarrow\quad AC<DF.$$
+
+*Demostración.* Denotemos los ángulos por $x<y$. Colocamos $G$ sobre la semirrecta interior a $\angle DEF$ que forma $x$ con $EF$, con $EG=DE$. Por LAL, $\triangle ABC\cong\triangle GEF$, así que $AC=GF$. La bisectriz de $\angle DEG$ corta el segmento $DF$ en un punto interior $K$, pues su dirección queda estrictamente entre las de $ED$ y $EF$. Los triángulos $DEK,GEK$ son congruentes por LAL, por lo que $DK=GK$. Si $G,K,F$ no son colineales, la desigualdad triangular da
+
+$$DF=DK+KF=GK+KF>GF=AC.$$
+
+Si son colineales, también lo son $D,G,K,F$. Como $DK=GK$ y $D\ne G$, $K$ es el punto medio de $DG$. A la vez está entre $D$ y $F$, así que $G$ y $F$ están del mismo lado de $K$. Entonces $GF=|KF-KG|<KF+KG=DF$. La desigualdad queda demostrada en todas las posiciones de $G$, no solamente en la dibujada por el libro.
+
+Para el recíproco, si $AC<DF$, los ángulos no pueden ser iguales, pues LAL daría $AC=DF$; tampoco puede $x>y$, por la implicación recién probada. Por tricotomía, $x<y$.
+
+<figure class="geometry-figure" id="geometry-fig-16" data-geometry="hinge" data-title="Dos lados se mantienen fijos; al abrir el ángulo comprendido aumenta el tercer lado.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/hinge.svg" alt="Dos lados se mantienen fijos; al abrir el ángulo comprendido aumenta el tercer lado." loading="lazy"></div>
+<figcaption><strong>Figura 16.</strong> Dos lados se mantienen fijos; al abrir el ángulo comprendido aumenta el tercer lado.</figcaption>
+</figure>
+
+## 1.6 Problemas de construcción
+
+La **regla sin marcas** y el **compás** son instrumentos ideales. Sus operaciones permitidas son:
+
+1. Trazar la recta determinada por dos puntos conocidos y distintos.
+2. Trazar una circunferencia o arco de centro conocido y radio igual a la distancia entre dos puntos conocidos.
+
+La regla no mide longitudes ni permite colocar una tangente «a ojo». Para trazar una recta hay que construir dos puntos de ella. La precisión física del lápiz no constituye una demostración: cada construcción debe justificarse geométricamente.
+
+### Hechos útiles para justificar construcciones
+
+Un **rombo** es un paralelogramo con sus cuatro lados iguales. Un **deltoide** o cometa es un cuadrilátero convexo con dos pares de lados adyacentes iguales. Un **dardo** es la versión simple cóncava con esos dos pares de lados iguales.
+
+**Teorema 1.6.1.**
+
+1. Las diagonales de un paralelogramo se bisecan mutuamente.
+2. Las de un rombo se bisecan perpendicularmente.
+3. Las rectas que contienen las diagonales de un deltoide o dardo se cortan perpendicularmente; en el dardo el corte puede quedar fuera de los segmentos diagonales.
+
+*Justificación.* En un paralelogramo, los alternos internos y la igualdad de lados opuestos permiten aplicar ALA a los triángulos opuestos formados por las diagonales; se obtienen iguales sus mitades. En un rombo, los vértices extremos de una diagonal equidistan de los extremos de la otra; por 1.5.1, su recta es la mediatriz de la otra. En un deltoide o dardo $AB=AD$ y $CB=CD$, así que tanto $A$ como $C$ están en la mediatriz de $BD$: la recta $AC$ es perpendicular a $BD$.
+
+<figure class="geometry-figure" id="geometry-fig-17">
+<div class="geometry-static"><img src="/assets/geometry-ch1/diagonals.svg" alt="Paralelogramo, rombo, deltoide y dardo: segmentos diagonales y, cuando hace falta, sus prolongaciones." loading="lazy"></div>
+<figcaption><strong>Figura 17.</strong> Paralelogramo, rombo, deltoide y dardo: segmentos diagonales y, cuando hace falta, sus prolongaciones.</figcaption>
+</figure>
+
+### Construcciones básicas
+
+**Ejercicio 1.6.2.** Construya un triángulo dados dos lados y su ángulo comprendido.
+
+**Ejercicio 1.6.3.** Construya un triángulo dados dos ángulos y su lado comprendido.
+
+**Ejercicio 1.6.4.** Construya un triángulo dados tres lados.
+
+En los ejercicios se supone que los datos permiten un triángulo no degenerado: longitudes positivas; ángulos positivos con suma menor que $180^\circ$ en ALA; y las tres desigualdades triangulares en LLL.
+
+**Ejemplo 1.6.5. Copiar un ángulo.** Dado $\angle BAC$ y un punto $D$ sobre una semirrecta elegida:
+
+1. Con centro $A$, trace un arco que corte ambos lados en $B',C'$.
+2. Con centro $D$ y el mismo radio, corte la semirrecta de destino en $E$.
+3. Con centro $E$ y radio $B'C'$, corte el arco de centro $D$ en $F$, en el lado elegido de la recta de destino.
+4. Trace $DF$. Por LLL, $\triangle AB'C'\cong\triangle DEF$, luego $\angle EDF=\angle BAC$.
+
+**Ejemplo 1.6.6. Construir la mediatriz.** Dados $A\ne B$, trace circunferencias de centros $A,B$ y radio común $r>AB/2$. Sus dos intersecciones son $C,D$. Trace $CD$. Ambos puntos equidistan de $A,B$; por 1.5.1, la recta es su mediatriz. La desigualdad estricta asegura dos intersecciones distintas.
+
+**Ejemplo 1.6.7. Perpendicular desde un punto exterior.** Dado $P\notin m$, trace una circunferencia de centro $P$ que corte $m$ en dos puntos $A,B$. Con centros $A,B$ y radio común adecuado, construya un punto $Q\ne P$ equidistante de ambos. Como $P,Q$ están en la mediatriz de $AB$, la recta $PQ$ es perpendicular a $m$.
+
+**Ejemplo 1.6.8. Bisecar un ángulo.** Un arco de centro en el vértice $P$ corta los lados en $S,T$. Trace arcos de centros $S,T$ con radio común mayor que $ST/2$. Elija su intersección $Q$ de modo que la semirrecta $PQ$ esté dentro del ángulo y $Q\ne P$. Los triángulos $PSQ,PTQ$ son congruentes por LLL; por tanto $PQ$ es la bisectriz interior.
+
+**Ejercicio 1.6.9.** Construya la perpendicular a una recta por un punto de ella.
+
+<figure class="geometry-figure" id="geometry-fig-18" data-geometry="constructions" data-title="Construcciones de copia de ángulo, mediatriz, perpendicular y bisectriz. En la versión web se muestran por pasos.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/constructions.svg" alt="Construcciones de copia de ángulo, mediatriz, perpendicular y bisectriz. En la versión web se muestran por pasos." loading="lazy"></div>
+<figcaption><strong>Figura 18.</strong> Construcciones de copia de ángulo, mediatriz, perpendicular y bisectriz. En la versión web se muestran por pasos.</figcaption>
+</figure>
+
+### 1.6.1 Método de lugares geométricos
+
+Un **lugar geométrico** es el conjunto de puntos que cumplen una condición. No basta encontrar algunos: hay que justificar que todos la cumplen y que todo punto que la cumple está en el conjunto. Por ejemplo, 1.5.1 identifica el lugar de puntos equidistantes de $A,B$ con su mediatriz.
+
+El método localiza un punto buscado como intersección de lugares construibles. Con regla y compás, los puntos nuevos aparecen como intersecciones de dos rectas, de una recta y una circunferencia o de dos circunferencias.
+
+**Ejemplo 1.6.10.** Construya una circunferencia de radio $r>0$ tangente a dos rectas secantes $l,m$.
+
+*Análisis.* El centro $O$ debe cumplir $d(O,l)=d(O,m)=r$. Está en alguna bisectriz de los ángulos y también en una paralela a cada recta a distancia $r$. Cada recta tiene dos paralelas de este tipo; sus cuatro combinaciones dan cuatro centros distintos.
+
+*Construcción.* Elija un lado de cada recta. Construya una perpendicular a $l$, marque sobre ella una distancia $r$ y trace por ese punto la perpendicular a esa perpendicular; obtiene una paralela $n$ a distancia $r$. Proceda igual con $m$ para obtener $k$. Trace $C(O,r)$, con $O=n\cap k$. Repita para las otras tres elecciones de lados.
+
+*Justificación.* Los radios hacia los pies de perpendicular miden $r$ y son perpendiculares a las rectas; cada recta es tangente a la circunferencia en su pie. Las cuatro combinaciones agotan los centros que satisfacen ambas condiciones.
+
+<figure class="geometry-figure" id="geometry-fig-19" data-geometry="two-lines" data-title="Intersecciones de paralelas a distancia r: cuatro circunferencias tangentes a dos rectas secantes.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/two-lines.svg" alt="Intersecciones de paralelas a distancia r: cuatro circunferencias tangentes a dos rectas secantes." loading="lazy"></div>
+<figcaption><strong>Figura 19.</strong> Intersecciones de paralelas a distancia r: cuatro circunferencias tangentes a dos rectas secantes.</figcaption>
+</figure>
+
+## 1.7 Soluciones a ejercicios seleccionados
+
+Se conservan los ejercicios que el libro resuelve en esta sección; no se añade un solucionario general de los demás.
+
+### Ejercicio 1.2.8
+
+1. **Pitágoras.** El recíproco afirma que $AB^2+BC^2=AC^2$ implica $\angle ABC=90^\circ$. Tanto la afirmación como su recíproco son verdaderos, según el conocimiento previo presupuesto.
+2. **Paralelogramo.** El recíproco afirma que $AB=CD$, $AD=BC$ implican que $ABCD$ es un paralelogramo. Es falso si se permiten cuadriláteros cruzados. Tome $A=(-1,1)$, $B=(1,-1)$, $C=(-1,-1)$ y $D=(1,1)$: los pares opuestos tienen longitudes iguales, pero $AB$ y $CD$ se cruzan. **Si se exige que el cuadrilátero sea simple, el recíproco sí es verdadero**, por LLL en los dos triángulos de una diagonal y el criterio de alternos internos.
+3. **Convexidad.** Un cuadrilátero convexo no tiene por qué ser rectángulo: un rombo con ángulos no rectos es un contraejemplo. El recíproco «todo rectángulo es convexo» es verdadero.
+4. **Diagonales.** La afirmación es verdadera: las diagonales de un rectángulo son iguales. El recíproco «si no es rectángulo, sus diagonales tienen distinta longitud» es falso. El trapecio isósceles $A=(-1,1)$, $B=(1,1)$, $C=(2,0)$, $D=(-2,0)$ tiene diagonales iguales y no es rectángulo.
+
+<figure class="geometry-figure" id="geometry-fig-20">
+<div class="geometry-static"><img src="/assets/geometry-ch1/counterexamples.svg" alt="Contraejemplos: lados opuestos iguales en una figura cruzada y diagonales iguales en un trapecio no rectangular." loading="lazy"></div>
+<figcaption><strong>Figura 20.</strong> Contraejemplos: lados opuestos iguales en una figura cruzada y diagonales iguales en un trapecio no rectangular.</figcaption>
+</figure>
+
+### Ejercicio 1.3.9
+
+Los radios $OT,OL$ son iguales, así que $\angle LTO=30^\circ$. El ángulo inscrito $\angle LTR$ mide $30^\circ+40^\circ=70^\circ$. Tales da $\angle LOR=140^\circ$ para el arco inferior. Como $L,O,U$ están alineados,
+
+$$\theta=180^\circ-140^\circ=40^\circ.$$
+
+### Ejercicio 1.3.14
+
+**Necesidad.** Sean $P,Q,R,S$ los puntos de tangencia sobre $AB,AD,DC,BC$. Los segmentos tangentes desde un mismo vértice son iguales:
+
+$$AP=AQ,\quad BP=BS,\quad CR=CS,\quad DR=DQ.$$
+
+Esto se justifica comparando los dos triángulos rectángulos de hipotenusa común que unen ese vértice con el centro y los dos pies: se aplica hipotenusa-cateto, porque ambos radios son iguales. Sumando,
+
+$$AB+CD=(AP+BP)+(CR+DR)=(AQ+DQ)+(BS+CS)=AD+BC.$$
+
+**Suficiencia, con convexidad.** Primero suponga que un par de rectas laterales opuestas se corta. Después de renombrar cíclicamente los vértices y, si hace falta, invertir su orden, podemos escribir ese corte como $X=AD\cap BC$, con $A$ entre $X,D$ y $B$ entre $X,C$. La convexidad garantiza que $AB$ corta las dos semirrectas del ángulo $DXC$ antes que $DC$.
+
+Sea $\omega$ la circunferencia inscrita en $\triangle XDC$. Si $t$ es la longitud de cada segmento tangente desde $X$, la igualdad de tangentes desde $D,C$ da
+
+$$2t=XD+XC-CD.$$
+
+Construya ahora la circunferencia auxiliar $\omega'$ situada dentro del ángulo $DXC$, al otro lado de $AB$ respecto de $X$, y tangente a $AB$ y a las dos semirrectas. Su centro se obtiene al intersectar la bisectriz interior en $X$ con la bisectriz del ángulo suplementario en $A$; se elige el rayo de esta última que entra en el ángulo $DXC$ más allá de $AB$. Las caracterizaciones de las bisectrices garantizan las tres tangencias. Los puntos de tangencia con las semirrectas quedan más allá de $A,B$, y el punto de tangencia con $AB$ queda en el segmento $AB$.
+
+Si $t'$ es la longitud tangente desde $X$ a $\omega'$, la igualdad de tangentes desde $A,B$ da
+
+$$2t'=XA+XB+AB.$$
+
+La hipótesis y $AD=XD-XA$, $BC=XC-XB$ implican
+
+$$XA+XB+AB=XD+XC-CD,$$
+
+así que $t'=t$. Ambas circunferencias están dentro del mismo ángulo y sus centros están sobre su bisectriz. Los triángulos rectángulos que unen $X$, el centro y un punto de tangencia tienen el mismo ángulo en $X$, el mismo lado tangente $t$ y un ángulo recto; por ALA son congruentes. Por tanto sus radios y centros coinciden: $\omega=\omega'$. La circunferencia es tangente a los cuatro segmentos del cuadrilátero.
+
+Si un par de lados opuestos es paralelo pero el otro no, usamos el par no paralelo en el argumento anterior. Si los dos pares son paralelos, se trata de un paralelogramo: $AB=CD$, $AD=BC$, y la hipótesis obliga a $AB=AD$. Es un rombo. Sus diagonales bisecan los ángulos, por LLL en los triángulos que forman, y su intersección equidista de los cuatro lados. La circunferencia con ese centro y ese radio toca los cuatro segmentos. Así queda cubierto también el caso paralelo, sin suponer que cualquier cuadrilátero con un solo par paralelo es un paralelogramo.
+
+<figure class="geometry-figure" id="geometry-fig-21">
+<div class="geometry-static"><img src="/assets/geometry-ch1/pitot-analysis.svg" alt="Análisis del recíproco: círculo tangente a tres lados y comparación con la tangente paralela al cuarto." loading="lazy"></div>
+<figcaption><strong>Figura 21.</strong> Análisis del recíproco: círculo tangente a tres lados y comparación con la tangente paralela al cuarto.</figcaption>
+</figure>
+
+### Ejercicio 1.4.4
+
+1. Un triángulo con ángulos $30^\circ,60^\circ,90^\circ$ tiene un ángulo de $60^\circ$ y no es isósceles.
+2. Tome $A=(0,3)$, $B=(-3,0)$, $P=(-1,0)$, $Q=(1,0)$, $C=(3,0)$. La base queda dividida en tres partes iguales, pero los tres ángulos en $A$ son aproximadamente $26.565^\circ,36.870^\circ,26.565^\circ$. No son iguales. La simetría solo iguala los dos exteriores; no obliga a que coincidan con el central.
+3. Si se admiten figuras cruzadas, tome $A=(0,1)$, $B=(1,1)$, $C=(-1,0)$ y $D=(0,0)$. Se tiene $AB=CD=1$ y ambos ángulos indicados son rectos, pero $ABCD$ es cruzado. **Con la hipótesis adicional de cuadrilátero simple, la afirmación sí sería verdadera**: las perpendiculares a $AD$ por $A,D$ son paralelas, y los lados iguales quedan del mismo lado de $AD$, formando un rectángulo.
+
+<figure class="geometry-figure" id="geometry-fig-22">
+<div class="geometry-static"><img src="/assets/geometry-ch1/counterexamples-144.svg" alt="Los tres contraejemplos del ejercicio 1.4.4 con sus datos explícitos." loading="lazy"></div>
+<figcaption><strong>Figura 22.</strong> Los tres contraejemplos del ejercicio 1.4.4 con sus datos explícitos.</figcaption>
+</figure>
+
+### Ejercicio 1.5.2
+
+El segmento $AP$ cruza la mediatriz en $Q$. Como $QA=QB$, la desigualdad triangular en $PQB$ da
+
+$$PB<PQ+QB=PQ+QA=PA.$$
+
+Si $P=B$, la conclusión $PB=0<PA$ es inmediata; el argumento triangular se usa para los demás puntos.
+
+### Ejercicio 1.5.3
+
+**Primera prueba.** Los dos ángulos agudos suman $90^\circ$, de modo que cada uno es menor que el ángulo recto. Por ángulo-lado, su lado opuesto, la hipotenusa, es el mayor.
+
+**Segunda prueba.** Si $\angle ABC=90^\circ$, prolongue $AB$ hasta $D$ con $BD=AB$. Como $C$ está en la mediatriz de $AD$, $CA=CD$. Por desigualdad triangular,
+
+$$AC=\tfrac12(AC+CD)>\tfrac12 AD=AB.$$
+
+Intercambiando los catetos se obtiene $AC>BC$.
+
+### Ejercicio 1.5.4
+
+Si $R\in l$, $R\ne Q$, el triángulo $PQR$ es rectángulo y $PR$ es su hipotenusa. Por 1.5.3, $PR>PQ$. Así $Q$ es el único punto que minimiza la distancia a $P$.
+
+<figure class="geometry-figure" id="geometry-fig-23">
+<div class="geometry-static"><img src="/assets/geometry-ch1/distance-proofs.svg" alt="Pruebas de proximidad a un extremo, comparación de la hipotenusa y distancia mínima a una recta." loading="lazy"></div>
+<figcaption><strong>Figura 23.</strong> Pruebas de proximidad a un extremo, comparación de la hipotenusa y distancia mínima a una recta.</figcaption>
+</figure>
+
+## 1.8 Problemas
+
+Los quince problemas mantienen el contenido y el orden del libro. Las figuras se redibujan con etiquetas para que los datos no dependan de estimar el dibujo.
+
+1. Pruebe que la bisectriz interior y la exterior **correspondientes a un mismo vértice** de un triángulo son perpendiculares. La exterior biseca el ángulo suplementario formado al prolongar uno de los lados.
+
+2. Sea $P$ interior al disco de $C(O,r)$, con $P\ne O$. Sea $Q$ la intersección de $\overrightarrow{OP}$ con la circunferencia. Use la desigualdad triangular para probar que $Q$ es su punto más cercano a $P$.
+
+3. Si $P$ es interior a $\triangle ABC$, use la desigualdad triangular para probar $AB+BC>AP+PC$.
+
+4. Escriba el recíproco de cada afirmación verdadera y, si resulta falso, dibuje un contraejemplo:
+   a. Si $\triangle ABC\cong\triangle DEF$, entonces $\angle A=\angle D$ y $\angle B=\angle E$.
+   b. Si $ABCD$ es un rectángulo, entonces $\angle A=\angle C=90^\circ$.
+   c. Si $ABCD$ es un rectángulo, entonces $\angle A=\angle B=\angle C=90^\circ$.
+
+5. En el triángulo isósceles $AB=AC$, sea $D$ el pie de la perpendicular desde $A$ a $BC$. Pruebe que $AD$ biseca $\angle BAC$.
+
+6. Pruebe que si la perpendicular desde $A$ a $BC$ biseca $\angle BAC$, entonces $AB=AC$.
+
+7. Sea $D$ la intersección de la bisectriz interior de $\angle A$ con $BC$. Pruebe
+
+$$\angle ADC=90^\circ+\frac{\angle B-\angle C}{2}.$$
+
+8. Construya un triángulo isósceles $ABC$ dados su ángulo del vértice $\angle A$ y la longitud de $BC$; $0^\circ<\angle A<180^\circ$, $BC>0$.
+
+9. Construya un triángulo rectángulo dados la hipotenusa y un cateto. Sus longitudes deben cumplir $0<\text{cateto}<\text{hipotenusa}$.
+
+10. Calcule $\theta$ en la figura. $O$ es el centro; $\angle AOB=50^\circ$ y $\angle COD=30^\circ$. Las cuerdas $AC$ y $BD$ se cortan en $X$, y $\theta=\angle AXB$. El dibujo no se usa como escala.
+
+<figure class="geometry-figure" id="geometry-fig-24">
+<div class="geometry-static"><img src="/assets/geometry-ch1/problem-10.svg" alt="Problema 10: dos cuerdas se cruzan; los arcos correspondientes a los ángulos centrales dados quedan identificados." loading="lazy"></div>
+<figcaption><strong>Figura 24.</strong> Problema 10: dos cuerdas se cruzan; los arcos correspondientes a los ángulos centrales dados quedan identificados.</figcaption>
+</figure>
+
+11. Sea $Q$ el pie de la perpendicular desde $P\notin l$ a $l$. Pruebe que $Q$ es el punto de $l$ más próximo a $P$.
+
+12. Sea $P$ interior al disco de $C(O,r)$, con $P\ne O$. Sea $Q$ la intersección de $\overrightarrow{PO}$ con la circunferencia. Pruebe que $Q$ es el punto de la circunferencia más alejado de $P$. Observe la diferencia de orden entre $\overrightarrow{PO}$ y $\overrightarrow{OP}$ del problema 2.
+
+13. Pruebe que un cuadrilátero simple es cíclico si y solo si sus ángulos opuestos suman $180^\circ$.
+
+14. Dibuje el lugar geométrico de los puntos cuya suma de distancias a dos rectas perpendiculares fijas es una constante positiva dada.
+
+15. Dados $C(P,s)$, una recta $l$ exterior a su disco y un radio $r>s$, construya las circunferencias de radio $r$ tangentes a $C(P,s)$ y a $l$. Considere tangencia externa e interna.
+
+<figure class="geometry-figure" id="geometry-fig-25" data-geometry="problem-15" data-title="Problema 15: análisis por intersecciones de lugares geométricos. La figura muestra un caso con cuatro soluciones.">
+<div class="geometry-static"><img src="/assets/geometry-ch1/problem-15.svg" alt="Problema 15: análisis por intersecciones de lugares geométricos. La figura muestra un caso con cuatro soluciones." loading="lazy"></div>
+<figcaption><strong>Figura 25.</strong> Problema 15: análisis por intersecciones de lugares geométricos. La figura muestra un caso con cuatro soluciones.</figcaption>
+</figure>
+
+**Precisión sobre el problema 15.** Si $d=d(P,l)>s$, no siempre hay cuatro soluciones, pese a la observación del libro. Los centros buscados están en la paralela a $l$ a distancia $r$ del mismo lado que $P$; la paralela del otro lado no puede dar tangencia con la circunferencia dada. Para tangencia externa deben satisfacer $OP=r+s$; para interna, $OP=r-s$. Se construyen las intersecciones de esa paralela con las dos circunferencias de centro $P$ y esos radios. Hay cuatro soluciones si $s<d<2r-s$, tres si $d=2r-s$, dos si $2r-s<d<2r+s$, una si $d=2r+s$ y ninguna si $d>2r+s$. En los casos frontera, dos intersecciones coinciden. Esta precisión pertenece al mismo problema y evita afirmar una cantidad de soluciones sin las hipótesis necesarias.
+
+### Referencia del capítulo
+
+I. E. Leonard, J. E. Lewis, A. C. F. Liu y G. W. Tokarsky. *Classical Geometry: Euclidean, Transformational, Inversive, and Projective*. Wiley, 2014. Capítulo 1, «Congruency», pp. 3–40. Las notas se limitan a ese capítulo y conservan la numeración original para facilitar la comparación.

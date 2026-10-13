@@ -41,6 +41,23 @@ Sistemas bidimensionales, linealización, estabilidad, péndulo, nulclinas y ext
 <div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/phase-plane.pdf" download>Descargar PDF</a></div>
 :::
 
+## Geometría Axiomática
+
+**MATG1062 · ESPOL**  
+Notas en español, basadas en Leonard, Lewis, Liu y Tokarsky (2014).
+
+::: {.notes-catalog-item}
+### Congruencia · Capítulo 1
+
+Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones con regla y compás. Incluye los ejercicios y problemas del capítulo, 25 figuras y 15 figuras con controles interactivos.
+
+::: {.meta}
+Capítulo completo · Secciones 1.1–1.8 · pp. 3–40 del libro
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/congruency-chapter-1.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a></div>
+:::
+
 ## Nota complementaria
 
 [De una ecuación diferencial de segundo orden a un sistema de primer orden](notes/second-order.qmd)

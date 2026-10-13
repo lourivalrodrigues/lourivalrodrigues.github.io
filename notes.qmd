@@ -41,6 +41,23 @@ Planar systems, linearization, stability, the pendulum, nullclines, and extensio
 <div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Read online</a><a class="btn-academic" href="files/notes/phase-plane.pdf" download>Download PDF</a></div>
 :::
 
+## Geometría Axiomática
+
+**MATG1062 · ESPOL**  
+Notas en español, basadas en Leonard, Lewis, Liu y Tokarsky (2014).
+
+::: {.notes-catalog-item}
+### Congruencia · Capítulo 1
+
+Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones con regla y compás. Incluye los ejercicios y problemas del capítulo, 25 figuras y 15 figuras con controles interactivos.
+
+::: {.meta}
+Capítulo completo · Secciones 1.1–1.8 · pp. 3–40 del libro
+:::
+
+<div class="note-actions"><a class="btn-academic primary" href="notes/congruency-chapter-1.html">Read online</a><a class="btn-academic" href="files/notes/congruency-chapter-1.pdf" download>Download PDF</a></div>
+:::
+
 ## Supplementary note
 
 [From a second-order differential equation to a first-order system](notes/second-order.qmd)

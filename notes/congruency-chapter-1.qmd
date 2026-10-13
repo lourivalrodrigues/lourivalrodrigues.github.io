@@ -1,0 +1,29 @@
+---
+title: "Congruencia · Capítulo 1"
+lang: es
+toc: true
+toc-depth: 2
+number-sections: false
+description: "Notas de Geometría Axiomática: capítulo 1 de Leonard, Lewis, Liu y Tokarsky; figuras interactivas y PDF."
+format:
+  html:
+    toc-title: Contenido
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/geometry-ch1.css">
+
+::: {.language-link}
+[Sitio en español](../es/notes/congruency-chapter-1.html)
+:::
+
+**Geometría Axiomática · MATG1062 · ESPOL**  
+**Docente:** Lourival Rodrigues de Lima.
+
+<div class="note-actions"><a class="btn-academic primary" href="../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a><a class="note-back" href="../notes.html">← Todas las notas</a></div>
+
+Las figuras con controles permiten explorar las mismas configuraciones del capítulo. Puede usar el ratón, el teclado o la pantalla táctil. La exploración acompaña las demostraciones; las igualdades del texto no dependen de la precisión de la pantalla. El PDF contiene dibujos estáticos.
+
+{{< include ../_content/notes/congruency-chapter-1.qmd >}}
+
+<script src="../assets/geometry-ch1.js" defer></script>
