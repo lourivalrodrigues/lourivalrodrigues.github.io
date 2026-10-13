@@ -9,6 +9,10 @@ description: Sitio académico de Lourival Rodrigues de Lima.
 :::
 
 
+<link rel="stylesheet" href="../../assets/notes.css">
+
+<a class="note-back" href="mathematical-methods.html">← Volver a la asignatura</a>
+
 ## La idea
 Consideremos una ecuación de segundo orden
 

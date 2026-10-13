@@ -19,7 +19,7 @@ crossref:
 
 Notas completas del curso Métodos Matemáticos para las Ciencias (MATG1075), en español.
 
-<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/chemical-modeling.pdf" download>Descargar PDF · 6 páginas</a><a class="note-back" href="../notes.html">← Todas las notas</a></div>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/chemical-modeling.pdf" download>Descargar PDF · 6 páginas</a><a class="note-back" href="mathematical-methods.html">← Volver a la asignatura</a></div>
 
 **Docente:** Lourival Rodrigues de Lima. **Base:** Witelski y Bowen (2015), sección 1.2, pp. 5–8.
 

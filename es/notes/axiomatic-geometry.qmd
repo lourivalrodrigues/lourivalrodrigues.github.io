@@ -1,0 +1,123 @@
+---
+title: "Geometría Axiomática"
+lang: es
+toc: false
+format:
+  html:
+    template-partials:
+      - ../../assets/courses/title-block.html
+description: "Geometría Axiomática · Notas, documentos y recursos de estudio."
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+<link rel="stylesheet" href="../../assets/course-hubs.css">
+
+<div class="language-link"><a href="../../notes/axiomatic-geometry.html">English</a></div>
+
+<nav class="course-breadcrumb" aria-label="Ruta de navegación"><a href="../notes.html">Notas</a><span aria-hidden="true">/</span><span>Geometría Axiomática</span></nav>
+
+<header class="course-hero">
+<span class="course-kicker">MATG1062 · ESPOL</span>
+<h1>Geometría Axiomática</h1>
+<p>Un espacio para estudiar las figuras, explorar sus propiedades y construir demostraciones.</p>
+<img class="course-hero-art" src="../../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Materiales en español</span><span>Figuras interactivas</span></div>
+</header>
+
+<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
+
+<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">1 capítulo disponible</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">01</div>
+<div>
+<h3>Congruencia · Capítulo 1</h3>
+<p>Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones.</p>
+<p class="meta">24 páginas · 25 figuras · 15 figuras interactivas</p>
+<div class="note-actions"><a class="btn-academic primary" href="congruency-chapter-1.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="course-guidance"><p><strong>Cómo usar estas notas.</strong> Contienen temas adicionales a los vistos en clase. Prioriza lo trabajado con el docente. La notación está definida en los documentos; si encuentras un error o una explicación poco clara, comunícalo para que podamos revisarla.</p></div>
+
+<div class="course-section-head" id="course-documents"><h2>Syllabus y documentos</h2></div>
+
+<div class="course-docs">
+<article class="course-doc">
+<span class="course-status pending">Borrador disponible</span>
+<h3>Syllabus · Contenido de asignatura</h3>
+<p>Objetivos, resultados de aprendizaje, unidades y bibliografía. El archivo disponible está marcado como borrador.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/courses/axiomatic-geometry-syllabus-draft.pdf" target="_blank" rel="noopener">Consultar PDF</a><a class="btn-academic" href="../../files/courses/axiomatic-geometry-syllabus-draft.pdf" download>Descargar</a></div>
+</article>
+
+<article class="course-doc">
+<span class="course-status">Documento disponible</span>
+<h3>Políticas y cronograma</h3>
+<p>Documento preparado en septiembre de 2026: objetivos, planificación semanal, evaluación y orientaciones de trabajo.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/courses/axiomatic-geometry-policies.pdf" target="_blank" rel="noopener">Consultar PDF</a><a class="btn-academic" href="../../files/courses/axiomatic-geometry-policies.pdf" download>Descargar</a></div>
+</article>
+
+</div>
+
+<details>
+<summary>Ver la organización temática</summary>
+
+Las unidades descritas en los documentos disponibles son:
+
+
+1. Congruencia de figuras planas
+2. Concurrencia de rectas
+3. Semejanza de figuras planas
+4. Enfoque algebraico de congruencia y concurrencia
+5. Área de figuras planas
+6. Geometría euclidiana avanzada
+
+</details>
+
+<p class="meta">Las fechas, los enunciados, las entregas y cualquier ajuste del curso se comunican por el Aula Virtual de ESPOL.</p>
+
+<div class="course-section-head" id="course-curiosities"><h2>Curiosidades</h2></div>
+
+<div class="course-curiosities">
+<details>
+<summary>Mover una figura no sustituye una demostración</summary>
+
+Al modificar una construcción puedes observar que una propiedad se conserva. Esto ayuda a formular una conjetura, pero la demostración debe explicar por qué se cumple para **todas** las figuras que satisfacen las hipótesis.
+
+Prueba a mover los controles de una figura de congruencia e identifica qué datos permanecen iguales.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-3">Explorar la congruencia →</a></p>
+</details>
+
+<details>
+<summary>Un ángulo que permanece constante</summary>
+
+Un ángulo inscrito mide la mitad del arco que intercepta. Si su vértice recorre el mismo arco y los extremos de la cuerda permanecen fijos, el ángulo no cambia.
+
+Explora también qué sucede al pasar al otro arco: es importante identificar el arco que **no contiene** el vértice.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-7">Explorar el teorema de Tales →</a></p>
+</details>
+
+<details>
+<summary>Tres proyecciones, una recta</summary>
+
+El teorema de Simson afirma que, si un punto está en la circunferencia circunscrita de un triángulo, sus proyecciones perpendiculares sobre las tres rectas laterales están alineadas.
+
+Mueve el punto y observa que los pies pueden quedar fuera de los segmentos laterales, sin perder la alineación.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-12">Explorar la recta de Simson →</a></p>
+</details>
+
+</div>
+
+<div class="course-section-head" id="course-reading"><h2>Bibliografía</h2></div>
+
+<div class="course-reference">
+<p><strong>Leonard, I. E.; Lewis, J. E.; Liu, A. C. F.; Tokarsky, G. W. (2014).</strong><br><em>Classical Geometry: Euclidean, Transformational, Inversive, and Projective.</em> Wiley.</p>
+<p class="meta">Texto base de las notas de Geometría Axiomática.</p>
+</div>
+<nav class="course-footnav" aria-label="Otras asignaturas"><a href="../notes.html">← Todas las asignaturas</a><a href="mathematical-methods.html">Métodos Matemáticos para las Ciencias →</a></nav>

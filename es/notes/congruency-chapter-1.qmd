@@ -20,7 +20,7 @@ format:
 **Geometría Axiomática · MATG1062 · ESPOL**  
 **Docente:** Lourival Rodrigues de Lima.
 
-<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a><a class="note-back" href="../../notes.html">← Todas las notas</a></div>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a><a class="note-back" href="axiomatic-geometry.html">← Volver a la asignatura</a></div>
 
 Las figuras con controles permiten explorar las mismas configuraciones del capítulo. Puede usar el ratón, el teclado o la pantalla táctil. La exploración acompaña las demostraciones; las igualdades del texto no dependen de la precisión de la pantalla. El PDF contiene dibujos estáticos.
 

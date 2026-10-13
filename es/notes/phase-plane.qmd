@@ -19,7 +19,7 @@ crossref:
 
 Notas completas del curso Métodos Matemáticos para las Ciencias (MATG1075), en español.
 
-<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/phase-plane.pdf" download>Descargar PDF · 19 páginas</a><a class="note-back" href="../notes.html">← Todas las notas</a></div>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/phase-plane.pdf" download>Descargar PDF · 19 páginas</a><a class="note-back" href="mathematical-methods.html">← Volver a la asignatura</a></div>
 
 **Docente:** Lourival Rodrigues de Lima. **Base:** Witelski y Bowen (2015), capítulo 1, secciones 1.5–1.7, pp. 12–21.
 

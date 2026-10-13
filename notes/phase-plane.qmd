@@ -19,7 +19,7 @@ crossref:
 
 Complete lecture notes for Mathematical Methods for the Sciences (MATG1075). The note text is in Spanish.
 
-<div class="note-actions"><a class="btn-academic primary" href="../files/notes/phase-plane.pdf" download>Download PDF · 19 pages</a><a class="note-back" href="../notes.html">← All notes</a></div>
+<div class="note-actions"><a class="btn-academic primary" href="../files/notes/phase-plane.pdf" download>Download PDF · 19 pages</a><a class="note-back" href="mathematical-methods.html">← Back to course</a></div>
 
 **Docente:** Lourival Rodrigues de Lima. **Base:** Witelski y Bowen (2015), capítulo 1, secciones 1.5–1.7, pp. 12–21.
 

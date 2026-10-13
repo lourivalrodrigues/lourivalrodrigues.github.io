@@ -1,65 +1,44 @@
 ---
-title: Notes
-toc: true
-description: Mathematics lecture notes and teaching materials by Lourival Rodrigues de Lima.
+title: "Notes"
+lang: en
+toc: false
+format:
+  html:
+    template-partials:
+      - assets/courses/title-block.html
+description: "Lecture notes and course resources, organized by subject."
 ---
 
-::: {.language-link}
-[Español](es/notes.html)
-:::
-
 <link rel="stylesheet" href="assets/notes.css">
+<link rel="stylesheet" href="assets/course-hubs.css">
 
-Lecture notes with definitions, proofs, and worked examples. Read the full notes online or download their PDF versions.
+<div class="language-link"><a href="es/notes.html">Español</a></div>
 
-## Métodos Matemáticos para las Ciencias
+<header class="course-hero">
+<span class="course-kicker">ESPOL · Study resources</span>
+<h1>A space for every course</h1>
+<p>Choose a course to find lecture notes, course documents, and ideas to explore.</p>
+<img class="course-hero-art" src="assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Lecture notes</span><span>Course documents</span><span>Further exploration</span></div>
+</header>
 
-**MATG1075 · ESPOL**  
-Materials in Spanish, based on Witelski and Bowen (2015).
+```{=html}
+<div class="course-grid">
+<a class="course-card" href="notes/mathematical-methods.html">
+<span class="course-kicker">MATG1075 · ESPOL</span>
+<h2>Métodos Matemáticos para las Ciencias</h2>
+<p>Mathematical modeling, differential equations, and dynamical systems.</p>
+<img class="course-card-art" src="assets/courses/mathematical-methods.svg" alt="" aria-hidden="true">
+<div class="course-card-footer"><span>2 full notes + 1 short note</span><strong>Open course <span aria-hidden="true">→</span></strong></div>
+</a>
+<a class="course-card" href="notes/axiomatic-geometry.html">
+<span class="course-kicker">MATG1062 · ESPOL</span>
+<h2>Geometría Axiomática</h2>
+<p>Axioms, constructions, and proofs. Figures you can explore.</p>
+<img class="course-card-art" src="assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-card-footer"><span>Chapter 1 · 15 interactive figures</span><strong>Open course <span aria-hidden="true">→</span></strong></div>
+</a>
+</div>
+```
 
-::: {.notes-catalog-item}
-### Modeling chemical transformations
-
-Mass action, conservation laws, reversible and consecutive reactions, explicit solutions, and exercises.
-
-::: {.meta}
-6 pages · Section 1.2 of the course textbook
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/chemical-modeling.html">Read online</a><a class="btn-academic" href="files/notes/chemical-modeling.pdf" download>Download PDF</a></div>
-:::
-
-::: {.notes-catalog-item}
-### Phase plane and new directions in mathematical modeling
-
-Planar systems, linearization, stability, the pendulum, nullclines, and extensions involving memory, discrete time, and randomness.
-
-::: {.meta}
-19 pages · Sections 1.5–1.7 of the course textbook
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Read online</a><a class="btn-academic" href="files/notes/phase-plane.pdf" download>Download PDF</a></div>
-:::
-
-## Geometría Axiomática
-
-**MATG1062 · ESPOL**  
-Notas en español, basadas en Leonard, Lewis, Liu y Tokarsky (2014).
-
-::: {.notes-catalog-item}
-### Congruencia · Capítulo 1
-
-Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones con regla y compás. Incluye los ejercicios y problemas del capítulo, 25 figuras y 15 figuras con controles interactivos.
-
-::: {.meta}
-Capítulo completo · Secciones 1.1–1.8 · pp. 3–40 del libro
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/congruency-chapter-1.html">Read online</a><a class="btn-academic" href="files/notes/congruency-chapter-1.pdf" download>Download PDF</a></div>
-:::
-
-## Supplementary note
-
-[From a second-order differential equation to a first-order system](notes/second-order.qmd)
-
-A brief explanation using the pendulum as an example.
+<div class="course-guidance"><p><strong>Supplementary study material.</strong> Each course page brings together the available resources. For assessments, focus on topics covered in class and consult the virtual learning environment for instructions and submissions.</p></div>

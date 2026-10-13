@@ -1,0 +1,141 @@
+---
+title: "Métodos Matemáticos para las Ciencias"
+lang: es
+toc: false
+format:
+  html:
+    template-partials:
+      - ../../assets/courses/title-block.html
+description: "Métodos Matemáticos para las Ciencias · Notas, documentos y recursos de estudio."
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+<link rel="stylesheet" href="../../assets/course-hubs.css">
+
+<div class="language-link"><a href="../../notes/mathematical-methods.html">English</a></div>
+
+<nav class="course-breadcrumb" aria-label="Ruta de navegación"><a href="../notes.html">Notas</a><span aria-hidden="true">/</span><span>Métodos Matemáticos para las Ciencias</span></nav>
+
+<header class="course-hero">
+<span class="course-kicker">MATG1075 · ESPOL</span>
+<h1>Métodos Matemáticos para las Ciencias</h1>
+<p>De un fenómeno a un modelo: formular ecuaciones, analizar soluciones e interpretar resultados.</p>
+<img class="course-hero-art" src="../../assets/courses/mathematical-methods.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Materiales en español</span><span>Modelación matemática</span></div>
+</header>
+
+<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
+
+<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">3 materiales disponibles</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">01</div>
+<div>
+<h3>Modelación de transformaciones químicas</h3>
+<p>Ley de acción de masas, conservación, reacciones reversibles y consecutivas, soluciones y ejercicios.</p>
+<p class="meta">6 páginas · Sección 1.2</p>
+<div class="note-actions"><a class="btn-academic primary" href="chemical-modeling.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/chemical-modeling.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">02</div>
+<div>
+<h3>Plano de fase y nuevas direcciones en modelación matemática</h3>
+<p>Sistemas planos, estabilidad, péndulo, nulclinas y extensiones de los modelos.</p>
+<p class="meta">19 páginas · Secciones 1.5–1.7</p>
+<div class="note-actions"><a class="btn-academic primary" href="phase-plane.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/phase-plane.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">03</div>
+<div>
+<h3>De segundo orden a un sistema de primer orden</h3>
+<p>La posición y la velocidad como variables de estado, con el péndulo como ejemplo.</p>
+<p class="meta">Nota breve de apoyo</p>
+<div class="note-actions"><a class="btn-academic primary" href="second-order.html">Leer en el sitio</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="course-guidance"><p><strong>Cómo usar estas notas.</strong> Contienen temas adicionales a los vistos en clase. Prioriza lo trabajado con el docente. La notación está definida en los documentos; si encuentras un error o una explicación poco clara, comunícalo para que podamos revisarla.</p></div>
+
+<div class="course-section-head" id="course-documents"><h2>Syllabus y documentos</h2></div>
+
+<div class="course-docs">
+<article class="course-doc">
+<span class="course-status pending">Pendiente de incorporar</span>
+<h3>Syllabus</h3>
+<p>El PDF del syllabus se incorporará aquí cuando esté disponible. Mientras tanto, puedes consultar la organización del curso en el documento de políticas.</p>
+
+</article>
+
+<article class="course-doc">
+<span class="course-status">Documento disponible</span>
+<h3>Políticas y cronograma</h3>
+<p>Documento preparado en septiembre de 2026: objetivos, planificación semanal, evaluación y orientaciones de trabajo.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../../files/courses/mathematical-methods-policies.pdf" target="_blank" rel="noopener">Consultar PDF</a><a class="btn-academic" href="../../files/courses/mathematical-methods-policies.pdf" download>Descargar</a></div>
+</article>
+
+</div>
+
+<details>
+<summary>Ver la organización temática</summary>
+
+Las unidades descritas en los documentos disponibles son:
+
+
+1. Introducción a los modelos matemáticos
+2. Modelos clásicos y aplicaciones
+3. Métodos variacionales
+4. Métodos analíticos de solución de ecuaciones en derivadas parciales
+
+</details>
+
+<p class="meta">Las fechas, los enunciados, las entregas y cualquier ajuste del curso se comunican por el Aula Virtual de ESPOL.</p>
+
+<div class="course-section-head" id="course-curiosities"><h2>Curiosidades</h2></div>
+
+<div class="course-curiosities">
+<details>
+<summary>La conservación también simplifica las ecuaciones</summary>
+
+En una reacción reversible $A \rightleftharpoons B$, si el volumen es constante, no hay entradas ni salidas y ambas especies se transforman una a una, la concentración total $a(t)+b(t)$ es constante.
+
+Conocer esa cantidad permite escribir una variable en función de la otra y reducir el número de ecuaciones independientes. Antes de resolver, conviene buscar qué se conserva.
+
+<p class="curiosity-link"><a href="chemical-modeling.html">Leer la nota de reacciones químicas →</a></p>
+</details>
+
+<details>
+<summary>¿Por qué una ecuación de segundo orden necesita dos datos iniciales?</summary>
+
+Para una ecuación $x^{\prime\prime}=f(t,x,x^\prime)$, definimos $v=x^\prime$ y obtenemos el sistema $x^\prime=v$, $v^\prime=f(t,x,v)$. El estado incluye **posición y velocidad**.
+
+En el péndulo, conocer el ángulo inicial no basta: distintas velocidades iniciales producen movimientos distintos. Bajo las condiciones habituales de existencia y unicidad, ambos datos determinan la solución local.
+
+<p class="curiosity-link"><a href="second-order.html">Ver la transformación paso a paso →</a></p>
+</details>
+
+<details>
+<summary>El mismo péndulo, dos descripciones</summary>
+
+El modelo ideal usa $\sin\theta$. Cerca de la posición vertical descendente, $\sin\theta\approx\theta$ cuando el ángulo se mide en radianes. Esta aproximación produce un modelo lineal útil para oscilaciones pequeñas.
+
+Al aumentar la amplitud, la aproximación pierde precisión. El plano de fase permite comparar las trayectorias y reconocer cuándo hace falta el modelo no lineal.
+
+<p class="curiosity-link"><a href="phase-plane.html">Estudiar el péndulo en el plano de fase →</a></p>
+</details>
+
+</div>
+
+<div class="course-section-head" id="course-reading"><h2>Bibliografía</h2></div>
+
+<div class="course-reference">
+<p><strong>Witelski, T.; Bowen, M. (2015).</strong><br><em>Methods of Mathematical Modelling: Continuous Systems and Differential Equations.</em> Springer.</p>
+<p class="meta">Texto base de las notas de Métodos Matemáticos para las Ciencias.</p>
+</div>
+<nav class="course-footnav" aria-label="Otras asignaturas"><a href="../notes.html">← Todas las asignaturas</a><a href="axiomatic-geometry.html">Geometría Axiomática →</a></nav>

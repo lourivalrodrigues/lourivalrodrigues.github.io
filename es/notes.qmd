@@ -1,65 +1,44 @@
 ---
-title: Notas
-toc: true
-description: Notas de clase y materiales de matemáticas de Lourival Rodrigues de Lima.
+title: "Notas"
+lang: es
+toc: false
+format:
+  html:
+    template-partials:
+      - ../assets/courses/title-block.html
+description: "Notas y materiales organizados por asignatura."
 ---
 
-::: {.language-link}
-[English](../notes.html)
-:::
-
 <link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/course-hubs.css">
 
-Notas de clase con definiciones, demostraciones y ejemplos resueltos. Puedes leerlas directamente aquí o descargar su versión en PDF.
+<div class="language-link"><a href="../notes.html">English</a></div>
 
-## Métodos Matemáticos para las Ciencias
+<header class="course-hero">
+<span class="course-kicker">ESPOL · Material de estudio</span>
+<h1>Un espacio para cada asignatura</h1>
+<p>Elige tu asignatura para acceder a las notas, los documentos del curso y las propuestas de exploración.</p>
+<img class="course-hero-art" src="../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Notas de clase</span><span>Documentos del curso</span><span>Curiosidades</span></div>
+</header>
 
-**MATG1075 · ESPOL**  
-Materiales en español, basados en Witelski y Bowen (2015).
+```{=html}
+<div class="course-grid">
+<a class="course-card" href="notes/mathematical-methods.html">
+<span class="course-kicker">MATG1075 · ESPOL</span>
+<h2>Métodos Matemáticos para las Ciencias</h2>
+<p>Modelación, ecuaciones diferenciales y sistemas dinámicos.</p>
+<img class="course-card-art" src="../assets/courses/mathematical-methods.svg" alt="" aria-hidden="true">
+<div class="course-card-footer"><span>2 notas completas + 1 nota breve</span><strong>Entrar a la asignatura <span aria-hidden="true">→</span></strong></div>
+</a>
+<a class="course-card" href="notes/axiomatic-geometry.html">
+<span class="course-kicker">MATG1062 · ESPOL</span>
+<h2>Geometría Axiomática</h2>
+<p>Axiomas, construcciones y demostraciones. Figuras que puedes explorar.</p>
+<img class="course-card-art" src="../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-card-footer"><span>Capítulo 1 · 15 figuras interactivas</span><strong>Entrar a la asignatura <span aria-hidden="true">→</span></strong></div>
+</a>
+</div>
+```
 
-::: {.notes-catalog-item}
-### Modelación de transformaciones químicas
-
-Ley de acción de masas, relaciones de conservación, reacciones reversibles y consecutivas, soluciones explícitas y ejercicios.
-
-::: {.meta}
-6 páginas · Sección 1.2 del libro base
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/chemical-modeling.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/chemical-modeling.pdf" download>Descargar PDF</a></div>
-:::
-
-::: {.notes-catalog-item}
-### Plano de fase y nuevas direcciones en modelación matemática
-
-Sistemas bidimensionales, linealización, estabilidad, péndulo, nulclinas y extensiones a modelos con memoria, tiempo discreto y aleatoriedad.
-
-::: {.meta}
-19 páginas · Secciones 1.5–1.7 del libro base
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/phase-plane.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/phase-plane.pdf" download>Descargar PDF</a></div>
-:::
-
-## Geometría Axiomática
-
-**MATG1062 · ESPOL**  
-Notas en español, basadas en Leonard, Lewis, Liu y Tokarsky (2014).
-
-::: {.notes-catalog-item}
-### Congruencia · Capítulo 1
-
-Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones con regla y compás. Incluye los ejercicios y problemas del capítulo, 25 figuras y 15 figuras con controles interactivos.
-
-::: {.meta}
-Capítulo completo · Secciones 1.1–1.8 · pp. 3–40 del libro
-:::
-
-<div class="note-actions"><a class="btn-academic primary" href="notes/congruency-chapter-1.html">Leer en el sitio</a><a class="btn-academic" href="../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a></div>
-:::
-
-## Nota complementaria
-
-[De una ecuación diferencial de segundo orden a un sistema de primer orden](notes/second-order.qmd)
-
-Una explicación breve con el ejemplo del péndulo.
+<div class="course-guidance"><p><strong>Material complementario.</strong> En cada página encontrarás los recursos disponibles. Para preparar tus evaluaciones, enfócate en los temas tratados en clase y consulta el Aula Virtual para las indicaciones y entregas.</p></div>

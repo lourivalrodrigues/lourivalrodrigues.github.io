@@ -1,0 +1,141 @@
+---
+title: "Métodos Matemáticos para las Ciencias"
+lang: en
+toc: false
+format:
+  html:
+    template-partials:
+      - ../assets/courses/title-block.html
+description: "Métodos Matemáticos para las Ciencias · Lecture notes and course resources."
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/course-hubs.css">
+
+<div class="language-link"><a href="../es/notes/mathematical-methods.html">Español</a></div>
+
+<nav class="course-breadcrumb" aria-label="Breadcrumb"><a href="../notes.html">Notes</a><span aria-hidden="true">/</span><span>Métodos Matemáticos para las Ciencias</span></nav>
+
+<header class="course-hero">
+<span class="course-kicker">MATG1075 · ESPOL</span>
+<h1>Métodos Matemáticos para las Ciencias</h1>
+<p>From a phenomenon to a model: formulate equations, analyze solutions, and interpret results.</p>
+<img class="course-hero-art" src="../assets/courses/mathematical-methods.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Study notes in Spanish</span><span>Mathematical modeling</span></div>
+</header>
+
+<nav class="course-jumpnav" aria-label="Course sections"><a href="#course-notes">Lecture notes</a><a href="#course-documents">Syllabus & documents</a><a href="#course-curiosities">Explore further</a><a href="#course-reading">Reading</a></nav>
+
+<div class="course-section-head" id="course-notes"><h2>Lecture notes</h2><span class="course-count">3 resources available</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">01</div>
+<div>
+<h3>Modeling chemical transformations</h3>
+<p>Mass action, conservation, reversible and consecutive reactions, solutions, and exercises.</p>
+<p class="meta">6 pages · Section 1.2</p>
+<div class="note-actions"><a class="btn-academic primary" href="chemical-modeling.html">Read online</a><a class="btn-academic" href="../files/notes/chemical-modeling.pdf" download>Download PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">02</div>
+<div>
+<h3>Phase plane and new directions in mathematical modeling</h3>
+<p>Planar systems, stability, the pendulum, nullclines, and model extensions.</p>
+<p class="meta">19 pages · Sections 1.5–1.7</p>
+<div class="note-actions"><a class="btn-academic primary" href="phase-plane.html">Read online</a><a class="btn-academic" href="../files/notes/phase-plane.pdf" download>Download PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">03</div>
+<div>
+<h3>From second order to a first-order system</h3>
+<p>Position and velocity as state variables, illustrated by the pendulum.</p>
+<p class="meta">Short supplementary note</p>
+<div class="note-actions"><a class="btn-academic primary" href="second-order.html">Read online</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="course-guidance"><p><strong>How to use these notes.</strong> They include topics beyond those already covered in class. Prioritize the material discussed with the lecturer. Notation is defined in each document; please report errors or unclear explanations.</p></div>
+
+<div class="course-section-head" id="course-documents"><h2>Syllabus & documents</h2></div>
+
+<div class="course-docs">
+<article class="course-doc">
+<span class="course-status pending">To be added</span>
+<h3>Syllabus</h3>
+<p>The syllabus PDF will be added here when available. For now, the policies document describes the course structure.</p>
+
+</article>
+
+<article class="course-doc">
+<span class="course-status">Available document</span>
+<h3>Policies and weekly plan</h3>
+<p>Document prepared in September 2026: objectives, weekly planning, assessment, and study guidance.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../files/courses/mathematical-methods-policies.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn-academic" href="../files/courses/mathematical-methods-policies.pdf" download>Download</a></div>
+</article>
+
+</div>
+
+<details>
+<summary>View the topic outline</summary>
+
+The available course documents list these units:
+
+
+1. Introduction to mathematical models
+2. Classical models and applications
+3. Variational methods
+4. Analytical solution methods for partial differential equations
+
+</details>
+
+<p class="meta">Dates, assignment instructions, submissions, and course updates are communicated through ESPOL’s virtual learning environment.</p>
+
+<div class="course-section-head" id="course-curiosities"><h2>Explore further</h2></div>
+
+<div class="course-curiosities">
+<details>
+<summary>Conservation can simplify the equations</summary>
+
+In a reversible reaction $A \rightleftharpoons B$, at constant volume, with no inflow or outflow and a one-to-one conversion, the total concentration $a(t)+b(t)$ is constant.
+
+This lets us express one variable in terms of the other and reduce the number of independent equations. Before solving, look for conserved quantities.
+
+<p class="curiosity-link"><a href="chemical-modeling.html">Read the chemical-reactions note →</a></p>
+</details>
+
+<details>
+<summary>Why does a second-order equation need two initial conditions?</summary>
+
+For an equation $x^{\prime\prime}=f(t,x,x^\prime)$, set $v=x^\prime$ to obtain $x^\prime=v$, $v^\prime=f(t,x,v)$. The state contains **position and velocity**.
+
+For the pendulum, the initial angle alone is insufficient: different initial velocities give different motions. Under the usual existence and uniqueness conditions, both data determine the local solution.
+
+<p class="curiosity-link"><a href="second-order.html">See the transformation step by step →</a></p>
+</details>
+
+<details>
+<summary>The same pendulum, two descriptions</summary>
+
+The ideal model uses $\sin\theta$. Near the downward vertical, $\sin\theta\approx\theta$ when the angle is measured in radians. This yields a useful linear model for small oscillations.
+
+At larger amplitudes, the approximation loses accuracy. The phase plane helps compare trajectories and identify when the nonlinear model is needed.
+
+<p class="curiosity-link"><a href="phase-plane.html">Study the pendulum in the phase plane →</a></p>
+</details>
+
+</div>
+
+<div class="course-section-head" id="course-reading"><h2>Reading</h2></div>
+
+<div class="course-reference">
+<p><strong>Witelski, T.; Bowen, M. (2015).</strong><br><em>Methods of Mathematical Modelling: Continuous Systems and Differential Equations.</em> Springer.</p>
+<p class="meta">Source textbook for the Mathematical Methods for the Sciences notes.</p>
+</div>
+<nav class="course-footnav" aria-label="Other courses"><a href="../notes.html">← All courses</a><a href="axiomatic-geometry.html">Geometría Axiomática →</a></nav>

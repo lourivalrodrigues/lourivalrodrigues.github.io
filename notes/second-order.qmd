@@ -9,6 +9,10 @@ description: Academic website of Lourival Rodrigues de Lima.
 :::
 
 
+<link rel="stylesheet" href="../assets/notes.css">
+
+<a class="note-back" href="mathematical-methods.html">← Back to course</a>
+
 ## The idea
 Consider a second-order differential equation
 

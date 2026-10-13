@@ -13,8 +13,12 @@ Esta página reúne áreas y cursos de mi actividad docente. Las fechas, políti
 ## Geometría Axiomática
 Axiomas, demostración y fundamentos de la geometría.
 
+[Entrar a la página de la asignatura](notes/axiomatic-geometry.html)
+
 ## Métodos Matemáticos para las Ciencias
 Modelación, ecuaciones diferenciales y sistemas dinámicos.
+
+[Entrar a la página de la asignatura](notes/mathematical-methods.html)
 
 ## Procesos Estocásticos
 Modelos probabilísticos para sistemas que evolucionan en el tiempo.

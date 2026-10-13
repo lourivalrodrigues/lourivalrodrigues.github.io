@@ -13,8 +13,12 @@ This page collects courses and areas from my teaching activity. Dates, assessmen
 ## Axiomatic Geometry
 Axioms, proofs, and the foundations of geometry.
 
+[Open the course page](notes/axiomatic-geometry.html)
+
 ## Mathematical Methods for the Sciences
 Modeling, differential equations, and dynamical systems.
+
+[Open the course page](notes/mathematical-methods.html)
 
 ## Stochastic Processes
 Probabilistic models of systems evolving in time.

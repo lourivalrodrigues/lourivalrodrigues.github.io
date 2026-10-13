@@ -1,0 +1,123 @@
+---
+title: "Geometría Axiomática"
+lang: en
+toc: false
+format:
+  html:
+    template-partials:
+      - ../assets/courses/title-block.html
+description: "Geometría Axiomática · Lecture notes and course resources."
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/course-hubs.css">
+
+<div class="language-link"><a href="../es/notes/axiomatic-geometry.html">Español</a></div>
+
+<nav class="course-breadcrumb" aria-label="Breadcrumb"><a href="../notes.html">Notes</a><span aria-hidden="true">/</span><span>Geometría Axiomática</span></nav>
+
+<header class="course-hero">
+<span class="course-kicker">MATG1062 · ESPOL</span>
+<h1>Geometría Axiomática</h1>
+<p>A space to study geometric figures, explore their properties, and develop proofs.</p>
+<img class="course-hero-art" src="../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
+<div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Study notes in Spanish</span><span>Interactive figures</span></div>
+</header>
+
+<nav class="course-jumpnav" aria-label="Course sections"><a href="#course-notes">Lecture notes</a><a href="#course-documents">Syllabus & documents</a><a href="#course-curiosities">Explore further</a><a href="#course-reading">Reading</a></nav>
+
+<div class="course-section-head" id="course-notes"><h2>Lecture notes</h2><span class="course-count">1 chapter available</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">01</div>
+<div>
+<h3>Congruencia · Capítulo 1</h3>
+<p>Triangle congruence, parallels, inscribed angles, quadrilaterals, perpendicular bisectors, angle bisectors, and constructions.</p>
+<p class="meta">24 pages · 25 figures · 15 interactive figures</p>
+<div class="note-actions"><a class="btn-academic primary" href="congruency-chapter-1.html">Read online</a><a class="btn-academic" href="../files/notes/congruency-chapter-1.pdf" download>Download PDF</a></div>
+</div>
+</article>
+
+</div>
+
+<div class="course-guidance"><p><strong>How to use these notes.</strong> They include topics beyond those already covered in class. Prioritize the material discussed with the lecturer. Notation is defined in each document; please report errors or unclear explanations.</p></div>
+
+<div class="course-section-head" id="course-documents"><h2>Syllabus & documents</h2></div>
+
+<div class="course-docs">
+<article class="course-doc">
+<span class="course-status pending">Draft available</span>
+<h3>Syllabus · Course outline</h3>
+<p>Objectives, learning outcomes, units, and bibliography. The available file is marked as a draft.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../files/courses/axiomatic-geometry-syllabus-draft.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn-academic" href="../files/courses/axiomatic-geometry-syllabus-draft.pdf" download>Download</a></div>
+</article>
+
+<article class="course-doc">
+<span class="course-status">Available document</span>
+<h3>Policies and weekly plan</h3>
+<p>Document prepared in September 2026: objectives, weekly planning, assessment, and study guidance.</p>
+<div class="note-actions"><a class="btn-academic primary" href="../files/courses/axiomatic-geometry-policies.pdf" target="_blank" rel="noopener">Open PDF</a><a class="btn-academic" href="../files/courses/axiomatic-geometry-policies.pdf" download>Download</a></div>
+</article>
+
+</div>
+
+<details>
+<summary>View the topic outline</summary>
+
+The available course documents list these units:
+
+
+1. Congruence of plane figures
+2. Concurrency of lines
+3. Similarity of plane figures
+4. Algebraic approach to congruence and concurrency
+5. Areas of plane figures
+6. Advanced Euclidean geometry
+
+</details>
+
+<p class="meta">Dates, assignment instructions, submissions, and course updates are communicated through ESPOL’s virtual learning environment.</p>
+
+<div class="course-section-head" id="course-curiosities"><h2>Explore further</h2></div>
+
+<div class="course-curiosities">
+<details>
+<summary>Moving a figure does not replace a proof</summary>
+
+Changing a construction can show that a property persists. This helps form a conjecture, but a proof must explain why it holds for **every** figure satisfying the hypotheses.
+
+Try moving the congruence controls and identify which data remain equal.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-3">Explore congruence →</a></p>
+</details>
+
+<details>
+<summary>An angle that stays constant</summary>
+
+An inscribed angle measures half its intercepted arc. If its vertex moves along the same arc while the chord endpoints stay fixed, the angle stays constant.
+
+Explore what happens on the other arc: identify the arc that **does not contain** the vertex.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-7">Explore the inscribed-angle theorem →</a></p>
+</details>
+
+<details>
+<summary>Three projections, one line</summary>
+
+Simson’s theorem states that the perpendicular projections of a point on a triangle’s circumcircle onto the three side lines are collinear.
+
+Move the point and observe that the feet can lie beyond the side segments while remaining aligned.
+
+<p class="curiosity-link"><a href="congruency-chapter-1.html#geometry-fig-12">Explore the Simson line →</a></p>
+</details>
+
+</div>
+
+<div class="course-section-head" id="course-reading"><h2>Reading</h2></div>
+
+<div class="course-reference">
+<p><strong>Leonard, I. E.; Lewis, J. E.; Liu, A. C. F.; Tokarsky, G. W. (2014).</strong><br><em>Classical Geometry: Euclidean, Transformational, Inversive, and Projective.</em> Wiley.</p>
+<p class="meta">Source textbook for the Axiomatic Geometry notes.</p>
+</div>
+<nav class="course-footnav" aria-label="Other courses"><a href="../notes.html">← All courses</a><a href="mathematical-methods.html">Métodos Matemáticos para las Ciencias →</a></nav>
