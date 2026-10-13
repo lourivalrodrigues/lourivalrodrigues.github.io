@@ -16,7 +16,7 @@ description: "Lecture notes and course resources, organized by subject."
 
 <header class="course-hero">
 <span class="course-kicker">ESPOL · Study resources</span>
-<h1>A space for every course</h1>
+<h1>Lecture notes and study materials</h1>
 <p>Choose a course to find lecture notes, course documents, and ideas to explore.</p>
 <img class="course-hero-art" src="assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
 <div class="course-tags"><span>Lecture notes</span><span>Course documents</span><span>Further exploration</span></div>

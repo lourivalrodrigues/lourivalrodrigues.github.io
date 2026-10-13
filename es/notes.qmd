@@ -16,7 +16,7 @@ description: "Notas y materiales organizados por asignatura."
 
 <header class="course-hero">
 <span class="course-kicker">ESPOL · Material de estudio</span>
-<h1>Un espacio para cada asignatura</h1>
+<h1>Notas de clase y materiales de estudio</h1>
 <p>Elige tu asignatura para acceder a las notas, los documentos del curso y las propuestas de exploración.</p>
 <img class="course-hero-art" src="../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
 <div class="course-tags"><span>Notas de clase</span><span>Documentos del curso</span><span>Curiosidades</span></div>
