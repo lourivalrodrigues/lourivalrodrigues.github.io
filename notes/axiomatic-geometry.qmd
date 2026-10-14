@@ -26,7 +26,7 @@ description: "Geometría Axiomática · Lecture notes and course resources."
 
 <nav class="course-jumpnav" aria-label="Course sections"><a href="#course-notes">Lecture notes</a><a href="#course-documents">Syllabus & documents</a><a href="#course-curiosities">Explore further</a><a href="#course-reading">Reading</a></nav>
 
-<div class="course-section-head" id="course-notes"><h2>Lecture notes</h2><span class="course-count">1 chapter available</span></div>
+<div class="course-section-head" id="course-notes"><h2>Lecture notes</h2><span class="course-count">2 chapters available</span></div>
 
 <div class="course-note-list">
 <article class="course-note">
@@ -36,6 +36,16 @@ description: "Geometría Axiomática · Lecture notes and course resources."
 <p>Triangle congruence, parallels, inscribed angles, quadrilaterals, perpendicular bisectors, angle bisectors, and constructions.</p>
 <p class="meta">24 pages · 25 figures · 15 interactive figures</p>
 <div class="note-actions"><a class="btn-academic primary" href="congruency-chapter-1.html">Read online</a><a class="btn-academic" href="../files/notes/congruency-chapter-1.pdf" download>Download PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">02</div>
+<div>
+<h3>Concurrencia · Capítulo 2</h3>
+<p>Perpendicular bisectors, angle bisectors, altitudes, medians, and triangle centers. Constructions, Thales’ locus, and problems.</p>
+<p class="meta">20 pages · 22 figures · 16 interactive figures · Sections 2.1–2.7</p>
+<div class="note-actions"><a class="btn-academic primary" href="concurrency-chapter-2.html">Read online</a><a class="btn-academic" href="../files/notes/concurrency-chapter-2.pdf" download>Download PDF</a></div>
 </div>
 </article>
 

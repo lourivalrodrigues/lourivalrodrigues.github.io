@@ -1,25 +1,22 @@
-1. prerequisites: Conocimientos previos: ángulos de un triángulo, Pitágoras y áreas con altura perpendicular.
-2. quadrilaterals: El orden de los vértices y la clasificación: convexo, simple cóncavo y cruzado.
-3. congruence: Correspondencias, ángulos opuestos por el vértice y los datos LAL, LLL y ALA. [interactiva]
-4. isosceles: Triángulo isósceles y construcción auxiliar para comparar ángulos y lados. [interactiva]
-5. parallel: Transversal de dos paralelas: correspondientes, alternos e interiores del mismo lado. [interactiva]
-6. triangle-angles: Paralela por un vértice y ángulo exterior: la igualdad se conserva al variar el triángulo. [interactiva]
-7. thales: Ángulo inscrito y arco interceptado; el control permite explorar las tres configuraciones y el arco mayor. [interactiva]
-8. circle-locus: Arco de ángulo constante y comparación para puntos interiores y exteriores en un mismo semiplano. [interactiva]
-9. exercise-139: Datos del ejercicio 1.3.9, con los puntos y el centro identificados.
-10. cyclic: Un cuadrilátero cíclico simple tiene ángulos opuestos suplementarios; el cruzado tiene ángulos opuestos menores iguales. [interactiva]
-11. tangential: Cuadrilátero convexo circunscrito a una circunferencia y pares de segmentos tangentes iguales.
-12. simson: Los tres pies de perpendicular permanecen alineados cuando P recorre la circunferencia. [interactiva]
-13. ssa: Dos intersecciones de una semirrecta y una circunferencia pueden producir triángulos no congruentes con datos LLA. [interactiva]
-14. mediatrix: La mediatriz es exactamente el lugar de puntos equidistantes de A y B. [interactiva]
-15. bisector: Puntos en la bisectriz y sus distancias perpendiculares a las rectas laterales. [interactiva]
-16. hinge: Dos lados se mantienen fijos; al abrir el ángulo comprendido aumenta el tercer lado. [interactiva]
-17. diagonals: Paralelogramo, rombo, deltoide y dardo: segmentos diagonales y, cuando hace falta, sus prolongaciones.
-18. constructions: Construcciones de copia de ángulo, mediatriz, perpendicular y bisectriz. En la versión web se muestran por pasos. [interactiva]
-19. two-lines: Intersecciones de paralelas a distancia r: cuatro circunferencias tangentes a dos rectas secantes. [interactiva]
-20. counterexamples: Contraejemplos: lados opuestos iguales en una figura cruzada y diagonales iguales en un trapecio no rectangular.
-21. pitot-analysis: Análisis del recíproco: círculo tangente a tres lados y comparación con la tangente paralela al cuarto.
-22. counterexamples-144: Los tres contraejemplos del ejercicio 1.4.4 con sus datos explícitos.
-23. distance-proofs: Pruebas de proximidad a un extremo, comparación de la hipotenusa y distancia mínima a una recta.
-24. problem-10: Problema 10: dos cuerdas se cruzan; los arcos correspondientes a los ángulos centrales dados quedan identificados.
-25. problem-15: Problema 15: análisis por intersecciones de lugares geométricos. La figura muestra un caso con cuatro soluciones. [interactiva]
+1. perpendicular-parallels: Dos paralelas y las perpendiculares correspondientes: el paralelismo se conserva. [interactiva]
+2. circumcenter: Las tres mediatrices se encuentran en O; los radios hacia A, B y C tienen la misma longitud. [interactiva]
+3. chord-tangent: Mediatriz de una cuerda, punto medio y radio perpendicular a una tangente. [interactiva]
+4. incenter: Las bisectrices interiores y las tres distancias iguales del incentro a los lados. [interactiva]
+5. excenters: Cada excentro reúne una bisectriz interior y dos exteriores. Cada excírculo toca un lado y las prolongaciones de los otros dos. [interactiva]
+6. parallelogram: Lados opuestos, ángulos opuestos y mitades de diagonales en un paralelogramo. [interactiva]
+7. orthocenter: Las alturas se transforman en mediatrices del triángulo mayor formado por las paralelas. [interactiva]
+8. midline: La prolongación PQ = QT produce dos paralelogramos y demuestra el teorema del segmento medio. [interactiva]
+9. median-lemma: El paralelogramo auxiliar EFPQ permite obtener la razón 2:1 sin utilizar semejanza. [interactiva]
+10. centroid: Las tres medianas concurren en G, a dos tercios de cada mediana medidos desde el vértice. [interactiva]
+11. parallel-constructions: Arcos de centros y radios conocidos para completar un paralelogramo y construir una paralela. [interactiva]
+12. tangent-construction: La circunferencia de diámetro OP localiza los dos puntos de tangencia S y T. [interactiva]
+13. thales-locus: Lugar de Tales para un ángulo agudo, recto u obtuso: dos arcos simétricos, excluyendo A y B. [interactiva]
+14. tangent-chord: La elección de la semirrecta tangente determina si se usa el ángulo central menor o el reflejo. [interactiva]
+15. locus-construction: La mediatriz de AB y la perpendicular a la tangente copiada localizan el centro del arco. [interactiva]
+16. angle-height: Las intersecciones del lugar de Tales con una paralela a distancia h determinan los vértices posibles. [interactiva]
+17. center-positions: Circuncentro O y ortocentro H en triángulos acutángulos, rectángulos y obtusángulos.
+18. equilateral: Mediatriz, bisectriz, altura y mediana comparten una misma recta en el triángulo equilátero.
+19. problem-5: Problema 5: los cuatro ángulos dados y los dos ángulos desconocidos, con las mismas incidencias de la figura del libro.
+20. problem-7: Problema 7: dos tangentes desde P y la cuerda que une sus puntos de tangencia.
+21. problem-12: Problema 12: construir extremos en los lados del ángulo manteniendo P como punto medio.
+22. problem-15: Problema 15: una cuerda no diametral y otra distinta que pasa por su punto medio.

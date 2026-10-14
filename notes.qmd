@@ -36,7 +36,7 @@ description: "Lecture notes and course resources, organized by subject."
 <h2>Geometría Axiomática</h2>
 <p>Axioms, constructions, and proofs. Figures you can explore.</p>
 <img class="course-card-art" src="assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
-<div class="course-card-footer"><span>Chapter 1 · 15 interactive figures</span><strong>Open course <span aria-hidden="true">→</span></strong></div>
+<div class="course-card-footer"><span>2 chapters · interactive figures</span><strong>Open course <span aria-hidden="true">→</span></strong></div>
 </a>
 </div>
 ```

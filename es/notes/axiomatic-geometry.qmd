@@ -26,7 +26,7 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 
 <nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
 
-<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">1 capítulo disponible</span></div>
+<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">2 capítulos disponibles</span></div>
 
 <div class="course-note-list">
 <article class="course-note">
@@ -36,6 +36,16 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 <p>Congruencia de triángulos, paralelas, ángulos inscritos, cuadriláteros, mediatrices, bisectrices y construcciones.</p>
 <p class="meta">24 páginas · 25 figuras · 15 figuras interactivas</p>
 <div class="note-actions"><a class="btn-academic primary" href="congruency-chapter-1.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/congruency-chapter-1.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">02</div>
+<div>
+<h3>Concurrencia · Capítulo 2</h3>
+<p>Mediatrices, bisectrices, alturas, medianas y centros del triángulo. Construcciones, lugar de Tales y problemas.</p>
+<p class="meta">20 páginas · 22 figuras · 16 figuras interactivas · Secciones 2.1–2.7</p>
+<div class="note-actions"><a class="btn-academic primary" href="concurrency-chapter-2.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/concurrency-chapter-2.pdf" download>Descargar PDF</a></div>
 </div>
 </article>
 

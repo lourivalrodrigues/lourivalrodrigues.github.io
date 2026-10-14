@@ -1,0 +1,417 @@
+## 2.1 Mediatrices
+
+Estas notas siguen el capítulo 2, **Concurrency**, de Leonard, Lewis, Liu y Tokarsky, *Classical Geometry: Euclidean, Transformational, Inversive, and Projective* (2014), pp. 41–58. Conservan las siete secciones, los resultados y ejercicios numerados, las soluciones de la sección 2.6 y los diecisiete problemas de la sección 2.7. La redacción y las figuras son nuevas; las precisiones de hipótesis se refieren a los mismos temas del capítulo.
+
+Trabajamos con triángulos no degenerados: sus tres vértices son distintos y no colineales. Usamos la notación del capítulo 1: $AB$ es una longitud, $\overleftrightarrow{AB}$ una recta y $C(O,r)$ una circunferencia de radio $r>0$. Una familia de rectas es **concurrente** en $P$ cuando todas pasan por $P$. En este capítulo, las tres rectas asociadas al triángulo tienen un único punto común.
+
+**Teorema 2.1.1. Paralelas y perpendiculares.** Si $l_1\parallel l_2$, $m_1\perp l_1$ y $m_2\perp l_2$, entonces $m_1\parallel m_2$.
+
+*Demostración.* Una perpendicular a $l_1$ corta también $l_2$ y, por los ángulos entre paralelas, es perpendicular a $l_2$. Dos rectas perpendiculares a una misma recta son paralelas: si se cortaran, por su punto de intersección pasarían dos perpendiculares distintas a esa recta, contradiciendo la unicidad de la perpendicular. Se conserva la convención de que una recta es paralela a sí misma.
+
+**Corolario 2.1.2.** Si $l_1\perp m_1$ y $l_2\perp m_2$, entonces
+
+$$l_1\parallel l_2\quad\Longleftrightarrow\quad m_1\parallel m_2.$$
+
+*Demostración.* Una implicación es 2.1.1. La otra se obtiene intercambiando los nombres $l$ y $m$.
+
+<figure class="geometry-figure" id="geometry2-fig-1" data-geometry2="perpendicular-parallels">
+<div class="geometry-static"><img src="/assets/geometry-ch2/perpendicular-parallels.svg" alt="Dos paralelas y las perpendiculares correspondientes: el paralelismo se conserva." loading="lazy"></div>
+<figcaption><strong>Figura 1.</strong> Dos paralelas y las perpendiculares correspondientes: el paralelismo se conserva.</figcaption>
+</figure>
+
+Si las rectas que contienen dos segmentos no son paralelas, sus mediatrices tampoco lo son y, por tanto, se cortan. Es importante exigir que los segmentos no estén alineados: dos segmentos colineales pueden tocarse y tener mediatrices distintas y paralelas.
+
+**Teorema 2.1.3. Concurrencia de las mediatrices.** Las mediatrices de los tres lados de un triángulo son concurrentes.
+
+*Demostración.* Las rectas $AB$ y $AC$ se cortan y son distintas; por 2.1.2, sus mediatrices se cortan en un punto $O$. La caracterización de la mediatriz da
+
+$$OB=OA,\qquad OA=OC.$$
+
+Así, $OB=OC$, por lo que $O$ también pertenece a la mediatriz de $BC$. La intersección de las dos primeras mediatrices es única; de ahí la unicidad del punto común.
+
+El punto $O$ se llama **circuncentro**. Como $OA=OB=OC$, la circunferencia $C(O,OA)$ pasa por los tres vértices y se llama **circunferencia circunscrita** al triángulo. Su centro no tiene por qué estar dentro del triángulo.
+
+<figure class="geometry-figure" id="geometry2-fig-2" data-geometry2="circumcenter">
+<div class="geometry-static"><img src="/assets/geometry-ch2/circumcenter.svg" alt="Las tres mediatrices se encuentran en O; los radios hacia A, B y C tienen la misma longitud." loading="lazy"></div>
+<figcaption><strong>Figura 2.</strong> Las tres mediatrices se encuentran en O; los radios hacia A, B y C tienen la misma longitud.</figcaption>
+</figure>
+
+**Ejercicio 2.1.4.** ¿Qué clase de triángulo tiene su circuncentro (1) sobre uno de sus lados y (2) fuera del triángulo? La clasificación y sus figuras aparecen en 2.6.
+
+## 2.2 Bisectrices
+
+### Cuerdas, radios y tangentes
+
+Una **cuerda** es un segmento cuyos extremos pertenecen a la circunferencia. Es un **diámetro** si pasa por su centro. Una recta es **tangente** si tiene exactamente un punto en común con la circunferencia.
+
+**Teorema 2.2.1.** Para una circunferencia $C(O,r)$:
+
+1. La mediatriz de cualquier cuerda pasa por $O$.
+2. Si una cuerda no es un diámetro, la recta que une su punto medio con $O$ es su mediatriz.
+3. La perpendicular a una cuerda trazada por $O$ pasa por el punto medio de la cuerda.
+4. Una recta que pasa por $P\in C(O,r)$ es tangente en $P$ si y solo si es perpendicular al radio $OP$.
+
+*Justificación de 1–3.* Si la cuerda es $AB$, entonces $OA=OB=r$; por la caracterización de la mediatriz, $O$ pertenece a ella. Para una cuerda no diametral, su punto medio $M$ es distinto de $O$, por lo que la recta $OM$ está definida y es la mediatriz. La unicidad de la perpendicular por $O$ da el tercer enunciado, también para un diámetro. En ese caso $M=O$ y no debe escribirse «la recta $OM$» como si estuviera determinada por dos puntos distintos.
+
+*Justificación de 4.* Si una recta por $P$ es perpendicular a $OP$, cualquier otro punto $Q$ de ella satisface $OQ>OP=r$, porque $OQ$ es la hipotenusa de un triángulo rectángulo. No hay otro punto de la circunferencia en la recta. Recíprocamente, sea $M$ el pie de la perpendicular desde $O$ a una tangente por $P$. Si $M\ne P$, entonces $OM<OP=r$. La recta atravesaría el disco y cortaría su circunferencia en dos puntos. Por tanto $M=P$ y la tangente es perpendicular al radio.
+
+<figure class="geometry-figure" id="geometry2-fig-3" data-geometry2="chord-tangent">
+<div class="geometry-static"><img src="/assets/geometry-ch2/chord-tangent.svg" alt="Mediatriz de una cuerda, punto medio y radio perpendicular a una tangente." loading="lazy"></div>
+<figcaption><strong>Figura 3.</strong> Mediatriz de una cuerda, punto medio y radio perpendicular a una tangente.</figcaption>
+</figure>
+
+### Incentro y circunferencia inscrita
+
+Una **bisectriz interior** divide el ángulo de un vértice en dos ángulos iguales. Su recta soporte permite hablar de concurrencia de rectas; la semirrecta interior indica cuál parte de ella se considera. La distancia a un lado significa la distancia a la recta que lo contiene, medida perpendicularmente.
+
+**Teorema 2.2.2.** Las bisectrices interiores de los ángulos de un triángulo son concurrentes.
+
+*Demostración.* Las bisectrices desde $B$ y $C$ se cortan en un punto interior $I$: cada una entra en el triángulo, y sus segmentos hasta el lado opuesto se cruzan. Como $I$ está en esas bisectrices,
+
+$$d(I,AB)=d(I,BC),\qquad d(I,BC)=d(I,AC).$$
+
+Así, $d(I,AB)=d(I,AC)$. Al estar dentro del ángulo en $A$, $I$ pertenece a su bisectriz interior, según la caracterización del capítulo 1.
+
+El punto $I$ es el **incentro**. Su distancia común $r$ a los tres lados es positiva. Los pies de perpendicular quedan en los segmentos laterales: por ejemplo, el pie sobre $AB$ está delante de $A$ y de $B$, pues $AI$ y $BI$ forman con ese lado ángulos menores que $90^\circ$. Por 2.2.1, $C(I,r)$ es tangente a los tres lados. Se llama **circunferencia inscrita** o **incírculo**.
+
+<figure class="geometry-figure" id="geometry2-fig-4" data-geometry2="incenter">
+<div class="geometry-static"><img src="/assets/geometry-ch2/incenter.svg" alt="Las bisectrices interiores y las tres distancias iguales del incentro a los lados." loading="lazy"></div>
+<figcaption><strong>Figura 4.</strong> Las bisectrices interiores y las tres distancias iguales del incentro a los lados.</figcaption>
+</figure>
+
+### Excentros y circunferencias exinscritas
+
+La **bisectriz exterior** biseca un ángulo suplementario al interior en el mismo vértice. Sus dos elecciones de semirrecta opuestas determinan una sola recta, perpendicular a la bisectriz interior.
+
+**Proposición 2.2.3.** Cada par de rectas bisectrices exteriores de un triángulo se corta.
+
+*Demostración.* Las bisectrices interiores correspondientes se cortan en $I$ y son distintas: la que pasa por $A$ no puede coincidir con la recta $AB$. Si las exteriores fueran paralelas, 2.1.2 implicaría que las interiores también lo serían, una contradicción. En la cuenta angular de la figura del libro, $2(\theta+\phi)=180^\circ+\gamma$; como $\gamma<180^\circ$, también se obtiene $\theta+\phi<180^\circ$.
+
+**Teorema 2.2.4.** Las bisectrices exteriores de dos ángulos de un triángulo y la bisectriz interior del tercero son concurrentes.
+
+*Demostración.* Consideremos las exteriores en $A,C$, que se cortan en $E_B$. Sus semirrectas hacia el semiplano opuesto a $B$ respecto de $AC$ forman, con $AC$ y $CA$, los ángulos $90^\circ-A/2$ y $90^\circ-C/2$. Su suma es menor que $180^\circ$, de modo que se encuentran en ese semiplano. Además, $A+(90^\circ-A/2)<180^\circ$ y la desigualdad análoga en $C$ sitúan $E_B$ dentro del ángulo en $B$.
+
+Por las bisectrices exteriores,
+
+$$d(E_B,AB)=d(E_B,AC)=d(E_B,BC).$$
+
+Como está dentro del ángulo en $B$, la última igualdad lo sitúa en su bisectriz interior. La ubicación en el ángulo es necesaria: la sola igualdad de distancias a dos rectas no distingue la bisectriz interior de la exterior.
+
+El punto $E_B$ es el **excentro opuesto a $B$**. La circunferencia con ese centro y radio igual a la distancia común a las tres rectas es una **circunferencia exinscrita**, o **excírculo**: toca el segmento $AC$ y las prolongaciones de $AB,BC$. Repitiendo para los otros vértices se obtienen tres excentros $E_A,E_B,E_C$ y tres excírculos, todos exteriores al triángulo.
+
+<figure class="geometry-figure" id="geometry2-fig-5" data-geometry2="excenters">
+<div class="geometry-static"><img src="/assets/geometry-ch2/excenters.svg" alt="Cada excentro reúne una bisectriz interior y dos exteriores. Cada excírculo toca un lado y las prolongaciones de los otros dos." loading="lazy"></div>
+<figcaption><strong>Figura 5.</strong> Cada excentro reúne una bisectriz interior y dos exteriores. Cada excírculo toca un lado y las prolongaciones de los otros dos.</figcaption>
+</figure>
+
+## 2.3 Alturas
+
+Una **recta de altura** pasa por un vértice y es perpendicular a la recta del lado opuesto. El **segmento de altura** une el vértice con el pie de esa perpendicular, y su longitud es la **altura correspondiente**. El libro usa *altitude* para la recta; distinguir recta, segmento y longitud evita confundir la concurrencia con una afirmación sobre segmentos que pueden no cruzarse.
+
+El pie puede estar en el lado opuesto o en su prolongación. Para demostrar la concurrencia necesitamos los hechos siguientes sobre paralelogramos. Aquí un paralelogramo es un cuadrilátero simple con ambos pares de lados opuestos paralelos; rombos, rectángulos y cuadrados son casos particulares.
+
+### Propiedades y criterios de paralelogramo
+
+**Teorema 2.3.1.** En un paralelogramo:
+
+1. Los lados opuestos son congruentes.
+2. Los ángulos opuestos son congruentes.
+3. Las diagonales se bisecan mutuamente.
+
+*Demostración de 1 y 2.* En $ABCD$, la diagonal $AC$ forma ángulos alternos internos iguales entre $AB,CD$ y entre $BC,DA$. Con el lado común $AC$, ALA da $\triangle ABC\cong\triangle CDA$. Se obtienen $AB=CD$, $BC=DA$ y la igualdad de los ángulos opuestos, sumando los ángulos que divide la diagonal cuando haga falta.
+
+**Ejercicio 2.3.2.** Demuestre el tercer enunciado de 2.3.1.
+
+**Teorema 2.3.3. Recíproco para las diagonales.** Si las diagonales de un cuadrilátero no degenerado se bisecan mutuamente, el cuadrilátero es un paralelogramo. «Bisecarse mutuamente» significa que se cortan en el punto medio de **ambos segmentos**.
+
+**Ejercicio 2.3.4.** Demuestre 2.3.3.
+
+<figure class="geometry-figure" id="geometry2-fig-6" data-geometry2="parallelogram">
+<div class="geometry-static"><img src="/assets/geometry-ch2/parallelogram.svg" alt="Lados opuestos, ángulos opuestos y mitades de diagonales en un paralelogramo." loading="lazy"></div>
+<figcaption><strong>Figura 6.</strong> Lados opuestos, ángulos opuestos y mitades de diagonales en un paralelogramo.</figcaption>
+</figure>
+
+**Teorema 2.3.5.** Un cuadrilátero **simple** es un paralelogramo si se cumple cualquiera de estas condiciones:
+
+1. Sus dos pares de lados opuestos tienen longitudes iguales.
+2. Sus dos pares de ángulos opuestos tienen medidas iguales.
+3. Un par de lados opuestos es a la vez paralelo y congruente.
+
+*Demostración de 1.* Elija una diagonal interior $AC$. Por LLL, $\triangle ABC\cong\triangle CDA$. Los ángulos correspondientes a ambos lados de la diagonal son alternos internos iguales; por los criterios de paralelismo, $AB\parallel CD$ y $BC\parallel AD$.
+
+*Justificación de 2.* De la suma de $360^\circ$ y de $A=C$, $B=D$ resulta $A+B=180^\circ$ y también $B+C=180^\circ$. Ningún ángulo puede ser reflejo, pues su opuesto sería igual y la suma superaría $360^\circ$. Los criterios para interiores del mismo lado dan los dos pares de paralelas.
+
+*Justificación de 3.* Si $AB\parallel CD$ y $AB=CD$, use $AC$ como transversal: $\angle BAC=\angle DCA$. Por LAL, $\triangle BAC\cong\triangle DCA$. La otra pareja de alternos internos es igual, así que $BC\parallel AD$.
+
+La hipótesis «simple» no puede omitirse en 1 y 2: una figura cruzada puede tener lados opuestos iguales o ángulos opuestos menores iguales sin ser un paralelogramo.
+
+### Concurrencia de alturas
+
+**Teorema 2.3.6.** Las tres rectas de altura de un triángulo son concurrentes.
+
+*Demostración.* Por cada vértice de $ABC$ trace la paralela al lado opuesto. Las tres rectas forman un triángulo mayor $DEF$, donde $A\in EF$, $B\in FD$ y $C\in DE$. Los paralelogramos $ABCE$, $ACBF$ y $CABD$ dan
+
+$$AF=AE=BC,\qquad BF=BD=AC,\qquad CD=CE=AB.$$
+
+Así, $A,B,C$ son los puntos medios de los lados del triángulo mayor. La altura desde $A$ es perpendicular a $BC$ y, por tanto, a $EF$; como pasa por su punto medio, es la mediatriz de $EF$. Lo mismo ocurre con las otras dos alturas. Por 2.1.3, las tres concurren.
+
+El punto común $H$ es el **ortocentro**. En esta construcción, el ortocentro de $ABC$ es el circuncentro de $DEF$. El argumento funciona también para triángulos rectángulos y obtusángulos; las rectas completas son las que concurren.
+
+<figure class="geometry-figure" id="geometry2-fig-7" data-geometry2="orthocenter">
+<div class="geometry-static"><img src="/assets/geometry-ch2/orthocenter.svg" alt="Las alturas se transforman en mediatrices del triángulo mayor formado por las paralelas." loading="lazy"></div>
+<figcaption><strong>Figura 7.</strong> Las alturas se transforman en mediatrices del triángulo mayor formado por las paralelas.</figcaption>
+</figure>
+
+**Ejercicio 2.3.7.** Dé ejemplos de triángulos cuyo ortocentro (1) esté sobre un lado y (2) esté fuera del triángulo.
+
+## 2.4 Medianas
+
+Una **mediana** es el segmento que une un vértice con el punto medio del lado opuesto; también se considera su recta soporte. Como el punto de concurrencia será interior, los tres segmentos medianos se cortan en él.
+
+**Ejercicio 2.4.1.** En un triángulo equilátero $ABC$, pruebe que coinciden la mediatriz de $BC$, la recta de la bisectriz interior en $A$, la recta de altura desde $A$ y la recta de la mediana desde $A$. La bisectriz es una semirrecta y la mediana un segmento; la coincidencia se refiere a sus **rectas soporte**.
+
+### Segmento medio
+
+**Teorema 2.4.2. Segmento medio.** Si $P,Q$ son los puntos medios de $AB,AC$, respectivamente, entonces
+
+$$PQ\parallel BC,\qquad PQ=\frac{BC}{2}.$$
+
+*Demostración.* Prolongue $PQ$ hasta $T$ con $PQ=QT$. En $ATCP$, las diagonales $AC,PT$ se bisecan en $Q$, así que 2.3.3 da un paralelogramo. Por tanto $TC\parallel AP$ y $TC=AP$. Como $AP=PB$ y $AP,PB$ están en la misma recta, $TC\parallel PB$ y $TC=PB$. El cuadrilátero $TCBP$ es simple y, por 2.3.5(3), también es un paralelogramo. Luego $PT\parallel BC$, $PT=BC$ y $PQ=PT/2=BC/2$.
+
+<figure class="geometry-figure" id="geometry2-fig-8" data-geometry2="midline">
+<div class="geometry-static"><img src="/assets/geometry-ch2/midline.svg" alt="La prolongación PQ = QT produce dos paralelogramos y demuestra el teorema del segmento medio." loading="lazy"></div>
+<figcaption><strong>Figura 8.</strong> La prolongación PQ = QT produce dos paralelogramos y demuestra el teorema del segmento medio.</figcaption>
+</figure>
+
+**Lema 2.4.3. División de las medianas.** Dos medianas se cortan en un punto que divide cada una en razón $2:1$, con la parte más larga junto al vértice.
+
+*Demostración.* Sean $E,F$ los puntos medios de $AC,AB$, y $G$ la intersección interior de $BE,CF$. Por 2.4.2, $EF\parallel BC$ y $EF=BC/2$. Sean $P,Q$ los puntos medios de $GB,GC$. En $GBC$, el mismo teorema da $PQ\parallel BC$ y $PQ=BC/2$. El cuadrilátero $EFPQ$ es simple y tiene lados opuestos $EF,PQ$ iguales y paralelos; es un paralelogramo. Sus diagonales $EP,FQ$ se cortan en $G$, por lo que
+
+$$EG=GP=PB,\qquad FG=GQ=QC.$$
+
+Por tanto $BG=2GE$ y $CG=2GF$. No significa que el punto de intersección divida una mediana en tres segmentos distintos: la divide en dos, de longitudes $2/3$ y $1/3$ de su longitud total.
+
+<figure class="geometry-figure" id="geometry2-fig-9" data-geometry2="median-lemma">
+<div class="geometry-static"><img src="/assets/geometry-ch2/median-lemma.svg" alt="El paralelogramo auxiliar EFPQ permite obtener la razón 2:1 sin utilizar semejanza." loading="lazy"></div>
+<figcaption><strong>Figura 9.</strong> El paralelogramo auxiliar EFPQ permite obtener la razón 2:1 sin utilizar semejanza.</figcaption>
+</figure>
+
+**Teorema 2.4.4.** Las tres medianas de un triángulo son concurrentes.
+
+*Demostración.* Las medianas $BE,CF$ se cortan en $G$ con $EG/EB=1/3$. Las medianas $BE,AD$ se cortan en $G'$ y, por el mismo lema, $EG'/EB=1/3$. Ambos están en el segmento $EB$, y allí hay un único punto a esa distancia de $E$; luego $G=G'$. Las tres medianas pasan por él.
+
+El punto $G$ se llama **baricentro** o **centroide**. Siempre está dentro del triángulo. En una lámina triangular de espesor y densidad uniformes, coincide con el centro de gravedad y permite equilibrarla sobre un apoyo situado allí. La uniformidad es parte de la interpretación física.
+
+<figure class="geometry-figure" id="geometry2-fig-10" data-geometry2="centroid">
+<div class="geometry-static"><img src="/assets/geometry-ch2/centroid.svg" alt="Las tres medianas concurren en G, a dos tercios de cada mediana medidos desde el vértice." loading="lazy"></div>
+<figcaption><strong>Figura 10.</strong> Las tres medianas concurren en G, a dos tercios de cada mediana medidos desde el vértice.</figcaption>
+</figure>
+
+**Teorema 2.4.5. Recíproco parcial del segmento medio.** Si $P$ es el punto medio de $AB$ y $Q\in AC$ satisface $PQ\parallel BC$, entonces $Q$ es el punto medio de $AC$.
+
+*Demostración.* Sea $Q'$ el punto medio de $AC$. Por 2.4.2, $PQ'\parallel BC$. La unicidad de la paralela por $P$ implica que las rectas $PQ,PQ'$ son la misma. Como esta recta corta $AC$ en un solo punto, $Q=Q'$.
+
+## 2.5 Problemas de construcción
+
+Se utilizan únicamente las operaciones de regla sin marcas y compás descritas en el capítulo 1. Toda construcción necesita comprobar que los puntos elegidos existen y que el resultado cumple las condiciones dadas.
+
+### Paralelogramos y paralelas
+
+**Ejemplo 2.5.1. Completar un paralelogramo.** Dados dos lados adyacentes $AB,AC$ con $A,B,C$ no colineales:
+
+1. Trace $C(B,AC)$ y $C(C,AB)$.
+2. Elija su intersección $D$ situada del mismo lado de la recta $AC$ que $B$.
+3. Trace $BD,CD$. El orden del paralelogramo es **$ABDC$**, no $ABCD$.
+
+*Justificación.* Por construcción $BD=AC$, $CD=AB$. La elección de $D$ produce el cuadrilátero simple con esos pares opuestos iguales; por 2.3.5, es un paralelogramo. Una de las otras intersecciones puede producir una figura cruzada o coincidir con un punto inicial; no sirve para el orden elegido.
+
+**Ejemplo 2.5.2. Paralela por un punto exterior.** Dados una recta $l$ y $P\notin l$:
+
+1. Una circunferencia de centro $P$ y radio suficientemente grande corta $l$ en dos puntos $Q,S$.
+2. Trace $C(S,PQ)$ y $C(P,QS)$.
+3. Elija la intersección $T$ que hace de $PQST$ un cuadrilátero simple: $T$ queda del lado de $PS$ opuesto a $Q$.
+4. Trace $PT$.
+
+Como $PQ=ST$ y $QS=PT$, 2.3.5 da el paralelogramo $PQST$, así que $PT\parallel QS=l$. La selección de la intersección correcta evita una configuración cruzada.
+
+<figure class="geometry-figure" id="geometry2-fig-11" data-geometry2="parallel-constructions">
+<div class="geometry-static"><img src="/assets/geometry-ch2/parallel-constructions.svg" alt="Arcos de centros y radios conocidos para completar un paralelogramo y construir una paralela." loading="lazy"></div>
+<figcaption><strong>Figura 11.</strong> Arcos de centros y radios conocidos para completar un paralelogramo y construir una paralela.</figcaption>
+</figure>
+
+### Tangentes desde un punto exterior
+
+**Ejemplo 2.5.3.** Dados $C(O,r)$ y $P$ con $OP>r$, construya las dos tangentes desde $P$.
+
+1. Trace $OP$ y construya su punto medio $M$ mediante la mediatriz.
+2. Trace $C(M,MP)$, la circunferencia de diámetro $OP$.
+3. Sean $S,T$ sus intersecciones con $C(O,r)$. Trace $PS,PT$.
+
+*Justificación.* Por el ángulo en una semicircunferencia, $\angle OSP=\angle OTP=90^\circ$. Así, $PS\perp OS$, $PT\perp OT$, y 2.2.1 garantiza las tangencias. Hay dos intersecciones porque $P$ es estrictamente exterior. Si $P$ estuviera en la circunferencia habría una sola tangente; si fuera interior no existirían tangentes reales desde él.
+
+<figure class="geometry-figure" id="geometry2-fig-12" data-geometry2="tangent-construction">
+<div class="geometry-static"><img src="/assets/geometry-ch2/tangent-construction.svg" alt="La circunferencia de diámetro OP localiza los dos puntos de tangencia S y T." loading="lazy"></div>
+<figcaption><strong>Figura 12.</strong> La circunferencia de diámetro OP localiza los dos puntos de tangencia S y T.</figcaption>
+</figure>
+
+### Lugar geométrico de Tales
+
+Dados $A\ne B$ y $0^\circ<\theta<180^\circ$, el **lugar de Tales** es
+
+$$\mathcal T_\theta(A,B)=\{P\notin\overleftrightarrow{AB}:\angle APB=\theta\}.$$
+
+En cada semiplano de $AB$, el recíproco del teorema de Tales del capítulo 1 da un arco, sin los extremos $A,B$. Los dos arcos son simétricos respecto de $AB$.
+
+**Precisión.** En general pertenecen a **dos circunferencias diferentes**. Solo para $\theta=90^\circ$ son las dos semicircunferencias de una misma circunferencia, la de diámetro $AB$. Para $\theta$ agudo se seleccionan arcos mayores; para $\theta$ obtuso, arcos menores. Esta distinción corrige la frase del libro que describe ambos como arcos de una sola circunferencia.
+
+<figure class="geometry-figure" id="geometry2-fig-13" data-geometry2="thales-locus">
+<div class="geometry-static"><img src="/assets/geometry-ch2/thales-locus.svg" alt="Lugar de Tales para un ángulo agudo, recto u obtuso: dos arcos simétricos, excluyendo A y B." loading="lazy"></div>
+<figcaption><strong>Figura 13.</strong> Lugar de Tales para un ángulo agudo, recto u obtuso: dos arcos simétricos, excluyendo A y B.</figcaption>
+</figure>
+
+**Teorema 2.5.4. Ángulo entre tangente y cuerda.** Sea $AB$ una cuerda de $C(O,r)$. Elija sobre la tangente en $A$ la semirrecta $AP$ que forma con $AB$ un ángulo $\theta\le90^\circ$. Entonces el ángulo central menor que corresponde a la cuerda cumple
+
+$$\angle AOB=2\angle PAB=2\theta.$$
+
+La semirrecta tangente opuesta $AQ$ forma $180^\circ-\theta$ con $AB$, cuyo doble es la medida del ángulo central reflejo correspondiente. Para un diámetro ambas medidas centrales son $180^\circ$.
+
+*Demostración.* Si $AB$ no es un diámetro, sea $M$ su punto medio. En el triángulo isósceles $OAB$, los dos ángulos en $O$ separados por $OM$ son iguales; llámelos $\alpha$. Sea $\phi=\angle OAM$. Como $OM\perp AB$, $\alpha+\phi=90^\circ$. La tangente es perpendicular a $OA$, así que el ángulo agudo entre tangente y cuerda es $\theta=90^\circ-\phi=\alpha$. Por tanto $\angle AOB=2\alpha=2\theta$. Si es un diámetro, tangente y cuerda son perpendiculares y la igualdad se verifica directamente, sin usar el triángulo degenerado $OMA$.
+
+<figure class="geometry-figure" id="geometry2-fig-14" data-geometry2="tangent-chord">
+<div class="geometry-static"><img src="/assets/geometry-ch2/tangent-chord.svg" alt="La elección de la semirrecta tangente determina si se usa el ángulo central menor o el reflejo." loading="lazy"></div>
+<figcaption><strong>Figura 14.</strong> La elección de la semirrecta tangente determina si se usa el ángulo central menor o el reflejo.</figcaption>
+</figure>
+
+**Ejemplo 2.5.5. Construir el lugar de Tales para $0^\circ<\theta<90^\circ$.** Dados el segmento $AB$ y el ángulo:
+
+1. Elija un semiplano $H$ de $AB$ para el arco buscado.
+2. Copie en $A$ el ángulo $\theta$ entre $AB$ y una semirrecta en el semiplano opuesto a $H$. Sea $l$ su recta soporte.
+3. Construya la mediatriz $m$ de $AB$ y la perpendicular $t$ a $l$ por $A$.
+4. Tome $O=m\cap t$ y trace $C(O,OA)$.
+5. Seleccione el arco de esa circunferencia situado en $H$, sin $A,B$. Repita la construcción en el otro semiplano.
+
+*Justificación.* $OA=OB$ porque $O\in m$ y $l\perp OA$, por lo que $l$ es tangente en $A$. Según 2.5.4, el arco menor opuesto al elegido mide $2\theta$; Tales da $\angle AXB=\theta$ para todo $X$ del arco elegido. No debe seleccionarse el otro arco de la misma circunferencia: sus ángulos inscritos miden $180^\circ-\theta$.
+
+Para $\theta=90^\circ$ se construye directamente la circunferencia de diámetro $AB$. Si se necesita el lugar para un ángulo obtuso, la misma copia de ángulo y perpendicular localiza el centro en el otro semiplano; se elige el arco que produce la medida dada, usando el ángulo central reflejo. Son variaciones de la misma construcción, no un lugar geométrico diferente.
+
+<figure class="geometry-figure" id="geometry2-fig-15" data-geometry2="locus-construction">
+<div class="geometry-static"><img src="/assets/geometry-ch2/locus-construction.svg" alt="La mediatriz de AB y la perpendicular a la tangente copiada localizan el centro del arco." loading="lazy"></div>
+<figcaption><strong>Figura 15.</strong> La mediatriz de AB y la perpendicular a la tangente copiada localizan el centro del arco.</figcaption>
+</figure>
+
+**Ejemplo 2.5.6. Triángulo con ángulo y altura dados.** Dados $B\ne C$, un ángulo $0^\circ<\theta<180^\circ$ para $\angle A$ y una altura $h>0$ desde $A$:
+
+1. Construya $\mathcal T_\theta(B,C)$.
+2. Construya las dos paralelas a $BC$ a distancia $h$, una en cada semiplano.
+3. Cada intersección de esas paralelas con los arcos del lugar es un posible vértice $A$.
+
+*Justificación.* Pertenecer al lugar da $\angle BAC=\theta$, y pertenecer a una paralela a distancia $h$ da la altura indicada. Todo triángulo con esos datos debe cumplir ambas condiciones, así que la construcción encuentra todas las soluciones. Puede haber cero, dos o cuatro vértices en todo el plano; si se fija un semiplano, cero, uno o dos. Una intersección tangencial cuenta una sola vez. El libro ilustra la construcción en un semiplano.
+
+<figure class="geometry-figure" id="geometry2-fig-16" data-geometry2="angle-height">
+<div class="geometry-static"><img src="/assets/geometry-ch2/angle-height.svg" alt="Las intersecciones del lugar de Tales con una paralela a distancia h determinan los vértices posibles." loading="lazy"></div>
+<figcaption><strong>Figura 16.</strong> Las intersecciones del lugar de Tales con una paralela a distancia h determinan los vértices posibles.</figcaption>
+</figure>
+
+## 2.6 Soluciones a los ejercicios
+
+### Ejercicio 2.1.4: posición del circuncentro
+
+- En un triángulo **acutángulo**, $O$ está en su interior.
+- En un triángulo **rectángulo**, $O$ es el punto medio de la hipotenusa: está en el lado, no en un vértice.
+- En un triángulo **obtusángulo**, $O$ está fuera del triángulo.
+
+Estas son las posiciones mostradas en el libro. En el caso rectángulo, la circunferencia de diámetro igual a la hipotenusa pasa por el tercer vértice por Tales, y la unicidad del circuncentro identifica su centro.
+
+<figure class="geometry-figure" id="geometry2-fig-17">
+<div class="geometry-static"><img src="/assets/geometry-ch2/center-positions.svg" alt="Circuncentro O y ortocentro H en triángulos acutángulos, rectángulos y obtusángulos." loading="lazy"></div>
+<figcaption><strong>Figura 17.</strong> Circuncentro O y ortocentro H en triángulos acutángulos, rectángulos y obtusángulos.</figcaption>
+</figure>
+
+### Ejercicio 2.3.2: diagonales de un paralelogramo
+
+Sea $P=AC\cap BD$. En $ABP$ y $CDP$ se tienen dos pares de ángulos alternos internos iguales y $AB=CD$, por 2.3.1(1). ALA da congruencia; por tanto $AP=CP$, $BP=DP$. Las diagonales se bisecan mutuamente.
+
+### Ejercicio 2.3.4: recíproco para las diagonales
+
+Si $AP=CP$ y $BP=DP$, con $P$ interior a ambas diagonales, entonces $\angle APB=\angle CPD$ por opuestos por el vértice. LAL da $\triangle APB\cong\triangle CPD$, de modo que $\angle PAB=\angle PCD$ y $AB\parallel CD$. Comparando $APD$ y $CPB$ del mismo modo se obtiene $AD\parallel CB$. Es un paralelogramo.
+
+### Ejercicio 2.3.7: posición del ortocentro
+
+- En un triángulo **acutángulo**, $H$ está en su interior.
+- En un triángulo **rectángulo**, los dos catetos son alturas, por lo que $H$ es el vértice del ángulo recto.
+- En un triángulo **obtusángulo**, $H$ es exterior. Las prolongaciones de las rectas de altura concurren en él, aunque algunos segmentos de altura no lo contengan.
+
+### Ejercicio 2.4.1: cuatro rectas en un triángulo equilátero
+
+Sea $D$ el punto medio de $BC$. Como $AB=AC$, $A$ está en la mediatriz de $BC$; también $D$ está en ella. Por tanto $AD$ es esa mediatriz y es perpendicular a $BC$.
+
+Por LLL, $\triangle ADB\cong\triangle ADC$, pues $AB=AC$, $DB=DC$ y $AD$ es común. Así, $\angle BAD=\angle DAC$ y $AD$ es la recta de la bisectriz. Es la recta de altura porque $AD\perp BC$, y la de la mediana porque $D$ es el punto medio. Se concluye la coincidencia de las cuatro rectas. El mismo argumento para un vértice funciona en un triángulo isósceles con $AB=AC$; el ejercicio pide el caso equilátero.
+
+<figure class="geometry-figure" id="geometry2-fig-18">
+<div class="geometry-static"><img src="/assets/geometry-ch2/equilateral.svg" alt="Mediatriz, bisectriz, altura y mediana comparten una misma recta en el triángulo equilátero." loading="lazy"></div>
+<figcaption><strong>Figura 18.</strong> Mediatriz, bisectriz, altura y mediana comparten una misma recta en el triángulo equilátero.</figcaption>
+</figure>
+
+## 2.7 Problemas
+
+Se conserva el orden de los diecisiete problemas del libro. Los datos de las figuras están expresados también en el texto. Las aclaraciones indican cuándo hay que usar una recta prolongada o excluir un caso degenerado.
+
+1. Sean $BE,CF$ las rectas de altura de $\triangle ABC$, con pies $E\in\overleftrightarrow{AC}$, $F\in\overleftrightarrow{AB}$, y sea $M$ el punto medio de $BC$. Pruebe $ME=MF$.
+
+2. Con los mismos pies, suponga $E\ne F$ y $EF\parallel BC$. Pruebe que $AB=AC$. La condición $E\ne F$ permite que la recta $EF$ esté definida.
+
+3. La mediatriz de $BC$ corta la circunferencia circunscrita de $ABC$ en el punto $D$ del semiplano de $BC$ opuesto a $A$. Pruebe que $AD$ biseca $\angle BAC$.
+
+4. Si $I$ es el incentro, pruebe
+
+$$\angle BIC=90^\circ+\frac{\angle BAC}{2}.$$
+
+5. Calcule los ángulos $\alpha,\beta$ de la figura. Los datos son $\angle ABC=40^\circ$, $\angle CBD=70^\circ$, $\angle BCA=30^\circ$, $\angle BCD=75^\circ$. Se buscan $\alpha=\angle CDA$, $\beta=\angle ADB$.
+
+<figure class="geometry-figure" id="geometry2-fig-19">
+<div class="geometry-static"><img src="/assets/geometry-ch2/problem-5.svg" alt="Problema 5: los cuatro ángulos dados y los dos ángulos desconocidos, con las mismas incidencias de la figura del libro." loading="lazy"></div>
+<figcaption><strong>Figura 19.</strong> Problema 5: los cuatro ángulos dados y los dos ángulos desconocidos, con las mismas incidencias de la figura del libro.</figcaption>
+</figure>
+
+6. En $\triangle ABC$, $\angle BAC=100^\circ$ y $\angle ABC=50^\circ$. Sea $AD$ la recta de altura con pie $D\in\overleftrightarrow{BC}$ y sea $BE$ la mediana, con $E$ punto medio de $AC$. Determine $\angle CDE$.
+
+7. Los segmentos $PS,PT$ son tangentes a $C(O,r)$ en $S,T$, con $P$ exterior. Pruebe (a) $PS=PT$ y (b) $ST\perp OP$.
+
+<figure class="geometry-figure" id="geometry2-fig-20">
+<div class="geometry-static"><img src="/assets/geometry-ch2/problem-7.svg" alt="Problema 7: dos tangentes desde P y la cuerda que une sus puntos de tangencia." loading="lazy"></div>
+<figcaption><strong>Figura 20.</strong> Problema 7: dos tangentes desde P y la cuerda que une sus puntos de tangencia.</figcaption>
+</figure>
+
+8. Construya $\triangle ABC$ dados $BC$ y las longitudes positivas $h_b,h_c$ de las alturas desde $B,C$, respectivamente. Determine si los datos permiten la construcción y distinga las soluciones posibles.
+
+9. Construya $\triangle ABC$ dados $BC$, la altura positiva $h_b$ desde $B$ y la longitud positiva $m_a$ de la mediana desde $A$.
+
+10. Construya $\triangle ABC$ dados la altura positiva $h$ desde $A$ y las longitudes $b=AC$, $c=AB$.
+
+11. Construya $\triangle ABC$ dados $BC$, el ángulo $0^\circ<\beta<180^\circ$ en $B$ y la longitud positiva $t$ de la mediana desde $B$.
+
+12. Dado un punto $P$ interior a $\angle ABC$, construya un segmento $XY$ con $X\in\overrightarrow{BA}$, $Y\in\overrightarrow{BC}$ y punto medio $P$. Los extremos pertenecen a las semirrectas laterales, no necesariamente a los segmentos cortos que representan los lados en el dibujo.
+
+<figure class="geometry-figure" id="geometry2-fig-21">
+<div class="geometry-static"><img src="/assets/geometry-ch2/problem-12.svg" alt="Problema 12: construir extremos en los lados del ángulo manteniendo P como punto medio." loading="lazy"></div>
+<figcaption><strong>Figura 21.</strong> Problema 12: construir extremos en los lados del ángulo manteniendo P como punto medio.</figcaption>
+</figure>
+
+13. Dados dos segmentos cuyas rectas se encuentran en un punto $P$ fuera de la hoja, construya la bisectriz del ángulo indicado entre ellas. Todas las operaciones deben realizarse dentro de la hoja, sin utilizar físicamente el punto $P$.
+
+14. Sea $AB$ un diámetro. Pruebe que las dos intersecciones de su mediatriz con la circunferencia son los puntos de esta más alejados de la **recta** $AB$. La distancia se mide perpendicularmente.
+
+15. Sea $M$ el punto medio de una cuerda $AB$ de $C(O,r)$. Si otra cuerda distinta $CD$ contiene $M$, compare sus longitudes usando Pitágoras. **Si $M\ne O$, pruebe $AB<CD$; si $M=O$, ambas son diámetros y $AB=CD$.** La desigualdad estricta del enunciado impreso necesita excluir el caso diametral.
+
+<figure class="geometry-figure" id="geometry2-fig-22">
+<div class="geometry-static"><img src="/assets/geometry-ch2/problem-15.svg" alt="Problema 15: una cuerda no diametral y otra distinta que pasa por su punto medio." loading="lazy"></div>
+<figcaption><strong>Figura 22.</strong> Problema 15: una cuerda no diametral y otra distinta que pasa por su punto medio.</figcaption>
+</figure>
+
+16. Sea $ABCD$ un cuadrilátero cruzado con diagonales $AC,BD$ no paralelas. Sean $P,Q,R,S$ los puntos medios de $AB,BC,CD,DA$, respectivamente. Pruebe que $PQRS$ es un paralelogramo. **Precisión:** la condición sobre las diagonales evita una figura degenerada; si son paralelas, los cuatro puntos medios pueden quedar alineados. Por ejemplo, $A=(-1,1)$, $B=(1,-1)$, $C=(-1,-1)$, $D=(1,1)$ dan $P=R=(0,0)$, $Q=(0,-1)$ y $S=(0,1)$.
+
+17. Un polígono **regular convexo** tiene todos los lados iguales y todos los ángulos interiores iguales. Pruebe que sus vértices pertenecen a una misma circunferencia.
+
+### Referencia del capítulo
+
+I. E. Leonard, J. E. Lewis, A. C. F. Liu y G. W. Tokarsky. *Classical Geometry: Euclidean, Transformational, Inversive, and Projective*. Wiley, 2014. Capítulo 2, «Concurrency», pp. 41–58. Se utilizan los resultados del capítulo 1 como antecedentes; no se incorporan temas de los capítulos posteriores.

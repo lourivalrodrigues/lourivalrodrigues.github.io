@@ -1,0 +1,33 @@
+---
+title: "Concurrencia · Capítulo 2"
+lang: es
+toc: true
+toc-depth: 2
+number-sections: false
+description: "Geometría Axiomática: capítulo 2, concurrencia, centros del triángulo y construcciones; PDF y figuras interactivas."
+format:
+  html:
+    toc-title: Contenido
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+<link rel="stylesheet" href="../../assets/geometry-ch1.css">
+
+::: {.language-link}
+[English site](../../notes/concurrency-chapter-2.html)
+:::
+
+**Geometría Axiomática · MATG1062 · ESPOL**  
+**Docente:** Lourival Rodrigues de Lima.
+
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/concurrency-chapter-2.pdf" download>Descargar PDF</a><a class="note-back" href="axiomatic-geometry.html">← Volver a la asignatura</a></div>
+
+Las figuras con controles pueden explorarse con el ratón, el teclado o una pantalla táctil. Algunas construcciones se muestran por pasos. El PDF contiene versiones estáticas de los dibujos. La exploración ayuda a interpretar los resultados; no sustituye las demostraciones.
+
+<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="axiomatic-geometry.html">Página de la asignatura</a></div>
+
+{{< include ../../_content/notes/concurrency-chapter-2.qmd >}}
+
+<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="axiomatic-geometry.html">Volver a Geometría Axiomática →</a></div>
+
+<script src="../../assets/geometry-ch2.js" defer></script>

@@ -12,3 +12,7 @@ main table { max-width:100%; font-size:.9rem; }
 main .center:has(table) { max-width:100%; overflow-x:auto; text-align:left; }
 @media(max-width:600px) { .definicion,.proposicion,.teorema,.ejemplo { padding:.65rem .75rem; } }
 @media print { .note-actions { display:none; } .definicion,.proposicion,.teorema,.ejemplo { background:#f4f7f5; border-left-color:#285e48; } }
+
+/* Navigation between geometry chapters. */
+.chapter-navigation{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin:1.5rem 0;padding:1rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.94rem}
+.chapter-navigation a{text-decoration:none}.chapter-navigation a:hover{text-decoration:underline}@media print{.chapter-navigation{display:none}}

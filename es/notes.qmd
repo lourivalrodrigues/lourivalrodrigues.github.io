@@ -36,7 +36,7 @@ description: "Notas y materiales organizados por asignatura."
 <h2>Geometría Axiomática</h2>
 <p>Axiomas, construcciones y demostraciones. Figuras que puedes explorar.</p>
 <img class="course-card-art" src="../assets/courses/axiomatic-geometry.svg" alt="" aria-hidden="true">
-<div class="course-card-footer"><span>Capítulo 1 · 15 figuras interactivas</span><strong>Entrar a la asignatura <span aria-hidden="true">→</span></strong></div>
+<div class="course-card-footer"><span>2 capítulos · figuras interactivas</span><strong>Entrar a la asignatura <span aria-hidden="true">→</span></strong></div>
 </a>
 </div>
 ```

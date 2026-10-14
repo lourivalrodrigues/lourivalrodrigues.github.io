@@ -26,4 +26,6 @@ Las figuras con controles permiten explorar las mismas configuraciones del capí
 
 {{< include ../_content/notes/congruency-chapter-1.qmd >}}
 
+<div class="chapter-navigation"><a href="axiomatic-geometry.html">Course page</a><a href="concurrency-chapter-2.html">Capítulo 2 · Concurrencia →</a></div>
+
 <script src="../assets/geometry-ch1.js" defer></script>
