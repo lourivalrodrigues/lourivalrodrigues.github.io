@@ -1,0 +1,28 @@
+---
+title: "Lección 1 — Solucionario y péndulo interactivo"
+lang: es
+toc: true
+toc-depth: 2
+description: "Métodos Matemáticos para las Ciencias: péndulo, estabilidad y reacción química."
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+<link rel="stylesheet" href="../../assets/lesson-1.css">
+
+```{=html}
+<div class="language-link"><a href="../../notes/lesson-1-solutions.html">English</a></div>
+<a class="note-back" href="mathematical-methods.html">← Volver a la asignatura</a>
+<div class="lesson-nav"><a class="btn-academic" href="lesson-1.html">Enunciado</a><a class="btn-academic" href="lesson-1-solutions.html">Solucionario</a><a class="btn-academic" href="lesson-1-solutions.html#pendulo-interactivo">Péndulo interactivo</a><a class="btn-academic" href="../../files/notes/lesson-1-solutions.pdf" download>Descargar solucionario PDF</a></div>
+```
+
+Solución detallada de los tres ejercicios. Puedes consultar primero el [enunciado](lesson-1.html), intentar resolverlo y después comparar tus cálculos.
+
+::: {.lesson-intro}
+**Convenciones del modelo.** En el péndulo, el ángulo se mide desde la vertical descendente; $m$ es el coeficiente inercial de la ecuación. En la reacción $A\to B$, se considera un sistema cerrado de volumen constante y estequiometría uno a uno.
+:::
+
+{{< include ../../_content/notes/lesson-1-solutions.qmd >}}
+
+{{< include ../../_content/notes/lesson-1-pendulum.qmd >}}
+
+<script src="../../assets/lesson-1-pendulum.js" defer></script>

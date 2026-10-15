@@ -24,7 +24,7 @@ description: "Métodos Matemáticos para las Ciencias · Notas, documentos y rec
 <div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Materiales en español</span><span>Modelación matemática</span></div>
 </header>
 
-<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
+<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-assessments">Evaluaciones</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
 
 <div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">3 materiales disponibles</span></div>
 
@@ -62,6 +62,21 @@ description: "Métodos Matemáticos para las Ciencias · Notas, documentos y rec
 </div>
 
 <div class="course-guidance"><p><strong>Cómo usar estas notas.</strong> Contienen temas adicionales a los vistos en clase. Prioriza lo trabajado con el docente. La notación está definida en los documentos; si encuentras un error o una explicación poco clara, comunícalo para que podamos revisarla.</p></div>
+
+<div class="course-section-head" id="course-assessments"><h2>Evaluaciones y soluciones</h2><span class="course-count">Lección 1 disponible</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">L1</div>
+<div>
+<h3>Lección 1 · Péndulo, estabilidad y reacción química</h3>
+<p>Enunciado de 100 puntos, solución detallada y péndulo interactivo con plano de fase y energía.</p>
+<p class="meta">Material en español · 3 ejercicios · 2 PDF</p>
+<div class="note-actions"><a class="btn-academic" href="lesson-1.html">Ver enunciado</a><a class="btn-academic primary" href="lesson-1-solutions.html">Ver soluciones</a><a class="btn-academic" href="lesson-1-solutions.html#pendulo-interactivo">Explorar el péndulo</a></div>
+<div class="note-actions"><a class="btn-academic" href="../../files/notes/lesson-1.pdf" download>Enunciado PDF</a><a class="btn-academic" href="../../files/notes/lesson-1-solutions.pdf" download>Solucionario PDF</a></div>
+</div>
+</article>
+</div>
 
 <div class="course-section-head" id="course-documents"><h2>Syllabus y documentos</h2></div>
 

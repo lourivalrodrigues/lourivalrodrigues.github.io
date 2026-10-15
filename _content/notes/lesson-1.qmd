@@ -1,0 +1,69 @@
+## 1. **El péndulo simple (30 puntos).** {#ejercicio-1}
+
+El movimiento de un péndulo con fricción está descrito por la ecuación diferencial
+
+$$m\frac{d^2\theta}{dt^2}+\mu\frac{d\theta}{dt}+\kappa\sin\theta=0,$$
+
+donde $m>0$, $\mu\geq0$ y $\kappa>0$ son constantes. La función $\theta(t)$ representa el ángulo del péndulo respecto a la dirección vertical.
+
+### a) **(10 puntos)** {#ejercicio-1-a}
+
+Introduzca la variable $v(t)=d\theta/dt$ y transforme la ecuación del péndulo en un sistema de dos ecuaciones diferenciales de primer orden.
+
+### b) **(10 puntos)** {#ejercicio-1-b}
+
+Determine todos los puntos de equilibrio del sistema obtenido.
+
+### c) **(10 puntos)** {#ejercicio-1-c}
+
+Considere ahora el caso sin fricción, es decir, $\mu=0$. La energía total del péndulo es
+
+$$E(\theta,v)=\frac12mv^2+\kappa(1-\cos\theta).$$
+
+Calcule $dE/dt$ utilizando las ecuaciones del sistema y explique el significado físico del resultado.
+
+## 2. **Análisis de un sistema dinámico (35 puntos).** {#ejercicio-2}
+
+Considere el siguiente sistema de ecuaciones diferenciales:
+
+$$\begin{cases}\dot x=y,\\\dot y=-4x-4y.\end{cases}$$
+
+### a) **(10 puntos)** {#ejercicio-2-a}
+
+Determine todos los puntos de equilibrio del sistema.
+
+### b) **(10 puntos)** {#ejercicio-2-b}
+
+Escriba el sistema en forma matricial $\dot{\mathbf X}=A\mathbf X$, $\mathbf X=\begin{pmatrix}x\\y\end{pmatrix}$. Determine la matriz $A$.
+
+### c) **(10 puntos)** {#ejercicio-2-c}
+
+Calcule los valores propios de la matriz $A$ y, a partir de ellos, clasifique el punto de equilibrio.
+
+### d) **(5 puntos)** {#ejercicio-2-d}
+
+Explique qué ocurre con las trayectorias que comienzan suficientemente cerca del equilibrio cuando $t\to\infty$.
+
+## 3. **Modelación de una reacción química (35 puntos).** {#ejercicio-3}
+
+Considere una reacción química irreversible
+
+$$A\xrightarrow{k}B,$$
+
+en la cual una sustancia $A$ se transforma en una sustancia $B$ con constante de reacción $k>0$. Denotemos por $a(t)$ y $b(t)$ las concentraciones de las sustancias $A$ y $B$, respectivamente. Suponga que la velocidad de transformación es proporcional a la concentración de $A$.
+
+### a) **(10 puntos)** {#ejercicio-3-a}
+
+Formule un sistema de ecuaciones diferenciales ordinarias que describa la evolución de $a(t)$ y $b(t)$.
+
+### b) **(10 puntos)** {#ejercicio-3-b}
+
+Demuestre que la cantidad total $a(t)+b(t)$ permanece constante en el tiempo. Interprete físicamente este resultado.
+
+### c) **(10 puntos)** {#ejercicio-3-c}
+
+Si las condiciones iniciales son $a(0)=a_0>0$, $b(0)=0$, determine explícitamente $a(t)$ y $b(t)$.
+
+### d) **(5 puntos)** {#ejercicio-3-d}
+
+Determine $\lim_{t\to\infty}a(t)$ y $\lim_{t\to\infty}b(t)$, e interprete los resultados.

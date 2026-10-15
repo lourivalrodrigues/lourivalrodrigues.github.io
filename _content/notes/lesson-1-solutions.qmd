@@ -1,0 +1,733 @@
+## 1. **El péndulo simple (30 puntos).** {#ejercicio-1}
+
+El movimiento de un péndulo con fricción está descrito por
+
+$$m\frac{d^2\theta}{dt^2}
++\mu\frac{d\theta}{dt}
++\kappa\sin\theta=0,
+$$
+
+donde $m>0$, $\mu\geq0$ y $\kappa>0$.
+
+### a) **(10 puntos)** {#ejercicio-1-a}
+
+Transforme la ecuación en un sistema de primer orden.
+
+**Solución.**
+
+Introducimos la nueva variable $v(t)=\frac{d\theta}{dt}$. Por definición, tenemos $\frac{d\theta}{dt}=v$. Derivando la expresión de $v$ respecto al tiempo, obtenemos
+
+$$\frac{dv}{dt}
+=
+\frac{d^2\theta}{dt^2}.$$
+
+Sustituyendo estas expresiones en la ecuación original,
+
+$$m\frac{dv}{dt}
++\mu v+\kappa\sin\theta=0.$$
+
+Despejando la derivada de $v$,
+
+$$\frac{dv}{dt}
+=
+-\frac{\mu}{m}v
+-\frac{\kappa}{m}\sin\theta.$$
+
+Por tanto, el sistema equivalente de primer orden es
+
+$$\boxed{
+\begin{aligned}
+\dot{\theta}&=v,\\
+\dot{v}&=
+-\frac{\mu}{m}v
+-\frac{\kappa}{m}\sin\theta.
+\end{aligned}
+}$$
+
+El estado del sistema queda determinado por el vector
+
+$$\mathbf X(t)=
+\begin{pmatrix}
+\theta(t)\\v(t)
+\end{pmatrix}.$$
+
+En particular, el sistema puede escribirse como
+
+$$\dot{\mathbf X}=F(\mathbf X),$$
+
+donde
+
+$$F(\theta,v)=
+\begin{pmatrix}
+v\\[2mm]
+-\dfrac{\mu}{m}v
+-\dfrac{\kappa}{m}\sin\theta
+\end{pmatrix}.$$
+
+Así, una ecuación diferencial de segundo orden se transforma en un sistema de dos ecuaciones diferenciales de primer orden.
+
+### b) **(10 puntos)** {#ejercicio-1-b}
+
+Determine todos los puntos de equilibrio.
+
+**Solución.**
+
+Un punto de equilibrio $(\theta_*,v_*)$ satisface $\dot{\theta}=0$ y $\dot v=0$. Utilizando el sistema obtenido en el literal anterior,
+
+$$\begin{cases}
+v_*=0,\\[2mm]
+-\dfrac{\mu}{m}v_*
+-\dfrac{\kappa}{m}
+\sin\theta_*=0.
+\end{cases}$$
+
+La primera ecuación implica $v_*=0$. Sustituyendo en la segunda,
+
+$$-\frac{\kappa}{m}
+\sin\theta_*=0.$$
+
+Como $m>0$ y $\kappa>0$, $\sin\theta_*=0$. Recordemos que
+
+$$\sin\theta=0
+\quad\Longleftrightarrow\quad
+\theta=k\pi,
+\qquad k\in\mathbb Z.$$
+
+Por consiguiente, todos los puntos de equilibrio son
+
+$$\boxed{
+(\theta_*,v_*)=(k\pi,0),
+\qquad k\in\mathbb Z.
+}$$
+
+**Interpretación física.**
+
+Existen dos tipos de posiciones de equilibrio:
+
+-   Cuando $\theta=2k\pi$, el péndulo se encuentra en la posición vertical inferior.
+
+-   Cuando $\theta=(2k+1)\pi$, el péndulo se encuentra en la posición vertical superior.
+
+En ambos casos, la velocidad angular es nula. La existencia de un equilibrio no implica necesariamente que este sea estable.
+
+### c) **(10 puntos)** {#ejercicio-1-c}
+
+Considere $\mu=0$ y demuestre que la energía se conserva.
+
+**Solución.**
+
+La energía mecánica total es
+
+$$E(\theta,v)
+=
+\frac12 mv^2+
+\kappa(1-\cos\theta).$$
+
+Como $\theta$ y $v$ dependen del tiempo, aplicamos la regla de la cadena:
+
+$$\frac{dE}{dt}
+=
+\frac{\partial E}
+{\partial\theta}
+\frac{d\theta}{dt}
++
+\frac{\partial E}
+{\partial v}
+\frac{dv}{dt}.$$
+
+Calculamos las derivadas parciales:
+
+$$\frac{\partial E}
+{\partial\theta}
+=
+\kappa\sin\theta,$$
+
+y
+
+$$\frac{\partial E}
+{\partial v}=mv.$$
+
+Por tanto,
+
+$$\frac{dE}{dt}
+=
+\kappa\sin\theta\,\dot\theta
++mv\dot v.$$
+
+Utilizando $\dot\theta=v$,
+
+$$\frac{dE}{dt}
+=
+\kappa v\sin\theta
++mv\dot v.$$
+
+Factorizando,
+
+$$\frac{dE}{dt}
+=
+v(\kappa\sin\theta+m\dot v).$$
+
+Para el sistema original,
+
+$$m\dot v=-\mu v-\kappa\sin\theta.$$
+
+Sustituyendo,
+
+$$\begin{aligned}
+\frac{dE}{dt}
+&=
+v(\kappa\sin\theta
+-\mu v-\kappa\sin\theta)\\
+&=-\mu v^2.
+\end{aligned}$$
+
+Hemos demostrado la identidad general
+
+$$\boxed{
+\frac{dE}{dt}=-\mu v^2.
+}$$
+
+En particular, cuando $\mu=0$,
+
+$$\boxed{
+\frac{dE}{dt}=0.
+}$$
+
+Esto implica que
+
+$$E(\theta(t),v(t))=E_0,$$
+
+donde $E_0$ es una constante determinada por las condiciones iniciales:
+
+$$E_0=
+\frac12 mv(0)^2+
+\kappa(1-\cos\theta(0)).$$
+
+**Interpretación física.**
+
+La energía total es la suma de la energía cinética,
+
+$$K=\frac12 mv^2,$$
+
+y la energía potencial,
+
+$$U=\kappa(1-\cos\theta).$$
+
+En ausencia de fricción, la energía puede transformarse de cinética a potencial y viceversa, pero su valor total permanece constante.
+
+Cuando $\mu>0$, en cambio,
+
+$$\frac{dE}{dt}=-\mu v^2\leq0.$$
+
+En este caso la energía nunca aumenta, pues existe disipación debida a la fricción.
+
+## 2. **Análisis de un sistema dinámico (35 puntos).** {#ejercicio-2}
+
+Considere
+
+$$\begin{cases}
+\dot x=y,\\
+\dot y=-4x-4y.
+\end{cases}
+$$
+
+### a) **(10 puntos)** {#ejercicio-2-a}
+
+Determine los puntos de equilibrio.
+
+**Solución.**
+
+Un punto de equilibrio $(x_*,y_*)$ debe satisfacer $\dot x=0$ y $\dot y=0$. Por tanto,
+
+$$\begin{cases}
+y_*=0,\\
+-4x_*-4y_*=0.
+\end{cases}$$
+
+De la primera ecuación, $y_*=0$. Sustituyendo en la segunda, $-4x_*=0$. Por consiguiente, $x_*=0$. El sistema posee un único punto de equilibrio:
+
+$$\boxed{(x_*,y_*)=(0,0).}$$
+
+### b) **(10 puntos)** {#ejercicio-2-b}
+
+Escriba el sistema en forma matricial.
+
+**Solución.**
+
+Definimos el vector de estado
+
+$$\mathbf X=
+\begin{pmatrix}
+x\\y
+\end{pmatrix}.$$
+
+Su derivada temporal es
+
+$$\dot{\mathbf X}=
+\begin{pmatrix}
+\dot x\\\dot y
+\end{pmatrix}.$$
+
+Utilizando las ecuaciones del sistema,
+
+$$\dot{\mathbf X}=
+\begin{pmatrix}
+y\\-4x-4y
+\end{pmatrix}.$$
+
+Observamos que
+
+$$\begin{pmatrix}
+y\\-4x-4y
+\end{pmatrix}
+=
+\begin{pmatrix}
+0&1\\
+-4&-4
+\end{pmatrix}
+\begin{pmatrix}
+x\\y
+\end{pmatrix}.$$
+
+Por tanto,
+
+$$\boxed{
+\dot{\mathbf X}
+=A\mathbf X,
+\qquad
+A=
+\begin{pmatrix}
+0&1\\
+-4&-4
+\end{pmatrix}.
+}$$
+
+Esta representación permite estudiar la dinámica del sistema mediante las propiedades de la matriz $A$.
+
+### c) **(10 puntos)** {#ejercicio-2-c}
+
+Calcule los valores propios y clasifique el equilibrio.
+
+**Solución.**
+
+Los valores propios de $A$ son las soluciones de la ecuación característica
+
+$$\det(A-\lambda I)=0.$$
+
+Primero calculamos
+
+$$A-\lambda I=
+\begin{pmatrix}
+-\lambda&1\\
+-4&-4-\lambda
+\end{pmatrix}.$$
+
+Su determinante es
+
+$$\begin{aligned}
+\det(A-\lambda I)
+&=(-\lambda)(-4-\lambda)
+ -(1)(-4)\\
+&=\lambda(4+\lambda)+4\\
+&=\lambda^2+4\lambda+4.
+\end{aligned}$$
+
+Factorizando,
+
+$$\lambda^2+4\lambda+4
+=(\lambda+2)^2.$$
+
+Entonces,
+
+$$(\lambda+2)^2=0.$$
+
+Se obtiene un valor propio real repetido:
+
+$$\boxed{\lambda_1=\lambda_2=-2.}$$
+
+Para clasificar correctamente el equilibrio, verificamos los vectores propios.
+
+Resolvemos
+
+$$(A+2I)\mathbf u=0.$$
+
+Como
+
+$$A+2I=
+\begin{pmatrix}
+2&1\\
+-4&-2
+\end{pmatrix},$$
+
+tenemos
+
+$$\begin{pmatrix}
+2&1\\
+-4&-2
+\end{pmatrix}
+\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\\0
+\end{pmatrix}.$$
+
+Este sistema se reduce a
+
+$$2u_1+u_2=0.$$
+
+De aquí,
+
+$$u_2=-2u_1.$$
+
+En consecuencia, los vectores propios tienen la forma
+
+$$\mathbf u=s
+\begin{pmatrix}
+1\\-2
+\end{pmatrix},
+\qquad s\neq0.$$
+
+Existe solamente una dirección propia linealmente independiente.
+
+Por consiguiente, la matriz no es diagonalizable.
+
+Como el valor propio repetido es negativo, el equilibrio es un
+
+$$\boxed{
+\text{nodo estable degenerado}
+}$$
+
+también llamado **nodo impropio estable**.
+
+En particular, el origen es asintóticamente estable.
+
+### d) **(5 puntos)** {#ejercicio-2-d}
+
+Describa el comportamiento de las trayectorias.
+
+**Solución.**
+
+Como ambos valores propios tienen parte real negativa,
+
+$$\lambda_1=\lambda_2=-2<0,$$
+
+las soluciones que comienzan cerca del origen se aproximan al equilibrio cuando $t\to\infty$.
+
+Es decir,
+
+$$\boxed{
+\lim_{t\to\infty}
+\mathbf X(t)
+=
+\begin{pmatrix}
+0\\0
+\end{pmatrix}.
+}$$
+
+En consecuencia,
+
+$$\lim_{t\to\infty}x(t)=0,
+\qquad
+\lim_{t\to\infty}y(t)=0.$$
+
+De hecho, por tratarse de un sistema lineal con todos sus valores propios de parte real negativa, la convergencia ocurre para cualquier condición inicial.
+
+**Verificación adicional.**
+
+La primera ecuación implica
+
+$$y=\dot x.$$
+
+Derivando,
+
+$$\dot y=\ddot x.$$
+
+Sustituyendo en la segunda ecuación,
+
+$$\ddot x+4\dot x+4x=0.$$
+
+La ecuación característica es
+
+$$r^2+4r+4=0,$$
+
+que tiene la raíz doble $r=-2$.
+
+La solución general es
+
+$$x(t)=(C_1+C_2t)e^{-2t}.$$
+
+Derivando,
+
+$$\begin{aligned}
+y(t)
+&=\dot x(t)\\
+&=\left[
+C_2-2C_1-2C_2t
+\right]e^{-2t}.
+\end{aligned}$$
+
+Como
+
+$$e^{-2t}\to0,
+\qquad
+te^{-2t}\to0,$$
+
+obtenemos
+
+$$x(t)\to0,\qquad y(t)\to0.$$
+
+Esto confirma la estabilidad asintótica del origen.
+
+## 3. **Modelación de una reacción química (35 puntos).** {#ejercicio-3}
+
+Considere la reacción irreversible
+
+$$A\xrightarrow{k}B,
+\qquad k>0.$$
+
+Denotamos por $a(t)$ y $b(t)$ las concentraciones de las sustancias $A$ y $B$.
+
+La velocidad de transformación es proporcional a la concentración de $A$.
+
+### a) **(10 puntos)** {#ejercicio-3-a}
+
+Formule el sistema de ecuaciones diferenciales.
+
+**Solución.**
+
+La hipótesis de proporcionalidad indica que la velocidad de reacción es
+
+$$r(t)=ka(t),$$
+
+donde $k>0$ es la constante de reacción.
+
+Como la sustancia $A$ se consume, su concentración disminuye con una velocidad igual a $r(t)$.
+
+Por tanto,
+
+$$\frac{da}{dt}=-r(t)=-ka(t).$$
+
+Por otro lado, la sustancia $B$ se produce a partir de $A$.
+
+Suponiendo una reacción uno a uno, cada unidad de $A$ consumida genera una unidad de $B$.
+
+Por tanto,
+
+$$\frac{db}{dt}=r(t)=ka(t).$$
+
+El modelo matemático es
+
+$$\boxed{
+\begin{cases}
+\dot a=-ka,\\
+\dot b=ka.
+\end{cases}
+}$$
+
+Se trata de un sistema autónomo y lineal de dos ecuaciones diferenciales de primer orden. La primera ecuación describe la desaparición de $A$, mientras que la segunda describe la formación de $B$.
+
+### b) **(10 puntos)** {#ejercicio-3-b}
+
+Demuestre que $a(t)+b(t)$ permanece constante.
+
+**Solución.**
+
+Definimos la concentración total
+
+$$C(t)=a(t)+b(t).$$
+
+Derivando respecto al tiempo,
+
+$$\frac{dC}{dt}
+=
+\frac{da}{dt}
++
+\frac{db}{dt}.$$
+
+Sustituyendo las ecuaciones del modelo,
+
+$$\frac{dC}{dt}
+=
+-ka+ka = 0$$
+
+Es decir,
+
+$$\boxed{
+a(t)+b(t)=a(0)+b(0).
+}$$
+
+Esta identidad constituye una ley de conservación para el sistema.
+
+**Interpretación física.**
+
+La reacción transforma la sustancia $A$ en la sustancia $B$ sin crear ni destruir la cantidad total representada por $a+b$. La cantidad de $A$ que desaparece es exactamente igual a la cantidad de $B$ que se produce. Esto supone una reacción con estequiometría uno a uno, sin pérdidas ni fuentes externas y con volumen constante.
+
+### c) **(10 puntos)** {#ejercicio-3-c}
+
+Resuelva el sistema con
+
+$$a(0)=a_0>0,\qquad b(0)=0.$$
+
+**Solución.**
+
+Comenzamos con la primera ecuación:
+
+$$\frac{da}{dt}=-ka.$$
+
+Es una ecuación diferencial de primer orden con variables separables.
+
+Como $a_0>0$, podemos escribir
+
+$$\frac{1}{a}\frac{da}{dt}=-k.$$
+
+Separando las variables,
+
+$$\frac{da}{a}=-k\,dt.$$
+
+Integrando,
+
+$$\int\frac{da}{a}
+=
+-k\int dt.$$
+
+Obtenemos
+
+$$\ln|a|=-kt+C.$$
+
+Aplicando la función exponencial,
+
+$$a(t)=Ce^{-kt},$$
+
+donde hemos utilizado que $a(t)>0$ para $t\geq0$. Aplicando la condición inicial,
+
+$$a(0)=C=a_0.$$
+
+Por tanto,
+
+$$\boxed{a(t)=a_0e^{-kt}.}$$
+
+Ahora resolvemos la segunda ecuación:
+
+$$\frac{db}{dt}=ka(t).$$
+
+Sustituyendo la solución obtenida,
+
+$$\frac{db}{dt}
+=ka_0e^{-kt}.$$
+
+Integramos desde $0$ hasta $t$:
+
+$$b(t)-b(0)
+=
+\int_0^t ka_0e^{-ks}\,ds.$$
+
+Como $b(0)=0$,
+
+$$b(t)
+=
+ka_0\int_0^t e^{-ks}\,ds.$$
+
+Calculando la integral,
+
+$$b(t)
+=
+ka_0
+\left[
+-\frac{1}{k}e^{-ks}
+\right]_0^t.$$
+
+Entonces,
+
+$$\begin{aligned}
+b(t)
+&=-a_0(e^{-kt}-1)\\
+&=a_0(1-e^{-kt}).
+\end{aligned}$$
+
+En consecuencia,
+
+$$\boxed{
+b(t)=a_0(1-e^{-kt}).
+}$$
+
+La solución completa es
+
+$$\boxed{
+\begin{aligned}
+a(t)&=a_0e^{-kt},\\
+b(t)&=a_0(1-e^{-kt}).
+\end{aligned}
+}$$
+
+**Verificación.**
+
+Sumando las soluciones,
+
+$$\begin{aligned}
+a(t)+b(t)
+&=a_0e^{-kt}
++a_0(1-e^{-kt})\\
+&=a_0.
+\end{aligned}$$
+
+Así,
+
+$$a(t)+b(t)=a_0,$$
+
+lo cual coincide con la ley de conservación demostrada en el literal anterior.
+
+### d) **(5 puntos)** {#ejercicio-3-d}
+
+Determine los límites de las concentraciones e interprete los resultados.
+
+**Solución.**
+
+Recordemos las soluciones
+
+$$a(t)=a_0e^{-kt}$$
+
+y
+
+$$b(t)=a_0(1-e^{-kt}).$$
+
+Como $k>0$,
+
+$$\lim_{t\to\infty}e^{-kt}=0.$$
+
+En consecuencia,
+
+$$\begin{aligned}
+\lim_{t\to\infty}a(t)
+&=a_0\lim_{t\to\infty}e^{-kt}\\
+&=0.
+\end{aligned}$$
+
+Por tanto,
+
+$$\boxed{
+\lim_{t\to\infty}a(t)=0.
+}$$
+
+Para la segunda sustancia,
+
+$$\begin{aligned}
+\lim_{t\to\infty}b(t)
+&=a_0\left(
+1-\lim_{t\to\infty}e^{-kt}
+\right)\\
+&=a_0.
+\end{aligned}$$
+
+Por consiguiente,
+
+$$\boxed{
+\lim_{t\to\infty}b(t)=a_0.
+}$$
+
+**Interpretación física.**
+
+A medida que transcurre el tiempo, la sustancia $A$ se consume gradualmente y su concentración se aproxima a cero. Simultáneamente, la concentración de $B$ aumenta hasta aproximarse a la concentración inicial de $A$. En el límite, toda la sustancia inicial se encuentra transformada en $B$. La evolución del sistema es consistente con la conservación de la concentración total:
+
+$$a(t)+b(t)=a_0.$$

@@ -1,0 +1,56 @@
+## Explora el péndulo {#pendulo-interactivo}
+
+El simulador utiliza el **modelo no lineal de la lección**, sin sustituir $\sin\theta$ por $\theta$:
+
+$$\dot\theta=v,\qquad \dot v=-\frac\mu m v-\frac\kappa m\sin\theta.$$
+
+El ángulo se mide desde la **vertical descendente**. Los controles muestran el ángulo inicial en grados; el cálculo y el plano de fase utilizan radianes. Aquí $m$ representa el coeficiente inercial de la ecuación dada. La longitud del dibujo es fija y no constituye un parámetro físico adicional.
+
+```{=html}
+<section class="lesson-simulator" data-pendulum-lesson aria-label="Simulador del péndulo no lineal">
+<h3>Del sistema al movimiento</h3>
+<div class="sim-fallback">
+<p>El péndulo oscila alrededor de la vertical descendente. Sin fricción, E es constante; con fricción, dE/dt = −μv². Activa JavaScript para modificar los parámetros, observar el movimiento y explorar las gráficas.</p>
+<svg viewBox="0 0 360 220" role="img" aria-label="Péndulo inclinado respecto de la vertical descendente"><line x1="180" y1="35" x2="180" y2="190" stroke="#8ba394" stroke-dasharray="5 5"/><line x1="180" y1="35" x2="277" y2="105" stroke="#c7e8a5" stroke-width="5"/><circle cx="277" cy="105" r="15" fill="#f4cf81"/><circle cx="180" cy="35" r="5" fill="#eef5ec"/><text x="195" y="85">θ</text></svg>
+</div>
+<div class="sim-interactive">
+<div class="sim-controls">
+<label>Coeficiente m <output data-output="m"></output><input data-param="m" aria-label="Coeficiente inercial m" type="range" min="0.25" max="4" step="0.25" value="1"></label>
+<label>Fricción μ <output data-output="mu"></output><input data-param="mu" aria-label="Fricción mu" type="range" min="0" max="3" step="0.05" value="0"></label>
+<label>Coeficiente κ <output data-output="kappa"></output><input data-param="kappa" aria-label="Coeficiente kappa" type="range" min="0.25" max="10" step="0.25" value="1"></label>
+<label>Ángulo inicial θ₀ <output data-output="theta"></output><input data-param="theta" aria-label="Ángulo inicial en grados" type="range" min="-180" max="180" step="1" value="60"></label>
+<label>Velocidad inicial v₀ <output data-output="v"></output><input data-param="v" aria-label="Velocidad angular inicial en radianes por segundo" type="range" min="-6" max="6" step="0.1" value="0"></label>
+</div>
+<div class="sim-actions"><button type="button" data-play aria-pressed="false">Iniciar</button><button type="button" data-reset>Reiniciar</button><button type="button" data-preset="ideal">Sin fricción</button><button type="button" data-preset="damped">Con amortiguamiento</button><button type="button" data-preset="rotation">Rotación completa</button></div>
+<p data-status role="status" aria-live="polite"></p>
+<div class="sim-main">
+<div><svg viewBox="0 0 360 220" role="img" aria-label="Posición del péndulo en el instante seleccionado"><line x1="180" y1="45" x2="180" y2="185" stroke="#8ba394" stroke-dasharray="5 5"/><line data-rod x1="180" y1="45" x2="180" y2="167" stroke="#c7e8a5" stroke-width="5"/><circle data-bob cx="180" cy="167" r="16" fill="#f4cf81"/><circle cx="180" cy="45" r="5" fill="#eef5ec"/><text x="190" y="195">Vertical descendente</text></svg><p class="sim-values" data-values></p></div>
+<div><h4>Plano de fase</h4><svg class="sim-chart" data-phase viewBox="0 0 640 285" role="img" aria-label="Trayectoria en el plano de fase theta, velocidad angular"></svg><p class="sim-help">La curva discontinua muestra los 60 s calculados; el trazo verde y el punto indican la evolución hasta el instante elegido.</p></div>
+</div>
+<label class="sim-seek">Tiempo <input data-seek type="range" min="0" max="60" step="0.0333333333" value="0" aria-label="Recorrer el tiempo de la simulación"><output data-time></output></label>
+<h4>Intercambio y disipación de energía</h4>
+<div class="sim-legend"><span style="--legend:#80c5e8">Cinética K</span><span style="--legend:#efbd80">Potencial U</span><span style="--legend:#c7e8a5">Total E</span></div>
+<svg class="sim-chart" data-energy viewBox="0 0 640 285" role="img" aria-label="Energías cinética, potencial y total en función del tiempo"></svg>
+<p class="sim-values" data-energy-values></p>
+<p class="sim-help" data-error></p>
+<p class="sim-help">Cambia un parámetro para iniciar un nuevo experimento desde t = 0. La animación empieza al pulsar Iniciar. Las gráficas representan una aproximación numérica mediante Runge–Kutta de cuarto orden, con paso 1/240 s; el balance permite observar el error numérico.</p>
+</div>
+</section>
+```
+
+### Qué observar
+
+1. **Sin fricción:** utiliza $\mu=0$, $\theta_0=60^\circ$ y $v_0=0$. La energía pasa de potencial a cinética y viceversa, mientras $E=K+U$ permanece constante, salvo el error numérico.
+2. **Con fricción:** selecciona *Con amortiguamiento*. Comprueba que la energía total disminuye y que la trayectoria se aproxima al equilibrio inferior.
+3. **Rotación:** selecciona *Rotación completa*. En este ejemplo sin fricción, $E_0>2\kappa$, la barrera de energía de la posición superior, y el péndulo completa vueltas. El ángulo del plano de fase no se reduce módulo $2\pi$.
+4. **Equilibrios:** prueba $\theta_0=0$ o $180^\circ$ y $v_0=0$. Ambos son equilibrios exactos. Cerca de la posición superior, una perturbación pequeña —incluso el redondeo numérico— puede generar un alejamiento visible.
+
+La energía disipada acumulada es
+
+$$D(t)=\int_0^t\mu v(s)^2\,ds.$$
+
+Por la identidad demostrada en el literal 1c,
+
+$$E(t)+D(t)=E(0).$$
+
+Esta igualdad vale para el modelo continuo; en la simulación se satisface aproximadamente. La animación ilustra la solución y **no reemplaza la demostración**.

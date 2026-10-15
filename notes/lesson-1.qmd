@@ -1,0 +1,26 @@
+---
+title: "Lección 1 — Enunciado"
+lang: es
+toc: true
+toc-depth: 2
+description: "Métodos Matemáticos para las Ciencias: péndulo, estabilidad y reacción química."
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/lesson-1.css">
+
+```{=html}
+<div class="language-link"><a href="../es/notes/lesson-1.html">Español</a></div>
+<a class="note-back" href="mathematical-methods.html">← Back to course</a>
+<div class="lesson-nav"><a class="btn-academic" href="lesson-1.html">Enunciado</a><a class="btn-academic" href="lesson-1-solutions.html">Solucionario</a><a class="btn-academic" href="lesson-1-solutions.html#pendulo-interactivo">Péndulo interactivo</a><a class="btn-academic" href="../files/notes/lesson-1.pdf" download>Descargar enunciado PDF</a></div>
+```
+
+**Métodos Matemáticos para las Ciencias · Lección 1 · 100 puntos.**
+
+**Indicaciones:** Justifique sus respuestas y presente ordenadamente los cálculos realizados. No se permite el uso de dispositivos electrónicos.
+
+::: {.lesson-intro}
+**Convenciones del modelo.** En el péndulo, el ángulo se mide desde la vertical descendente; $m$ es el coeficiente inercial de la ecuación. En la reacción $A\to B$, se considera un sistema cerrado de volumen constante y estequiometría uno a uno.
+:::
+
+{{< include ../_content/notes/lesson-1.qmd >}}

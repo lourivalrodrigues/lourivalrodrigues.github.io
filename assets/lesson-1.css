@@ -1,0 +1,22 @@
+.lesson-intro {border-left:3px solid #b8d6a5;padding:.8rem 1.2rem;margin:1.4rem 0;background:rgba(184,214,165,.07)}
+.lesson-nav {display:flex;gap:.65rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.lesson-simulator {--sim-ink:#eef5ec;--sim-muted:#c7d4ca;--sim-grid:rgba(210,231,215,.14);background:#102c25;color:var(--sim-ink);border:1px solid #537b64;border-radius:18px;padding:clamp(.9rem,3vw,1.6rem);margin:1.4rem 0 2rem;box-shadow:0 10px 32px #0002}
+.lesson-simulator h3,.lesson-simulator h4 {color:var(--sim-ink);margin-top:0}
+.lesson-simulator p,.lesson-simulator small {color:var(--sim-muted)}
+.sim-interactive {display:none}.sim-ready .sim-interactive {display:block}.sim-ready .sim-fallback {display:none}
+.sim-controls {display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.8rem 1.2rem;margin:1.2rem 0}
+.sim-controls label {display:block;font-size:.9rem}.sim-controls output {float:right;color:#e2c77e;font-variant-numeric:tabular-nums}
+.sim-controls input {display:block;width:100%;accent-color:#c5dfa3;margin:.7rem 0}
+.sim-actions {display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}
+.lesson-simulator button {border:1px solid #89aa91;background:#214a39;color:#fff;border-radius:8px;padding:.55rem .8rem;font:inherit;font-size:.88rem;cursor:pointer}
+.lesson-simulator button:hover {background:#356249}.lesson-simulator button[data-play] {background:#c5dfa3;color:#102c25;font-weight:700}
+.lesson-simulator :focus-visible {outline:3px solid #efd58e;outline-offset:4px}
+.sim-main {display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:1rem;align-items:center}
+.sim-main svg,.sim-chart {width:100%;height:auto;display:block;background:#0c221d;border-radius:12px}
+.lesson-simulator svg text {font:12px system-ui,sans-serif;fill:#d3e0d5}.sim-values {font-size:.85rem;font-variant-numeric:tabular-nums;min-height:2.4em;margin:.5rem 0}
+.sim-legend {display:flex;flex-wrap:wrap;gap:1rem;font-size:.85rem;margin:.5rem 0}.sim-legend span:before {content:'';display:inline-block;width:.8rem;height:.2rem;margin-right:.4rem;vertical-align:middle;background:var(--legend)}
+.sim-chart path {fill:none;stroke-width:2;stroke-linejoin:round}.sim-grid {stroke:var(--sim-grid);stroke-width:1}.sim-axis {stroke:#8ba394;stroke-width:1}.sim-reference {stroke:#9bad9e;stroke-width:1.5!important;stroke-dasharray:4 4;opacity:.5}.sim-phase {stroke:#c7e8a5}.sim-current {fill:#f4cf81;stroke:#102c25;stroke-width:2}.sim-kinetic {stroke:#80c5e8}.sim-potential {stroke:#efbd80}.sim-total {stroke:#c7e8a5;stroke-width:3!important}
+.sim-seek {display:flex;align-items:center;gap:.8rem;margin:1rem 0}.sim-seek input {flex:1;min-width:0;accent-color:#c5dfa3}.sim-seek output {white-space:nowrap;font-size:.85rem}
+.sim-help {font-size:.85rem;margin-bottom:0}.lesson-source-note {font-size:.9rem}
+@media(max-width:650px){.sim-main{grid-template-columns:1fr}.sim-main>div:first-child{max-width:360px;justify-self:center;width:100%}.sim-seek{flex-wrap:wrap}}
+@media print{.sim-interactive{display:none!important}.sim-fallback{display:block!important}.lesson-simulator{background:white;color:#102c25;box-shadow:none}.lesson-simulator p,.lesson-simulator h3{color:#102c25}.lesson-nav{display:none}}

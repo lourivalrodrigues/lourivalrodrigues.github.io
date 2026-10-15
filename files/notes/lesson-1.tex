@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\setlength{\emergencystretch}{2em}
+\usepackage[spanish,provide=*]{babel}
+\usepackage{graphicx,amsmath,amssymb,enumitem}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\begin{document}
+\begin{flushright}
+\IfFileExists{logo-espol.png}{\includegraphics[scale=0.8]{logo-espol.png}}{}
+\end{flushright}
+\textbf{Nombre:} \hrulefill\par
+\vspace{0.2cm}
+\textbf{Fecha:} \hrulefill\par
+\textbf{Materia:} MÉTODOS MATEMÁTICOS PARA LAS CIENCIAS
+\begin{center}{\Large\bfseries Lección 1}\\[3pt]\end{center}
+\hrule\vspace{0.3cm}
+\textbf{Indicaciones:} Justifique sus respuestas y presente ordenadamente los cálculos realizados. No se permite el uso de dispositivos electrónicos.
+\begin{enumerate}[leftmargin=*,itemsep=1cm]
+\item \textbf{El péndulo simple (30 puntos).}
+El movimiento de un péndulo con fricción está descrito por la ecuación diferencial
+\begin{equation}m\frac{d^2\theta}{dt^2}+\mu\frac{d\theta}{dt}+\kappa\sin\theta=0,\label{eq:pendulo}\end{equation}
+donde $m>0$, $\mu\geq0$ y $\kappa>0$ son constantes. La función $\theta(t)$ representa el ángulo del péndulo respecto a la dirección vertical.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=0.3cm]
+\item \textbf{(10 puntos)} Introduzca la variable $v(t)=d\theta/dt$ y transforme la ecuación \eqref{eq:pendulo} en un sistema de dos ecuaciones diferenciales de primer orden.
+\item \textbf{(10 puntos)} Determine todos los puntos de equilibrio del sistema obtenido.
+\item \textbf{(10 puntos)} Considere ahora el caso sin fricción, es decir, $\mu=0$. La energía total del péndulo es
+\[E(\theta,v)=\frac12mv^2+\kappa(1-\cos\theta).\]
+Calcule $dE/dt$ utilizando las ecuaciones del sistema y explique el significado físico del resultado.
+\end{enumerate}
+\item \textbf{Análisis de un sistema dinámico (35 puntos).}
+Considere el siguiente sistema de ecuaciones diferenciales:
+\begin{equation}\begin{cases}\dot x=y,\\\dot y=-4x-4y.\end{cases}\label{eq:sistema}\end{equation}
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=0.3cm]
+\item \textbf{(10 puntos)} Determine todos los puntos de equilibrio del sistema.
+\item \textbf{(10 puntos)} Escriba el sistema en forma matricial $\dot{\mathbf X}=A\mathbf X$, $\mathbf X=\begin{pmatrix}x\\y\end{pmatrix}$. Determine la matriz $A$.
+\item \textbf{(10 puntos)} Calcule los valores propios de la matriz $A$ y, a partir de ellos, clasifique el punto de equilibrio.
+\item \textbf{(5 puntos)} Explique qué ocurre con las trayectorias que comienzan suficientemente cerca del equilibrio cuando $t\to\infty$.
+\end{enumerate}
+\item \textbf{Modelación de una reacción química (35 puntos).}
+Considere una reacción química irreversible
+\[A\xrightarrow{k}B,\]
+en la cual una sustancia $A$ se transforma en una sustancia $B$ con constante de reacción $k>0$.
+Denotemos por $a(t)$ y $b(t)$ las concentraciones de las sustancias $A$ y $B$, respectivamente.
+Suponga que la velocidad de transformación es proporcional a la concentración de $A$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=0.3cm]
+\item \textbf{(10 puntos)} Formule un sistema de ecuaciones diferenciales ordinarias que describa la evolución de $a(t)$ y $b(t)$.
+\item \textbf{(10 puntos)} Demuestre que la cantidad total $a(t)+b(t)$ permanece constante en el tiempo. Interprete físicamente este resultado.
+\item \textbf{(10 puntos)} Si las condiciones iniciales son $a(0)=a_0>0$, $b(0)=0$, determine explícitamente $a(t)$ y $b(t)$.
+\item \textbf{(5 puntos)} Determine $\lim_{t\to\infty}a(t)$ y $\lim_{t\to\infty}b(t)$, e interprete los resultados.
+\end{enumerate}
+\end{enumerate}
+\end{document}
