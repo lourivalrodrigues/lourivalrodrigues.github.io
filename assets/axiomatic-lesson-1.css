@@ -1,0 +1,3 @@
+.geometry-figure[data-axiomatic-lesson] .geometry-readout{min-height:4.5em}
+.geometry-figure[data-axiomatic-lesson] button:disabled{opacity:.45;cursor:default}
+@media print{.geometry-figure[data-axiomatic-lesson] .geometry-controls,.geometry-figure[data-axiomatic-lesson] .geometry-readout{display:none}}

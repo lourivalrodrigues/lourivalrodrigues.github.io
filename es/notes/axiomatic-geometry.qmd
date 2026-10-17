@@ -24,7 +24,7 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 <div class="course-tags"><span>Lourival Rodrigues de Lima</span><span>Materiales en español</span><span>Figuras interactivas</span></div>
 </header>
 
-<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
+<nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-assessments">Evaluaciones</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
 
 <div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">2 capítulos disponibles</span></div>
 
@@ -52,6 +52,20 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 </div>
 
 <div class="course-guidance"><p><strong>Cómo usar estas notas.</strong> Contienen temas adicionales a los vistos en clase. Prioriza lo trabajado con el docente. La notación está definida en los documentos; si encuentras un error o una explicación poco clara, comunícalo para que podamos revisarla.</p></div>
+
+<div class="course-section-head" id="course-assessments"><h2>Evaluaciones y soluciones</h2><span class="course-count">Solucionario disponible</span></div>
+
+<div class="course-note-list">
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">L1</div>
+<div>
+<h3>Lección 1 · Construcciones auxiliares y cálculo de ángulos</h3>
+<p>Solucionario revisado, con figuras vectoriales y dos construcciones interactivas por pasos.</p>
+<p class="meta">Material en español · Junio de 2026 · Problemas 2 y 3 resueltos; referencia bibliográfica para el problema 1</p>
+<div class="note-actions"><a class="btn-academic primary" href="axiomatic-lesson-1-solutions.html">Leer soluciones</a><a class="btn-academic" href="axiomatic-lesson-1-solutions.html#axiomatic-lesson-figure-2">Explorar las figuras</a><a class="btn-academic" href="../../files/notes/axiomatic-lesson-1-solutions.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+</div>
 
 <div class="course-section-head" id="course-documents"><h2>Syllabus y documentos</h2></div>
 

@@ -1,55 +1,77 @@
-# Lección 1 — Métodos Matemáticos para las Ciencias
+# Geometría Axiomática — Lección 1
 
-## O que foi preparado
-- Nova seção “Evaluaciones y soluciones” na página da matéria (EN/ES).
-- Enunciado completo para leitura no site e PDF de 2 páginas.
-- Solucionário completo para leitura no site e PDF de 11 páginas.
-- Pêndulo não linear: movimento, plano de fase, energias e controle de tempo.
-- Fontes LaTeX incluídas em files/notes/.
+## Qué contiene
+- Nueva sección “Evaluaciones y soluciones” en la página de la asignatura (EN/ES).
+- Solucionario revisado para leer en el sitio y descargar en PDF (5 páginas).
+- Referencia del libro para el problema 1, tal como indica el material recibido.
+- Soluciones detalladas de los problemas 2 y 3.
+- Dos figuras interactivas: pasos de construcción, giro y reflexión.
+- Imágenes vectoriales nítidas y fuente LaTeX editable.
+- Sin el nombre personal que se solicitó retirar, también en los metadatos del PDF.
 
-## Veja o pêndulo antes de atualizar
-Extraia o ZIP e abra PREVIA-PENDULO.html no seu navegador. Funciona sem internet.
+## Importante: el enunciado
+El PDF proporcionado es un solucionario. El enunciado original de la evaluación
+no se recibió; no está incluido ni se ha inventado una pregunta para el problema 1.
+Las configuraciones de los problemas 2 y 3 se explicitan a partir de las soluciones
+y sus figuras. Cuando esté disponible el enunciado, podrá incorporarse por separado.
 
-## Atualização do site existente
-1. Extraia este ZIP com “Extrair tudo”.
-2. No GitHub Desktop, selecione lourivalrodrigues.github.io e use Repository → Show in Explorer.
+## Veja as figuras antes de atualizar
+Extraia o ZIP e abra PREVIA-FIGURAS.html no navegador. A prévia funciona sem internet.
+
+## Como atualizar seu site
+1. Extraia este ZIP usando “Extrair tudo”.
+2. No GitHub Desktop, selecione lourivalrodrigues.github.io e clique em
+   Repository → Show in Explorer.
 3. Abra a pasta atualizacao-site deste pacote.
-4. Copie TODO O CONTEÚDO dela para a raiz do seu repositório (onde está _quarto.yml).
-   Mescle as pastas e substitua os arquivos correspondentes. Não crie uma pasta
-   atualizacao-site dentro do repositório. Não apague os demais arquivos do site.
-5. No GitHub Desktop, escreva “Add Lección 1 and interactive pendulum”, clique
-   em Commit to main e depois Push origin.
-6. Aguarde o workflow do GitHub Pages concluir. Acesse Notas → Métodos
-   Matemáticos para las Ciencias → Evaluaciones y soluciones.
+4. Copie TODO O CONTEÚDO dela para a raiz do repositório, onde está _quarto.yml.
+   Mescle as pastas e substitua os arquivos correspondentes; preserve os demais.
+   Não crie uma pasta atualizacao-site dentro do repositório.
+5. Faça Commit to main e depois Push origin.
+6. Aguarde o GitHub Pages concluir e confira Notas → Geometría Axiomática →
+   Evaluaciones y soluciones.
 
-Este pacote foi preparado para o site Quarto existente. Não foi enviado ao GitHub
-nem publicado automaticamente. O material da lección permanece em espanhol;
-a navegação da página da matéria acompanha o idioma escolhido no site.
+O pacote foi preparado para o site Quarto existente. Não foi publicado
+automaticamente. A leitura do material permanece em espanhol; a navegação da
+página da matéria acompanha a versão escolhida do site.
+
+## Correção matemática
+No problema 3, os ângulos de 20° no triângulo ACP implicam AP = CP.
+Com BP = AP, obtém-se BP = AP = CP. Essa cadeia foi explicitada antes de
+concluir que BCP é isósceles. Os resultados são x = 110° (problema 2) e
+x = 30° (problema 3).
 
 ## Verificação
-- Projeto Quarto: 30 páginas renderizadas sem erros.
-- 6 páginas alteradas/novas: 266 links, recursos e âncoras locais verificados.
-- As 160 expressões matemáticas do solucionário fornecido foram preservadas.
-- Simulador: 108 combinações de parâmetros e controles verificados.
-- Maior erro relativo observado no balanço energético em 60 s: 1.22 × 10⁻⁷.
-- PDFs renderizados e revisados visualmente, sem referências indefinidas
-  ou linhas excedendo as margens.
-- Não houve teste em navegador real neste ambiente. Depois da publicação,
-  confira a interação também no celular.
+- Projeto Quarto: 32 páginas renderizadas.
+- 4 páginas novas/alteradas: 194 links, recursos e âncoras locais verificados.
+- As 105 expressões matemáticas do texto revisado aparecem sem alterações
+  nas duas versões da página.
+- 4.582 verificações de ângulos, comprimentos, giros, reflexões e SVG.
+- 2 figuras montadas e 18 eventos de controles verificados.
+- PDF de 5 páginas renderizado e revisado visualmente; sem referências
+  indefinidas ou conteúdo fora das margens.
+- Não houve teste em navegador real neste ambiente; confira os controles
+  e a visualização no celular depois da publicação.
 
-## Arquivos
-- notes/mathematical-methods.qmd
-- es/notes/mathematical-methods.qmd
-- assets/lesson-1.css
-- assets/lesson-1-pendulum.js
-- notes/lesson-1.qmd
-- notes/lesson-1-solutions.qmd
-- es/notes/lesson-1.qmd
-- es/notes/lesson-1-solutions.qmd
-- _content/notes/lesson-1.qmd
-- _content/notes/lesson-1-solutions.qmd
-- _content/notes/lesson-1-pendulum.qmd
-- files/notes/lesson-1.pdf
-- files/notes/lesson-1-solutions.pdf
-- files/notes/lesson-1.tex
-- files/notes/lesson-1-solutions.tex
+## Fuente LaTeX
+La carpeta fontes-latex contiene el archivo .tex y las dos figuras PDF que
+necesita. Compile desde esa carpeta con pdfLaTeX. No es necesario copiar
+esta carpeta ni la vista previa al repositorio para actualizar el sitio.
+
+## Archivos del sitio
+- notes/axiomatic-geometry.qmd
+- es/notes/axiomatic-geometry.qmd
+- notes/axiomatic-lesson-1-solutions.qmd
+- es/notes/axiomatic-lesson-1-solutions.qmd
+- assets/axiomatic-lesson-1.js
+- assets/axiomatic-lesson-1.css
+- files/notes/axiomatic-lesson-1-solutions.pdf
+- assets/axiomatic-lesson-1/problem-2-step-0.svg
+- assets/axiomatic-lesson-1/problem-2-step-1.svg
+- assets/axiomatic-lesson-1/problem-2-step-2.svg
+- assets/axiomatic-lesson-1/problem-2-step-3.svg
+- assets/axiomatic-lesson-1/problem-2-step-4.svg
+- assets/axiomatic-lesson-1/problem-3-step-0.svg
+- assets/axiomatic-lesson-1/problem-3-step-1.svg
+- assets/axiomatic-lesson-1/problem-3-step-2.svg
+- assets/axiomatic-lesson-1/problem-3-step-3.svg
+- assets/axiomatic-lesson-1/problem-3-step-4.svg
