@@ -76,7 +76,7 @@ Expandiendo la divergencia,
 
 $$\frac{D\rho}{Dt}=-\rho\nabla\cdot\mathbf v.$$
 
-**Conservar masa no significa conservar densidad sobre una trayectoria.** Si el volumen se expande, la densidad disminuye. Solo para un flujo sin divergencia, y sin fuentes, se obtiene $D\rho/Dt=0$.
+**Conservar masa no significa conservar densidad sobre una trayectoria.** Si el volumen se expande, la densidad disminuye. En particular, para un flujo sin divergencia y sin fuentes se obtiene $D\rho/Dt=0$.
 
 ### Fuentes y sumideros
 
@@ -118,7 +118,9 @@ Para verificarlo, $\rho_t=-cP'(x-ct)$ y $\rho_x=P'(x-ct)$. El perfil se traslada
 
 El libro escribe el perfil mediante su serie compleja de Fourier, $P(x)=\sum_k A_ke^{ikx}$. Así, la onda viajera se expresa como
 
-$$\rho(x,t)=\sum_{k=-\infty}^{\infty}A_ke^{ik(x-ct)}=\sum_{k=-\infty}^{\infty}A_ke^{i[kx-\omega t]}.\tag{2.21}$$ Para un modo
+$$\rho(x,t)=\sum_{k=-\infty}^{\infty}A_ke^{ik(x-ct)}=\sum_{k=-\infty}^{\infty}A_ke^{i[kx-\omega t]}.\tag{2.21}$$
+
+Para un modo
 
 $$\rho_k(x,t)=A_k e^{i(kx-\omega t)},$$
 
@@ -219,7 +221,7 @@ Como $A=xe^{-2t}$, obtenemos
 
 $$\boxed{p(x,t)=\left[\frac{1}{2+\sin(xe^{-2t})}+\frac x2(e^{-2t}-1)\right]^{-1}.}$$
 
-La expresión es válida donde la solución permanece finita y el cambio de variables puede invertirse. En la figura se evita el denominador cero.
+La expresión representa la solución del problema inicial en el intervalo conectado con $t=0$ donde el denominador permanece distinto de cero. No se prolonga a través de un denominador nulo. En la figura, el control de tiempo se limita al intervalo anterior a esa singularidad.
 
 <figure class="transport-figure"><div data-transport="characteristic"><div class="transport-fallback"><img src="/assets/transport-ch2/characteristic-0.svg" alt="Trayectoria y valor de la solución sobre una característica seleccionada. La visualización no prolonga la fórmula a través de una explosión." loading="lazy"><img src="/assets/transport-ch2/characteristic-1.svg" alt="Trayectoria y valor de la solución sobre una característica seleccionada. La visualización no prolonga la fórmula a través de una explosión." loading="lazy"></div><p>Activa JavaScript para utilizar los controles.</p></div><figcaption>Trayectoria y valor de la solución sobre una característica seleccionada. La visualización no prolonga la fórmula a través de una explosión.</figcaption></figure>
 
@@ -460,7 +462,7 @@ y determinar $G(h)$.
 
 ### 2.12. Inicio de un choque
 
-Para $p_t+q(p)_x=0$ y $p(x,0)=f(x)$, suponer $q''(p)>0$ y que $f$ tiene un máximo local, por ejemplo $f(x)=e^{-x^2}$.
+Para $p_t+q(p)_x=0$ y $p(x,0)=f(x)$, suponer $q'(p)>0$ y que $f$ tiene un máximo local, por ejemplo $f(x)=e^{-x^2}$.
 
 (a) Para dos características $X(t;A_0)$ y $X(t;A_1)$ con valores distintos $P_0\ne P_1$, calcular el punto $x_{0,1}$ y el tiempo $t_{0,1}$ de intersección.
 
