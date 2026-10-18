@@ -1,0 +1,29 @@
+---
+title: "Ecuaciones de transporte · Capítulo 2"
+lang: es
+toc: true
+toc-depth: 2
+number-sections: false
+description: "Capítulo 2 de Witelski y Bowen: notas en español, PDF y figuras interactivas."
+format:
+  html:
+    toc-title: Contenido
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/transport-ch2.css">
+
+<div class="language-link"><a href="../es/notes/transport-chapter-2.html">Sitio en español</a></div>
+
+**Métodos Matemáticos para las Ciencias · MATG1075 · ESPOL**  
+**Docente:** Lourival Rodrigues de Lima.
+
+<div class="note-actions"><a class="btn-academic primary" href="../files/notes/transport-chapter-2.pdf" download>Descargar PDF</a><a class="note-back" href="mathematical-methods.html">← Volver a la asignatura</a></div>
+
+Las figuras con controles permiten cambiar el tiempo y, en el ejemplo de características, la posición inicial $A$. Los controles funcionan con ratón, teclado y pantalla táctil. El PDF incluye las versiones estáticas.
+
+{{< include ../_content/notes/transport-chapter-2.qmd >}}
+
+[Volver a Métodos Matemáticos para las Ciencias](mathematical-methods.html)
+
+<script src="../assets/transport-ch2.js" defer></script>
