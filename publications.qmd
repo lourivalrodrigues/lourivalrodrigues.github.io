@@ -63,6 +63,14 @@ Lourival Lima, Paulo Ruffino, Francys Souza.
 ## Preprints
 
 ::: {.publication}
+### Goldbach and Alexandroff Shake Hands
+Lourival Lima, Jorge Vielma.  
+arXiv:2610.25573, 2026.
+
+[arXiv](https://arxiv.org/abs/2610.25573) · [PDF](https://arxiv.org/pdf/2610.25573)
+:::
+
+::: {.publication}
 ### The Markov Accessibility Topology and its Probabilistic Structure
 Lourival Lima, Jorge Vielma.  
 arXiv:2610.10591, 2026.
