@@ -1,0 +1,26 @@
+## Explora el sistema de poleas {#poleas-interactivas}
+
+Esta visualización complementa la solución. Ajusta las masas o la configuración inicial y observa cómo las restricciones de las cuerdas relacionan los movimientos. Todas las posiciones se miden **hacia abajo** desde el centro de la polea fija.
+
+```{=html}
+<section class="lesson-simulator pulley-simulator" id="pulley-simulator" aria-label="Simulador de dos poleas">
+<h3>Dos cuerdas, dos grados de libertad</h3>
+<p>ℓ₁ = 6 m · ℓ₂ = 4 m · g = 9,81 m/s² · velocidades iniciales nulas</p>
+<div class="sim-fallback"><p>Activa JavaScript para usar los controles. La figura y la solución anteriores siguen disponibles.</p></div>
+<div class="sim-interactive">
+<div class="sim-controls"><label for="pulley-m1">Masa m₁<output data-out="m1" for="pulley-m1"></output><input id="pulley-m1" data-param="m1" type="range" min="0.5" max="6" step="0.1" value="2.5"></label>
+<label for="pulley-m2">Masa m₂<output data-out="m2" for="pulley-m2"></output><input id="pulley-m2" data-param="m2" type="range" min="0.5" max="6" step="0.1" value="1"></label>
+<label for="pulley-m3">Masa m₃<output data-out="m3" for="pulley-m3"></output><input id="pulley-m3" data-param="m3" type="range" min="0.5" max="6" step="0.1" value="1.5"></label>
+<label for="pulley-x0">Posición inicial x₀<output data-out="x0" for="pulley-x0"></output><input id="pulley-x0" data-param="x0" type="range" min="1.2" max="4" step="0.1" value="2.8"></label>
+<label for="pulley-y0">Longitud inicial y₀<output data-out="y0" for="pulley-y0"></output><input id="pulley-y0" data-param="y0" type="range" min="1" max="3" step="0.1" value="2"></label>
+</div>
+<div class="sim-actions"><button type="button" data-play>Iniciar</button><button type="button" data-reset>Reiniciar</button><button type="button" data-balanced>Ejemplo en equilibrio</button></div>
+<div class="sim-main"><div data-drawing></div><div><h4>Posiciones de las masas</h4><div data-plot></div><div class="sim-legend"><span style="--legend:#efc378">m₁</span><span style="--legend:#8dd6e8">m₂</span><span style="--legend:#b6d695">m₃</span></div><div data-values></div></div></div>
+<div class="sim-seek"><label for="pulley-time">Tiempo</label><input id="pulley-time" data-time type="range" min="0" max="1" step="0.001" value="0"><output data-clock for="pulley-time">0 s</output></div>
+<p data-status role="status" aria-live="polite"></p>
+</div></section>
+```
+
+**Cómo se calcula el movimiento.** Las aceleraciones se obtienen resolviendo el sistema del literal c). Como las masas y $g$ son constantes, las aceleraciones también lo son. Desde el reposo, se usan $x(t)=x_0+\tfrac12\ddot x\,t^2$ e $y(t)=y_0+\tfrac12\ddot y\,t^2$.
+
+La energía mostrada conserva la constante $C$ en $U=-g\sum_i m_i z_i$; por eso $U$ puede ser negativa. En este modelo ideal, $T+U$ permanece constante. La animación termina antes de que las masas alcancen las poleas o se agoten los tramos disponibles; no simula impactos. Puedes explorar el tiempo con el deslizador, sin reproducir la animación.

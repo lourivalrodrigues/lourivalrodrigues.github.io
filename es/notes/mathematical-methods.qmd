@@ -72,7 +72,7 @@ description: "Métodos Matemáticos para las Ciencias · Notas, documentos y rec
 
 <div class="course-guidance"><p><strong>Cómo usar estas notas.</strong> Contienen temas adicionales a los vistos en clase. Prioriza lo trabajado con el docente. La notación está definida en los documentos; si encuentras un error o una explicación poco clara, comunícalo para que podamos revisarla.</p></div>
 
-<div class="course-section-head" id="course-assessments"><h2>Evaluaciones y soluciones</h2><span class="course-count">Lección 1 disponible</span></div>
+<div class="course-section-head" id="course-assessments"><h2>Evaluaciones y soluciones</h2><span class="course-count">Lecciones 1–2 disponibles</span></div>
 
 <div class="course-note-list">
 <article class="course-note">
@@ -85,6 +85,13 @@ description: "Métodos Matemáticos para las Ciencias · Notas, documentos y rec
 <div class="note-actions"><a class="btn-academic" href="../../files/notes/lesson-1.pdf" download>Enunciado PDF</a><a class="btn-academic" href="../../files/notes/lesson-1-solutions.pdf" download>Solucionario PDF</a></div>
 </div>
 </article>
+<article class="course-note"><div class="course-note-index" aria-hidden="true">L2</div><div>
+<h3>Lección 2 · Promedio móvil y sistema de dos poleas</h3>
+<p>Soluciones detalladas, formulación lagrangiana y una simulación interactiva con tres masas.</p>
+<p class="meta">Material en español · 2 problemas · PDF e interacción</p>
+<div class="note-actions"><a class="btn-academic primary" href="lesson-2-solutions.html">Leer soluciones</a><a class="btn-academic" href="lesson-2-solutions.html#poleas-interactivas">Explorar las poleas</a><a class="btn-academic" href="../../files/notes/lesson-2-solutions.pdf" download>PDF</a></div>
+</div></article>
+
 </div>
 
 <div class="course-section-head" id="course-documents"><h2>Syllabus y documentos</h2></div>

@@ -1,0 +1,25 @@
+---
+title: "Lección 2 · Solucionario y poleas interactivas"
+lang: es
+toc: true
+toc-depth: 2
+description: "Promedio en un intervalo móvil y sistema de dos poleas: soluciones e interacción."
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/lesson-1.css">
+<link rel="stylesheet" href="../assets/lesson-2-pulleys.css">
+
+```{=html}
+<div class="language-link"><a href="../es/notes/lesson-2-solutions.html">Español</a></div>
+<a class="note-back" href="mathematical-methods.html">← Back to course</a>
+<div class="lesson-nav"><a class="btn-academic" href="#poleas-interactivas">Explorar las poleas</a><a class="btn-academic" href="../files/notes/lesson-2-solutions.pdf" download>Descargar solucionario PDF</a><a class="btn-academic" href="lesson-1-solutions.html">Lección 1</a></div>
+```
+
+Solución de los dos problemas de la Lección 2 de **Métodos Matemáticos para las Ciencias**, con las notaciones del documento de clase.
+
+{{< include ../_content/notes/lesson-2-solutions.qmd >}}
+
+{{< include ../_content/notes/lesson-2-pulleys.qmd >}}
+
+<script src="../assets/lesson-2-pulleys.js" defer></script>
