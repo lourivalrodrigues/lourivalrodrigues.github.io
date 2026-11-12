@@ -1,0 +1,27 @@
+---
+title: "Lección 2 · Solucionario"
+lang: es
+toc: true
+toc-depth: 2
+description: "Geometría Axiomática: relaciones métricas en un triángulo rectángulo, solución revisada, figura interactiva y PDF."
+---
+
+<link rel="stylesheet" href="../../assets/notes.css">
+<link rel="stylesheet" href="../../assets/geometry-ch1.css">
+
+<div class="language-link"><a href="../../notes/axiomatic-lesson-2-solutions.html">English site</a></div>
+
+<a class="note-back" href="axiomatic-geometry.html">← Volver a la asignatura</a>
+
+**Geometría Axiomática · MATG1062 · ESPOL**  
+**Lección 2 · Material de junio de 2026 · Solucionario revisado**
+
+<div class="note-actions"><a class="btn-academic primary" href="../../files/notes/axiomatic-lesson-2-solutions.pdf" download>Descargar solucionario PDF</a><a class="btn-academic" href="#axiomatic-lesson-2-figure">Explorar la figura</a></div>
+
+La figura conserva el ángulo recto al modificar el triángulo. Los controles funcionan con ratón, teclado o pantalla táctil. La exploración ilustra las relaciones; no sustituye su demostración. El PDF contiene figuras vectoriales estáticas.
+
+{{< include ../../_content/notes/axiomatic-lesson-2-solutions.qmd >}}
+
+<div class="chapter-navigation"><a href="axiomatic-lesson-1-solutions.html">← Lección 1 · Solucionario</a><a href="axiomatic-geometry.html">Volver a la asignatura →</a></div>
+
+<script src="../../assets/axiomatic-lesson-2.js" defer></script>

@@ -1,0 +1,23 @@
+(function(root){'use strict';
+function geometry(c=10,t=.36){const y=c*t,x=c-y,h=Math.sqrt(x*y);return {c,x,y,h,a:Math.sqrt(c*x),b:Math.sqrt(c*y),t};}
+function svg(c=10,t=.36,mode=0){const g=geometry(c,t),A=[90,335],B=[710,335],F=[90+620*t,335],C=[F[0],335-620*g.h/c],p=q=>q.join(','),line=(u,v,col='#245b48',dash='')=>`<line x1="${u[0]}" y1="${u[1]}" x2="${v[0]}" y2="${v[1]}" stroke="${col}" stroke-width="2.8" ${dash}/>`;
+const txt=(x,y,s,col='#17392e')=>`<text x="${x}" y="${y}" fill="${col}" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" text-anchor="middle">${s}</text>`;
+const norm=v=>{let d=Math.hypot(...v);return v.map(x=>x/d);},u=norm([A[0]-C[0],A[1]-C[1]]),v=norm([B[0]-C[0],B[1]-C[1]]),r=16,ca=[C[0]+u[0]*r,C[1]+u[1]*r],cb=[C[0]+v[0]*r,C[1]+v[1]*r],cc=[ca[0]+v[0]*r,ca[1]+v[1]*r];
+let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Triángulo ABC rectángulo en C, altura CF sobre la hipotenusa AB"><rect width="800" height="480" rx="12" fill="#f3f7f3"/><g transform="translate(0,25)">`;
+s+=`<polygon points="${p(A)} ${p(B)} ${p(C)}" fill="#245b48" fill-opacity=".06" stroke="#245b48" stroke-width="3"/>`;
+if(mode===1||mode===3)s+=`<polygon points="${p(A)} ${p(C)} ${p(F)}" fill="#38749c" fill-opacity=".22"/>`;
+if(mode===2||mode===3)s+=`<polygon points="${p(C)} ${p(B)} ${p(F)}" fill="#b17d27" fill-opacity=".22"/>`;
+s+=line(C,F,'#9b671b','stroke-dasharray="7 5"');s+=line(ca,cc)+line(cc,cb);s+=line([F[0],F[1]-15],[F[0]+15,F[1]-15])+line([F[0]+15,F[1]-15],[F[0]+15,F[1]]);
+for(const [q,n,dx,dy] of [[A,'A',-17,9],[B,'B',17,9],[C,'C',0,-18],[F,'F',0,30]])s+=`<circle cx="${q[0]}" cy="${q[1]}" r="3" fill="#245b48"/>`+txt(q[0]+dx,q[1]+dy,n);
+s+=txt((A[0]+C[0])/2-20,(A[1]+C[1])/2-12,'b','#38678d');s+=txt((B[0]+C[0])/2+20,(B[1]+C[1])/2-12,'a','#38678d');s+=txt(F[0]+24,(C[1]+F[1])/2,'h','#9b671b');s+=txt((A[0]+F[0])/2,321,'y');s+=txt((B[0]+F[0])/2,321,'x');
+s+=line([90,395],[710,395],'#879d92')+line([90,388],[90,402],'#879d92')+line([710,388],[710,402],'#879d92');s+=txt(400,427,'c = x + y');return s+'</g></svg>';}
+function init(){const el=document.getElementById('axiomatic-lesson-2-figure');if(!el)return;let c=10,t=.36,mode=0;const live=document.createElement('div'),controls=document.createElement('div'),read=document.createElement('p');live.className='geometry-live';controls.className='geometry-controls';read.className='geometry-readout';read.setAttribute('aria-live','polite');const fmt=x=>x.toLocaleString('es',{maximumFractionDigits:3});
+function draw(){const g=geometry(c,t);live.innerHTML=svg(c,t,mode);read.textContent=`a = ${fmt(g.a)}; b = ${fmt(g.b)}; c = ${fmt(c)}; x = ${fmt(g.x)}; y = ${fmt(g.y)}; h = ${fmt(g.h)}. h² = xy = ${fmt(g.x*g.y)}; a²+b² = c² = ${fmt(c*c)}. h/c = ${fmt(g.h/c)}${Math.abs(t-.5)<1e-9?': igualdad h=c/2, triángulo isósceles.':' < 0,5.'}`;}
+function slider(label,min,max,step,value,fn,id){const l=document.createElement('label'),s=document.createElement('span'),i=document.createElement('input'),o=document.createElement('output');s.textContent=label;i.type='range';Object.assign(i,{min,max,step,value,id});l.htmlFor=id;o.htmlFor=id;o.textContent=fmt(value);i.addEventListener('input',()=>{o.textContent=fmt(+i.value);fn(+i.value);draw();});l.append(s,i,o);controls.append(l);return [i,o];}
+const cInput=slider('Hipotenusa c',4,12,.1,c,v=>c=v,'lesson2-c'),tInput=slider('Posición de F: y/c',.15,.85,.01,t,v=>t=v,'lesson2-t');
+const l=document.createElement('label'),sp=document.createElement('span'),sel=document.createElement('select');sp.textContent='Destacar triángulos';sel.id='lesson2-mode';l.htmlFor=sel.id;['Configuración completa','ABC y ACF: ángulo A común','ABC y CBF: ángulo B común','Los dos triángulos pequeños'].forEach((text,i)=>{const o=document.createElement('option');o.value=i;o.textContent=text;sel.append(o);});sel.addEventListener('change',()=>{mode=+sel.value;draw();});l.append(sp,sel);controls.append(l);
+function reset(equal){c=10;t=equal?.5:.36;mode=equal?3:0;cInput[0].value=c;cInput[1].textContent=fmt(c);tInput[0].value=t;tInput[1].textContent=fmt(t);sel.value=mode;draw();}
+for(const [text,fn] of [['Caso de igualdad',()=>reset(true)],['Restablecer',()=>reset(false)]]){const b=document.createElement('button');b.type='button';b.textContent=text;b.addEventListener('click',fn);controls.append(b);}
+draw();el.insertBefore(live,el.querySelector('figcaption'));el.append(controls,read);el.classList.add('geometry-ready');}
+if(typeof module!=='undefined'&&module.exports)module.exports={geometry,svg};else{root.AxiomaticLesson2={geometry,svg};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();}
+})(typeof window!=='undefined'?window:globalThis);

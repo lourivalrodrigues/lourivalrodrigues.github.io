@@ -75,6 +75,13 @@ description: "Geometría Axiomática · Lecture notes and course resources."
 <div class="note-actions"><a class="btn-academic primary" href="axiomatic-lesson-1-solutions.html">Read solutions</a><a class="btn-academic" href="axiomatic-lesson-1-solutions.html#axiomatic-lesson-figure-2">Explore the figures</a><a class="btn-academic" href="../files/notes/axiomatic-lesson-1-solutions.pdf" download>Download PDF</a></div>
 </div>
 </article>
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">L2</div>
+<div><h3>Lección 2 · Metric relations in a right triangle</h3>
+<p>Metric relations in a right triangle: altitude, projections, legs, Pythagoras, and the equality case. Solutions to parts a–e and an interactive figure.</p>
+<p class="meta">Material in Spanish · June 2026 · Revised solution</p>
+<div class="note-actions"><a class="btn-academic primary" href="axiomatic-lesson-2-solutions.html">Read solutions</a><a class="btn-academic" href="axiomatic-lesson-2-solutions.html#axiomatic-lesson-2-figure">Explore the figure</a><a class="btn-academic" href="../files/notes/axiomatic-lesson-2-solutions.pdf" download>Download PDF</a></div>
+</div></article>
 </div>
 
 <div class="course-section-head" id="course-documents"><h2>Syllabus & documents</h2></div>
