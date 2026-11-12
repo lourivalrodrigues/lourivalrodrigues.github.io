@@ -24,10 +24,10 @@ format:
 
 Las figuras con controles pueden explorarse con el ratón, el teclado o una pantalla táctil. Algunas construcciones se muestran por pasos. El PDF contiene versiones estáticas de los dibujos. La exploración ayuda a interpretar los resultados; no sustituye las demostraciones.
 
-<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="axiomatic-geometry.html">Página de la asignatura</a></div>
+<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="similarity-chapter-3.html">Capítulo 3 · Semejanza →</a><a href="axiomatic-geometry.html">Página de la asignatura</a></div>
 
 {{< include ../_content/notes/concurrency-chapter-2.qmd >}}
 
-<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="axiomatic-geometry.html">Volver a Geometría Axiomática →</a></div>
+<div class="chapter-navigation"><a href="congruency-chapter-1.html">← Capítulo 1 · Congruencia</a><a href="similarity-chapter-3.html">Capítulo 3 · Semejanza →</a><a href="axiomatic-geometry.html">Volver a Geometría Axiomática →</a></div>
 
 <script src="../assets/geometry-ch2.js" defer></script>

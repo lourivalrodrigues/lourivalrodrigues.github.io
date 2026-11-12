@@ -26,7 +26,7 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 
 <nav class="course-jumpnav" aria-label="Secciones de la asignatura"><a href="#course-notes">Notas de clase</a><a href="#course-assessments">Evaluaciones</a><a href="#course-documents">Syllabus y documentos</a><a href="#course-curiosities">Curiosidades</a><a href="#course-reading">Bibliografía</a></nav>
 
-<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">2 capítulos disponibles</span></div>
+<div class="course-section-head" id="course-notes"><h2>Notas de clase</h2><span class="course-count">3 capítulos disponibles</span></div>
 
 <div class="course-note-list">
 <article class="course-note">
@@ -46,6 +46,16 @@ description: "Geometría Axiomática · Notas, documentos y recursos de estudio.
 <p>Mediatrices, bisectrices, alturas, medianas y centros del triángulo. Construcciones, lugar de Tales y problemas.</p>
 <p class="meta">20 páginas · 22 figuras · 16 figuras interactivas · Secciones 2.1–2.7</p>
 <div class="note-actions"><a class="btn-academic primary" href="concurrency-chapter-2.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/concurrency-chapter-2.pdf" download>Descargar PDF</a></div>
+</div>
+</article>
+
+<article class="course-note">
+<div class="course-note-index" aria-hidden="true">03</div>
+<div>
+<h3>Semejanza · Capítulo 3</h3>
+<p>Triángulos semejantes, criterios AAA, sAs, sss y AA; Pitágoras, Apolonio, Stewart, bisectrices, construcciones y potencia de un punto.</p>
+<p class="meta">25 páginas · Notas en español · 29 figuras · 22 interactivas · Secciones 3.1–3.8</p>
+<div class="note-actions"><a class="btn-academic primary" href="similarity-chapter-3.html">Leer en el sitio</a><a class="btn-academic" href="../../files/notes/similarity-chapter-3.pdf" download>Descargar PDF</a></div>
 </div>
 </article>
 

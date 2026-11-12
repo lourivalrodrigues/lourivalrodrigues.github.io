@@ -1,0 +1,31 @@
+---
+title: "Semejanza · Capítulo 3"
+lang: es
+toc: true
+toc-depth: 2
+number-sections: false
+description: "Geometría Axiomática: semejanza, construcciones y potencia de un punto. Notas en español, PDF y 22 figuras interactivas."
+format:
+  html:
+    toc-title: Contenido
+---
+
+<link rel="stylesheet" href="../assets/notes.css">
+<link rel="stylesheet" href="../assets/geometry-ch1.css">
+
+<div class="language-link"><a href="../es/notes/similarity-chapter-3.html">Sitio en español</a></div>
+
+**Geometría Axiomática · MATG1062 · ESPOL**  
+**Docente:** Lourival Rodrigues de Lima.
+
+<div class="note-actions"><a class="btn-academic primary" href="../files/notes/similarity-chapter-3.pdf" download>Descargar PDF</a><a class="note-back" href="axiomatic-geometry.html">← Back to course</a></div>
+
+Estas notas están en español. Las figuras con controles pueden explorarse con el ratón, el teclado o una pantalla táctil. Modifique los deslizadores y use **Restablecer** para regresar a la configuración inicial. Las construcciones por pasos permiten mostrar sus rectas auxiliares. El PDF contiene las mismas notas con figuras estáticas; si JavaScript está desactivado, los dibujos también permanecen visibles en el sitio. La exploración no sustituye una demostración.
+
+<div class="chapter-navigation"><a href="concurrency-chapter-2.html">← Capítulo 2 · Concurrencia</a><a href="axiomatic-geometry.html">Página de la asignatura</a></div>
+
+{{< include ../_content/notes/similarity-chapter-3.qmd >}}
+
+<div class="chapter-navigation"><a href="concurrency-chapter-2.html">← Capítulo 2 · Concurrencia</a><a href="axiomatic-geometry.html">Volver a Geometría Axiomática →</a></div>
+
+<script src="../assets/geometry-ch3.js" defer></script>
